@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="bom webkit header" model="ir.header_webkit">
+            <field name="footer_html"><![CDATA[]]></field>
+            <field name="orientation">Portrait</field>
+            <field name="format">A4</field>
+            <field name="html"><![CDATA[
+   <html>
+    <head>
+            
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <script>
+            function subst() {
+                var vars={};
+                var x=document.location.search.substring(1).split('&');
+                for(var i in x) {var z=x[i].split('=',2);vars[z[0]] = unescape(z[1]);}
+                if(vars['page']!=1){
+                   document.getElementById('inner_head').innerHTML=document.getElementById('actual_header').innerHTML;
+                }
+                var x=['frompage','topage','page','webpage','section','subsection','subsubsection'];
+                for(var i in x) {
+                    var y = document.getElementsByClassName(x[i]);
+                    for(var j=0; j<y.length; ++j) y[j].textContent = vars[x[i]];
+                }
+            }            
+        </script>
+        <style type="text/css">
+            ${css}
+        </style>
+    </head>
+    <body style="border:0; margin:0;" onload="subst()">
+        <table style="border:0" width="100%"> 
+            <tr>
+            	<td width="92%">
+                <td width="4%" style="text-align:right;font-size:10;width:350px;">&nbsp;<span class="page"/></td>
+                <td width="4%" style="text-align:left;font-size:10;width:30px">&nbsp;/&nbsp;<span class="topage"/></td>
+            </tr>
+        </table> ${_debug or ''|n}
+        <table id="inner_head" style="width: 100%;margin-left:1%;margin-right:1%;" >
+            
+        </table>${_debug or ''|n}
+        <table id="actual_header" style="display:none;margin-left:5%;" class="basic_table">
+            <tr >
+                	<td style="text-align:left; border-color:black;border-bottom:2px solid black; font-size:14; font-family: Helvetica-Bold;" width="35%"><b>${ _('BOM Name') }</b></td>
+                	<td style="text-align:left;border-color:black;border-bottom:2px solid black; font-size:14; font-family: Helvetica-Bold;" width="35%"><b>${ _('Product Name') }</b></td>
+                 	<td style="text-align:right;border-color:black;border-bottom:2px solid black; font-size:14; font-family: Helvetica-Bold;" width="15%"><b>${ _('Quantity') }<b></td>
+                	<td style="text-align:center;border-color:black;border-bottom:2px solid black; font-size:14; font-family: Helvetica-Bold;" width="15%"><b>${ _('BOM Ref') }</b></td>
+            	</tr>
+        </table>
+    </body>
+</html>]]>
+            </field>
+            <field eval="15.0" name="margin_top"/>
+            <field eval="5.0" name="margin_bottom"/>
+            <field name="css"><![CDATA[
+            
+
+
+
+.basic_table{
+border-color:black;
+border-collapse: collapse;
+font-family: Helvetica-Bold;
+}
+.basic_table td {
+border-color:black;
+border-bottom:2px solid black;
+font-size:12px;
+}
+
+.list_table {
+border-color:black;
+border-collapse: collapse;
+font-family: Helvetica;
+}
+.list_table td {
+border-bottom:1px solid #ccc;
+font-size:12px;
+padding-left:3px
+padding-right:3px
+padding-top:3px
+padding-bottom:3px
+}
+.list_table1 {
+border-color:black;
+border-collapse: collapse;
+font-family: Helvetica;
+}
+.list_table1 td {
+border-color:gray;
+border-bottom:2px solid gray;
+font-size:12px;
+
+}
+.list_table2 {
+border-color:black;
+border-collapse: collapse;
+
+}
+.list_table2 td {
+border-color:black;
+border-top:2px solid black;
+border-bottom:2px solid black;
+font-size:12;
+padding-left:3px
+padding-right:3px
+padding-top:3px
+padding-bottom:3px
+}
+.list_table th {
+border-bottom:2px solid black;
+text-align:left; 
+font-size:12px;
+font-weight:bold;
+padding-left:3px
+padding-right:3px
+}
+
+.list_tabe thead {
+    display:table-header-group;
+}
+
+
+.total {
+width:100%;
+}
+.lib {
+width:10.3%;
+}
+.tot {
+text-align:left;
+width:15%;
+}
+.righttot {
+width:74%;
+}
+.tax {
+width:50%;
+} 
+table {
+              display: table;
+              width: 100%;
+            }
+            
+            table thead {
+              display: table-header-group;
+            }
+            
+            table tbody {
+              display: table-row-group;
+            }
+            
+            table tfoot {
+              display: table-footer-group;
+            }
+            
+            table tr {
+              display: table-row;
+              height: auto;
+            }
+            
+            table th,
+            table td {
+              display: table-cell;
+              overflow: visible;
+            }
+            
+            table th,
+            table td {
+              height: 1px; /* Do the trick to make div.nobrk fill td height */
+            }
+            
+            table tr.singlecell td,
+            table tr.singlecell th {
+              height: auto; /* Reset trick for a full row td */
+            }
+            
+            .nobrk {
+              page-break-inside: avoid;
+              orphans: 10;
+              widows: 10;
+              position: relative;
+              margin: -1px 0 0 -1px;
+              min-height: 14px;
+              line-height: 14px;
+              height: 100%;
+            }
+            
+            table tbody td .nobrk {
+              min-height: 5px;
+            }
+            ]]>
+            </field>
+            <field name="name">bom webkit header</field>
+        </record>
+		
+<record id="production webkit header" model="ir.header_webkit">
+            <field name="footer_html"><![CDATA[]]></field>
+            <field name="orientation">Portrait</field>
+            <field name="format">A4</field>
+            <field name="html"><![CDATA[
+   <html>
+    <head>
+            
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <script>
+            function subst() {
+                var vars={};
+                var x=document.location.search.substring(1).split('&');
+                for(var i in x) {var z=x[i].split('=',2);vars[z[0]] = unescape(z[1]);}
+                if(vars['page']!=1){
+                   document.getElementById('inner_head').innerHTML=document.getElementById('actual_header').innerHTML;
+                }
+                var x=['frompage','topage','page','webpage','section','subsection','subsubsection'];
+                for(var i in x) {
+                    var y = document.getElementsByClassName(x[i]);
+                    for(var j=0; j<y.length; ++j) y[j].textContent = vars[x[i]];
+                }
+            }            
+        </script>
+        <style type="text/css">
+            ${css}
+        </style>
+    </head>
+    <body style="border:0; margin:0;" onload="subst()">
+           <table class="header" style="border-bottom: 1px solid black; width: 100%">
+            <tr >
+                <td style="text-align:right;font-size:10;font-family: Helvetica-Bold;" width="15%">${ formatLang(time.strftime('%Y-%m-%d'),date=True)}&nbsp;${time.strftime('%I:%M')}</td>
+                <td style="text-align:center;font-size:14; font-family: Helvetica-Bold;" width="75%"><b>${company.partner_id.name |entity}</b></td>
+                <td width="5%" style="text-align:right;font-size:10;width:350px; font-family: Helvetica-Bold;" >&nbsp;<span class="page"/></td>
+                <td width="5%" style="text-align:left;font-size:10;width:30px font-family: Helvetica-Bold;">&nbsp;/&nbsp;<span class="topage"/></td>
+            </tr>
+        </table> ${_debug or ''|n}
+        <table id="inner_head" style="width: 100%;margin-left:1%;margin-right:1%;" >
+            
+        </table>${_debug or ''|n}
+        <table id="actual_header" style="display:none;margin-left:5%;" class="basic_table">
+            <tr >
+                	
+            </tr>
+        </table>
+    </body>
+</html>]]>
+            </field>
+            <field eval="15.0" name="margin_top"/>
+            <field eval="5.0" name="margin_bottom"/>
+            <field name="css"><![CDATA[
+            
+.basic_table{
+border-collapse: collapse;
+font-family: Helvetica-Bold;
+}
+.basic_table td {
+border-color:black;
+border-bottom:2px solid black;
+
+}
+
+ .title{
+ text-align:left
+ font-family: Helvetica-Bold;
+ font-size:12px; 
+}
+
+.list_table {
+border-color:black;
+border-collapse: collapse;
+font-family: Helvetica;
+}
+.list_table td {
+border-color:gray;
+border-bottom:1px solid gray;
+font-size:12px;
+
+}
+.list_table1 {
+border-color:black;
+border-collapse: collapse;
+font-family: Helvetica;
+font-size:12px;
+}
+.list_table1 td {
+border-color:gray;
+border-bottom:1px solid gray;
+
+
+}
+.list_table2 {
+text-align:center;
+border-collapse: collapse;
+}
+.list_table2 td {
+			border:1px solid lightGrey;
+			border-collapse: collapse;
+			font-family: Helvetica;
+            font-size:11px;
+			}
+
+}
+
+            ]]>
+            </field>
+            <field name="name">production webkit header</field>
+        </record>
+
+        <report 
+        	auto="True" 
+        	header="False" 
+        	id="report_bom_structure" 
+        	model="mrp.bom" 
+        	name="bom.structure.webkit" 
+        	file="mrp_webkit/report/bom_structure.mako" 
+        	string="BOM Structure" 
+        	report_type="webkit"
+        	webkit_header="bom webkit header"/>
+
+        <report 
+            id="report_mrp_production_report"
+            string="Production Order"
+            model="mrp.production"
+            name="mrp.production.order.webkit"
+            file="mrp_webkit/report/order.mako"
+            auto="False"
+        	report_type="webkit"
+        	webkit_header="production webkit header"
+            />
+
+    </data>
+</openerp>

@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011-2013 Serpent Consulting Services (<http://www.serpentcs.com>)
+#    Copyright (C) 2011-2013 Serpent Consulting Services Pvt. Ltd. (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -29,7 +29,7 @@ This module adds state, date_start, date_stop in manufacturing order operation l
 ================================================================================================================
      It is conversion of rml report to Webkit Report.
     """,
-    'author': 'Serpent Consulting Services',
+    'author': 'Serpent Consulting Services Pvt. Ltd.',
     'website': 'http://www.serpentcs.com',
     'depends': ['mrp_operations','report_webkit'],
     'data': [

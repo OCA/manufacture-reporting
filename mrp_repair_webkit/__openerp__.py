@@ -30,7 +30,7 @@ The aim is to have a complete module to manage all products repairs.
     It is conversion of rml report to Webkit Report.
 
 """,
-    'author': 'Serpent Consulting Services',
+    'author': 'Serpent Consulting Services Pvt. Ltd.',
     'website': 'http://www.serpentcs.com',
     'depends': ['mrp_repair', 'report_webkit'],
     'data': [

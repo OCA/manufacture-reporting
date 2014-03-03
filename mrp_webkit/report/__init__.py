@@ -19,8 +19,8 @@
 #
 ############################################################################
 
-import order
-import bom_structure
+from . import order
+from . import bom_structure
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

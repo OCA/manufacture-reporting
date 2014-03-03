@@ -34,7 +34,7 @@ Manage the Manufacturing process in OpenERP
 ===========================================
 
  It is conversion of rml report to Webkit Report.
-    
+
     """,
     'data': [
         'mrp_report.xml',

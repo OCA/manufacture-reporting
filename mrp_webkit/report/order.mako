@@ -5,7 +5,7 @@
         <style type="text/css">
             ${css}
         </style>
-        <title>Production Order.pdf</title>        
+        <title>Production Order.pdf</title>
     </head>
     <body>
         %for o in objects:
@@ -16,7 +16,7 @@
                         </td>
                     </tr>
             </table>
-       
+
             <table width="100%" class="list_table2">
                 <tr>
                     <td width="35%">
@@ -44,7 +44,7 @@
                 </tr>
             </table>
             <br/>
-            
+
             <table width="100%" class="list_table2">
                 <tr>
                     <td width="35%">
@@ -78,9 +78,9 @@
                 </tr>
             </table>
             <br/>
-            
+
             %if o.workcenter_lines ==[]:
-                
+
             %else:
                 <table  width="100%">
                     <tr>
@@ -130,7 +130,7 @@
                     </table><br/>
                 %endfor
             %endif
-            
+
             <table class="title" width="100%">
                    <tr>
                        <td width="100%">
@@ -154,9 +154,9 @@
                     </td>
                 </tr>
             </table>
-            
+
              %if o.move_lines ==[]:
-             
+
              %else:
                 <table   style="font-family: Helvetica; font-size:11px;" width="100%">
                    <tr>
@@ -169,7 +169,7 @@
                     <table width="100%" class="list_table">
                         <tr>
                             <td style="text-align:left;" width="55%">
-                                ${line.product_id and line.product_id.code or ''} ${line.product_id and line.product_id.name or ''} 
+                                ${line.product_id and line.product_id.code or ''} ${line.product_id and line.product_id.name or ''}
                             </td>
                             <td style="text-align:right;" width="10%">
                                 ${formatLang( line.product_qty)} ${line.product_uom and line.product_uom.name or ''}
@@ -184,9 +184,9 @@
                     </table>
                 %endfor
              %endif
-               
+
              %if o.move_lines2 ==[]:
-             
+
              %else:
                  <table class="title" width="100%">
                     <tr>
@@ -199,7 +199,7 @@
                     <table width="100%" class="list_table1">
                         <tr>
                             <td style="text-align:left;"width="55%">
-                                ${line2.product_id and line2.product_id.code or ''} ${line2.product_id and line2.product_id.name or ''} 
+                                ${line2.product_id and line2.product_id.code or ''} ${line2.product_id and line2.product_id.name or ''}
                             </td>
                             <td style="text-align:right;"width="10%">
                                 ${formatLang( line2.product_qty)} ${line2.product_uom and line2.product_uom.name or ''}
@@ -215,6 +215,6 @@
                 %endfor
              %endif
              <p style="page-break-after:always"></p>
-        %endfor 
+        %endfor
     </body>
 </html>

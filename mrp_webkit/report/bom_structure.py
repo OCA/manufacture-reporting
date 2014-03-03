@@ -20,16 +20,15 @@
 ############################################################################
 
 import time
+
 from openerp.report import report_sxw
-from openerp.osv import osv
-from openerp import pooler
 
 class bom_structure(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
         super(bom_structure, self).__init__(cr, uid, name, context=context)
         self.localcontext.update({
             'time': time,
-            'get_children':self.get_children,
+            'get_children': self.get_children,
         })
 
     def get_children(self, object, level=0):
@@ -47,10 +46,10 @@ class bom_structure(report_sxw.rml_parse):
                 res['level'] = level
                 result.append(res)
                 if l.child_complete_ids:
-                    if level<6:
+                    if level < 6:
                         level += 1
                     _get_rec(l.child_complete_ids,level)
-                    if level>0 and level<6:
+                    if 0 < level  < 6:
                         level -= 1
             return result
 
@@ -58,7 +57,10 @@ class bom_structure(report_sxw.rml_parse):
 
         return children
 
-report_sxw.report_sxw('report.bom.structure.webkit','mrp.bom','mrp_webkit/report/bom_structure.mako',parser=bom_structure,header='internal')
+report_sxw.report_sxw('report.bom.structure.webkit',
+                      'mrp.bom',
+                      'mrp_webkit/report/bom_structure.mako',
+                      parser=bom_structure,header='internal')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -5,7 +5,7 @@
         <style type="text/css">
             ${css}
         </style>
-        <title>BOM Structure.pdf</title>        
+        <title>BOM Structure.pdf</title>
     </head>
     <body>
        <table  width="100%">
@@ -15,7 +15,7 @@
                 </td>
             </tr>
        </table>
-            
+
        <table width="100%" class="basic_table">
             <tr >
                 <td style="text-align:left;" width="35%"><b>${ _('BOM Name') }</b></td>
@@ -41,7 +41,7 @@
                     </td><br/>
                 </tr>
             </table>
-            
+
             %for l in get_children(o.bom_lines):
                 <table width="100%" class="list_table">
                     <tr>

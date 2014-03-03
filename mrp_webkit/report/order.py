@@ -20,6 +20,7 @@
 ############################################################################
 
 import time
+
 from openerp.report import report_sxw
 
 class order(report_sxw.rml_parse):
@@ -29,6 +30,10 @@ class order(report_sxw.rml_parse):
             'time': time,
         })
 
-report_sxw.report_sxw('report.mrp.production.order.webkit','mrp.production','addons/mrp_webkit/report/order.mako',parser=order,header='internal')
+report_sxw.report_sxw('report.mrp.production.order.webkit',
+                      'mrp.production',
+                      'addons/mrp_webkit/report/order.mako',
+                      parser=order,
+                      header='internal')
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

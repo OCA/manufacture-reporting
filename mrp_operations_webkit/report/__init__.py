@@ -19,7 +19,8 @@
 #
 ############################################################################
 
-import mrp_wc_barcode
-import mrp_code_barcode
+from . import mrp_wc_barcode
+from . import mrp_code_barcode
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

@@ -13,7 +13,7 @@
             </field>
             <field name="name">MRP webkit header</field>
         </record>
-        <report 
+        <report
             id="report_wc_barcode"
             string="Work Centers Barcode"
             model="mrp.workcenter"
@@ -29,7 +29,7 @@
             name="mrp.code.barcode.webkit"
             file="mrp_operations_webkit/report/mrp_code_barcode.mako"
         	report_type="webkit"
-        
+
         	webkit_header="mrp_operation_header"/>
 
     </data>

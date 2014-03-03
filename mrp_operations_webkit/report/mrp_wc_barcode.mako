@@ -17,7 +17,7 @@
                     padding-bottom:0px;
                     padding-left:10px;
                 }
-         </style>       
+         </style>
     </head>
 <body>
     %for o in objects:
@@ -37,10 +37,10 @@
                         %>
                         <p class="barcode39">
                         <img src='${id}' height="50px" width="130px"/>
-                        </p>  
+                        </p>
                     </td>
                     <td width="25%">
-                    </td>    
+                    </td>
                 </tr>
             </table>
             <p style="page-break-after:always;"></p>

@@ -19,10 +19,10 @@
 #
 ############################################################################
 
-from openerp import pooler
 import time
 import barcode
 import tempfile
+
 from openerp.report import report_sxw
 
 class code_barcode(report_sxw.rml_parse):
@@ -32,15 +32,18 @@ class code_barcode(report_sxw.rml_parse):
             'time': time,
             'generate_barcode': self.generate_barcode,
         })
-        
+
     def generate_barcode(self, barcode_string):
-         
-        temp_path_svg = tempfile.gettempdir()+"/temp_barcode_"+barcode_string+""
+        temp_path_svg = tempfile.gettempdir() + "/temp_barcode_" + barcode_string + ""
         code39 = barcode.get_barcode_class('code39')
         c39 = code39(str(barcode_string))
         c39.save(temp_path_svg)
         return temp_path_svg
-    
-report_sxw.report_sxw('report.mrp.code.barcode.webkit', 'mrp_operations.operation.code', 'addons/mrp_operations_webkit/report/mrp_code_barcode.mako',parser=code_barcode,header=False)
+
+report_sxw.report_sxw('report.mrp.code.barcode.webkit',
+                      'mrp_operations.operation.code',
+                      'addons/mrp_operations_webkit/report/mrp_code_barcode.mako',
+                      parser=code_barcode,header=False)
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

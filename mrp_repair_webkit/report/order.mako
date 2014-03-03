@@ -3,7 +3,7 @@
         <style type="text/css">
             ${css}
         </style>
-        <title>qutation_order.pdf</title>        
+        <title>qutation_order.pdf</title>
     </head>
     <body>
         %for o in objects:
@@ -25,8 +25,8 @@
                         %if o.address_id.vat:
                             ${ o.address_id.vat or '' }</br>
                         %endif
-                      
-                        
+
+
                     </td>
                     <td width="30%" colspan="2">
                         ${ o.partner_id.name or '' }
@@ -61,11 +61,11 @@
                             %if o.partner_invoice_id.vat:
                                 ${ o.partner_invoice_id.vat or '' }
                             %endif
-                       
+
                         </td>
                   </tr>
             </table>
-            <p class="title"> 
+            <p class="title">
             %if  o.state <> 'draft' or '':
                     Repair Quotation N° : ${ o.name }
             %endif
@@ -130,7 +130,7 @@
                             <tr>
                                 <td width="57%">
                                     %if line.type == 'add' or '':
-                                            (Add)${ line.name }    
+                                            (Add)${ line.name }
                                     %endif
                                     %if line.type == 'remove' or '':
                                         (Remove) ${ line.name }
@@ -150,11 +150,11 @@
                                   </td>
                             </tr>
                         </table>
-                     %endif 
+                     %endif
                 %endfor
                 %if len(o.fees_lines) != 0 :
-                        
-                     <h3><b>Fees Line(s)</b></h3> 
+
+                     <h3><b>Fees Line(s)</b></h3>
                      %for fees in o.fees_lines:
                         %if fees.to_invoice==True:
                             <table class="tr_bottom_line_dark_grey">
@@ -168,7 +168,7 @@
                                     <td width="10%" align="right">
                                       ${ formatLang(fees.product_uom_qty) } ${ fees.product_uom.name }
                                     </td>
-                                    <td width="8" align="right"> 
+                                    <td width="8" align="right">
                                       ${ formatLang(fees.price_unit) }
                                     </td>
                                     <td width="15%" align="right">

@@ -19,6 +19,7 @@
 #
 ##############################################################################
 import time
+
 from openerp.report import report_sxw
 
 class order(report_sxw.rml_parse):
@@ -39,7 +40,10 @@ class order(report_sxw.rml_parse):
         total = total + repair.amount_tax
         return total
 
-report_sxw.report_sxw('report.repair.order.webkit','mrp.repair','addons/mrp_repair_webkit/report/order.mako',parser=order)
+report_sxw.report_sxw('report.repair.order.webkit',
+                      'mrp.repair',
+                      'addons/mrp_repair_webkit/report/order.mako',
+                      parser=order)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

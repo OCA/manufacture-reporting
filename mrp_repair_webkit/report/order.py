@@ -22,6 +22,7 @@ import time
 
 from openerp.report import report_sxw
 
+
 class order(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
         super(order, self).__init__(cr, uid, name, context=context)
@@ -31,12 +32,12 @@ class order(report_sxw.rml_parse):
         })
 
     def total(self, repair):
-        print "repair",repair
+        print "repair", repair
         total = 0.0
         for operation in repair.operations:
-           total += operation.price_subtotal
+            total += operation.price_subtotal
         for fee in repair.fees_lines:
-           total += fee.price_subtotal
+            total += fee.price_subtotal
         total = total + repair.amount_tax
         return total
 
@@ -46,4 +47,3 @@ report_sxw.report_sxw('report.repair.order.webkit',
                       parser=order)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
-

@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    This module uses OpenERP, Open Source Management Solution Framework.
-#    Copyright (C) 2012-Today Serpent Consulting Services Pvt. Ltd.(<http://www.serpentcs.com>)
+#    Copyright (C) 2012-Today Serpent Consulting Services Pvt. Ltd.
+#                             (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -24,17 +25,19 @@
     'version': '1.0',
     'category': 'Manufacturing',
     'description': """
-The aim is to have a complete module to manage all products repairs.
-====================================================================
-    It is conversion of rml report to Webkit Report.
+Webkit reports for mrp repair
+=============================
 
+The aim is to have a complete module to manage all products repairs.
+
+It is conversion of rml report to Webkit Report.
 """,
     'author': 'Serpent Consulting Services Pvt. Ltd.',
     'website': 'http://www.serpentcs.com',
-    'depends': ['mrp_repair', 'report_webkit'],
-    'data': [
-        'mrp_repair_report.xml',
-    ],
+    'depends': ['mrp_repair',
+                'report_webkit'],
+    'data': ['mrp_repair_report.xml',
+             ],
     'installable': True,
     'auto_install': False,
 }

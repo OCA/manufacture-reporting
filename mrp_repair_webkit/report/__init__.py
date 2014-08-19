@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    This module uses OpenERP, Open Source Management Solution Framework.
-#    Copyright (C) 2013-Today Serpent Consulting Services Pvt. Ltd.(<http://www.serpentcs.com>)
+#    Copyright (C) 2013-Today Serpent Consulting Services Pvt. Ltd.
+#                             (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -20,5 +21,3 @@
 ##############################################################################
 
 from . import order
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

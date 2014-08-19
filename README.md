@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/OCA/manufacture-reporting.svg?branch=8.0)](https://travis-ci.org/OCA/manufacture-reporting)
-[![Coverage Status](https://coveralls.io/repos/OCA/manufacture-reporting/badge.png?branch=8.0)](https://coveralls.io/r/OCA/manufacture-reporting?branch=8.0)
+[![Build Status](https://travis-ci.org/OCA/manufacture-reporting.svg?branch=7.0)](https://travis-ci.org/OCA/manufacture-reporting)
+[![Coverage Status](https://coveralls.io/repos/OCA/manufacture-reporting/badge.png?branch=7.0)](https://coveralls.io/r/OCA/manufacture-reporting?branch=7.0)
 
 Manufacture Reports
 ===================

@@ -39,7 +39,7 @@ Manage the Manufacturing process in OpenERP
     'data': [
         'mrp_report.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': True,
     'auto_install': False,
 }

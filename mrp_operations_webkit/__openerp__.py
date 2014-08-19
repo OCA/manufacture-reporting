@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011-2013 Serpent Consulting Services Pvt. Ltd. (<http://www.serpentcs.com>)
+#    Copyright (C) 2011-2013 Serpent Consulting Services Pvt. Ltd.
+#                            (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -25,17 +26,20 @@
     'version': '1.0',
     'category': 'Manufacturing',
     'description': """
-This module adds state, date_start, date_stop in manufacturing order operation lines (in the 'Work Orders' tab).
-================================================================================================================
-     It is conversion of rml report to Webkit Report.
+Webkit report for mrp operations
+================================
+
+This module adds state, date_start, date_stop in manufacturing order
+operation lines (in the 'Work Orders' tab).
+
+It is conversion of rml report to Webkit Report.
     """,
     'author': 'Serpent Consulting Services Pvt. Ltd.',
     'website': 'http://www.serpentcs.com',
-    'depends': ['mrp_operations','report_webkit'],
-    'data': [
-        'mrp_operations_report.xml',
-    ],
+    'depends': ['mrp_operations',
+                'report_webkit'],
+    'data': ['mrp_operations_report.xml',
+             ],
     'installable': True,
     'auto_install': False,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

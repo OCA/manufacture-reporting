@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011-2013 Serpent Consulting Services (<http://www.serpentcs.com>)
+#    Copyright (C) 2011-2013 Serpent Consulting Services
+#                           (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -25,6 +26,7 @@ import tempfile
 
 from openerp.report import report_sxw
 
+
 class workcenter_code(report_sxw.rml_parse):
 
     def __init__(self, cr, uid, name, context):
@@ -35,15 +37,20 @@ class workcenter_code(report_sxw.rml_parse):
         })
 
     def generate_barcode(self, barcode_string):
-        temp_path_svg = tempfile.gettempdir() + "/temp_barcode_" + barcode_string + ""
+        temp_path_svg = (tempfile.gettempdir() +
+                         "/temp_barcode_" +
+                         barcode_string +
+                         ""
+                         )
         code39 = barcode.get_barcode_class('code39')
         c39 = code39(str(barcode_string))
         c39.save(temp_path_svg)
         return temp_path_svg+".svg"
 
 
-report_sxw.report_sxw('report.mrp.wc.barcode.webkit',
-                      'mrp.workcenter',
-                      'addons/mrp_operations_webkit/report/mrp_wc_barcode.mako',
-                      parser=workcenter_code,header=False)
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+report_sxw.report_sxw(
+    'report.mrp.wc.barcode.webkit',
+    'mrp.workcenter',
+    'addons/mrp_operations_webkit/report/mrp_wc_barcode.mako',
+    parser=workcenter_code,
+    header=False)

@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011-2013 Serpent Consulting Services Pvt. Ltd.(<http://www.serpentcs.com>)
+#    Copyright (C) 2011-2013 Serpent Consulting Services Pvt. Ltd.
+#                            (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -28,7 +29,7 @@
     'category': 'Manufacturing',
     'sequence': 18,
     'summary': 'Manufacturing Orders, Bill of Materials, Routing',
-    'depends': ['mrp','report_webkit'],
+    'depends': ['mrp', 'report_webkit'],
     'description': """
 Manage the Manufacturing process in OpenERP
 ===========================================
@@ -36,9 +37,8 @@ Manage the Manufacturing process in OpenERP
  It is conversion of rml report to Webkit Report.
 
     """,
-    'data': [
-        'mrp_report.xml',
-    ],
+    'data': ['mrp_report.xml',
+             ],
     'installable': True,
     'application': True,
     'auto_install': False,

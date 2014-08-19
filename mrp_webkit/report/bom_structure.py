@@ -2,7 +2,8 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2011-2013 Serpent Consulting Services (<http://www.serpentcs.com>)
+#    Copyright (C) 2011-2013 Serpent Consulting Services
+#                            (<http://www.serpentcs.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,6 +23,7 @@
 import time
 
 from openerp.report import report_sxw
+
 
 class bom_structure(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
@@ -48,19 +50,20 @@ class bom_structure(report_sxw.rml_parse):
                 if l.child_complete_ids:
                     if level < 6:
                         level += 1
-                    _get_rec(l.child_complete_ids,level)
-                    if 0 < level  < 6:
+                    _get_rec(l.child_complete_ids, level)
+                    if 0 < level < 6:
                         level -= 1
             return result
 
-        children = _get_rec(object,level)
+        children = _get_rec(object, level)
 
         return children
 
 report_sxw.report_sxw('report.bom.structure.webkit',
                       'mrp.bom',
                       'mrp_webkit/report/bom_structure.mako',
-                      parser=bom_structure,header='internal')
+                      parser=bom_structure,
+                      header='internal')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

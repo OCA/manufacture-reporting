@@ -15,6 +15,6 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[mrp_webkit](__unported__/mrp_webkit/) | 1.0 (unported) | Manufacturing Orders, Bill of Materials, Routing
+[mrp_webkit](mrp_webkit/) | 1.0 (unported) | Manufacturing Orders, Bill of Materials, Routing
 
 [//]: # (end addons)

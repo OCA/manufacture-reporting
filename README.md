@@ -11,4 +11,10 @@ This project aim to deal with OpenERP modules related to manage manufacturing re
 - New reports related to manufacturing area
 
 [//]: # (addons)
+Unported addons
+---------------
+addon | version | summary
+--- | --- | ---
+[mrp_webkit](mrp_webkit/) | 1.0 (unported) | Manufacturing Orders, Bill of Materials, Routing
+
 [//]: # (end addons)

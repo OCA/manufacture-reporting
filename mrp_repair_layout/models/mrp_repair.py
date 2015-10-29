@@ -47,19 +47,21 @@ class MrpRepair(models.Model):
 
 class MrpRepairLine(models.Model):
     _inherit = 'mrp.repair.line'
-    _order = 'repair_id, categ_sequence, layout_cat_id, id'
+    _order = 'repair_id, categ_sequence, layout_cat_id, sequence, id'
     layout_cat_id = fields.Many2one(
         'mrp_repair.layout.category', 'Section')
     categ_sequence = fields.Integer(
         related='layout_cat_id.sequence', string='Layout sequence',
         store=True, default=0)
+    sequence = fields.Integer('Sequence')
 
 
 class MrpRepairFee(models.Model):
     _inherit = 'mrp.repair.fee'
-    _order = 'repair_id, categ_sequence, layout_cat_id, id'
+    _order = 'repair_id, categ_sequence, layout_cat_id, sequence, id'
     layout_cat_id = fields.Many2one(
         'mrp_repair.layout.category', 'Section')
     categ_sequence = fields.Integer(
         related='layout_cat_id.sequence', string='Layout sequence',
         store=True, default=0)
+    sequence = fields.Integer('Sequence')

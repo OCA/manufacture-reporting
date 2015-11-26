@@ -11,6 +11,12 @@ This project aim to deal with OpenERP modules related to manage manufacturing re
 - New reports related to manufacturing area
 
 [//]: # (addons)
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[mrp_repair_layout](mrp_repair_layout/) | 8.0.1.0.0 | MRP Repair Layout
+
 Unported addons
 ---------------
 addon | version | summary

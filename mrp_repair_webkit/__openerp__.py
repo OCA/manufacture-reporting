@@ -36,7 +36,7 @@ It is conversion of rml report to Webkit Report.
     'author': "Serpent Consulting Services Pvt. Ltd.,"
               "Odoo Community Association (OCA)",
     'website': 'http://www.serpentcs.com',
-    'depends': ['mrp_repair', 'report_webkit'],
+    'depends': ['mrp', 'mrp_repair', 'report_webkit'],
     'data': ['mrp_repair_report.xml'],
     'images': [],
     'installable': True,

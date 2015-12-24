@@ -38,7 +38,7 @@ It is conversion of rml report to Webkit Report.
     'website': 'http://www.serpentcs.com',
     'depends': ['mrp_repair', 'report_webkit'],
     'data': ['mrp_repair_report.xml'],
-    'images' : [],
+    'images': [],
     'installable': True,
     'auto_install': False,
 }

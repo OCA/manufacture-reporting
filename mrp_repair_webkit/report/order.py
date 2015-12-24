@@ -45,4 +45,3 @@ report_sxw.report_sxw('report.repair.order.webkit',
                       'mrp.repair',
                       'addons/mrp_repair_webkit/report/order.mako',
                       parser=order)
-

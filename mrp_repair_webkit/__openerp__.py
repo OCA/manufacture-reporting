@@ -25,18 +25,20 @@
     'version': '1.0',
     'category': 'Manufacturing',
     'description': """
-Webkit reports for mrp repair
+Webkit report for mrp repair
 =============================
 
 The aim is to have a complete module to manage all products repairs.
 
 It is conversion of rml report to Webkit Report.
 """,
-    'author': 'Serpent Consulting Services Pvt. Ltd.',
+    "license": "AGPL-3",
+    'author': "Serpent Consulting Services Pvt. Ltd.,"
+              "Odoo Community Association (OCA)",
     'website': 'http://www.serpentcs.com',
     'depends': ['mrp_repair', 'report_webkit'],
     'data': ['mrp_repair_report.xml'],
+    'images' : [],
     'installable': True,
     'auto_install': False,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

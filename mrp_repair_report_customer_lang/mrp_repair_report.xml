@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.report.xml" id="mrp_repair.action_report_mrp_repair_order">
+            <field name="report_name">mrp_repair_report_customer_lang.report_mrp_repair_order_translate</field>
+        </record>
+    </data>
+</openerp>

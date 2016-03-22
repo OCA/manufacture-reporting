@@ -21,7 +21,7 @@
 ##############################################################################
 
 {
-    'name': 'Repairs Management',
+    'name': 'Repairs Management - Webkit Report',
     'version': '1.0',
     'category': 'Manufacturing',
     'description': """
@@ -36,7 +36,7 @@ It is conversion of rml report to Webkit Report.
     'author': "Serpent Consulting Services Pvt. Ltd.,"
               "Odoo Community Association (OCA)",
     'website': 'http://www.serpentcs.com',
-    'depends': ['mrp', 'mrp_repair', 'report_webkit'],
+    'depends': ['report_webkit', 'mrp_repair'],
     'data': ['mrp_repair_report.xml'],
     'images': [],
     'installable': True,

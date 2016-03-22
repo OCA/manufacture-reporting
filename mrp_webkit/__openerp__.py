@@ -22,7 +22,7 @@
 
 
 {
-    'name': 'MRP',
+    'name': 'MRP - Webkit Report',
     'version': '1.0',
     'author': "Serpent Consulting Services Pvt. Ltd.,"
               "Odoo Community Association (OCA)",
@@ -30,7 +30,7 @@
     'category': 'Manufacturing',
     'sequence': 18,
     'summary': 'Manufacturing Orders, Bill of Materials, Routing',
-    'depends': ['mrp', 'report_webkit'],
+    'depends': ['report_webkit', 'mrp'],
     'description': """
 Manage the Manufacturing process in OpenERP
 ===========================================

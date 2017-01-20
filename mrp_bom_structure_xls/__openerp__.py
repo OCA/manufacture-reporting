@@ -4,8 +4,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': "Export BOM Structure to Excel",
-    'version': '8.0.1.0.0',
+    'name': "Export BOM Structure to Excel .XLS",
+    'version': '9.0.1.0.0',
     'category': 'Manufacturing',
     'author': "Eficent, Odoo Community Association (OCA)",
     'website': 'https://github.com/OCA/manufacture-reporting',

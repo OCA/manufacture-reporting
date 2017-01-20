@@ -2,35 +2,27 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=============================
-Export BOM Structure to Excel
-=============================
+==================================
+Export BOM Structure to Excel .XLS
+==================================
 
-This module was written to extend the MRP capabilities of Odoo, and
-allows users to export the BOM structure to MS Excel .XLS format.
-
-Installation
-============
-
-No additional installation instructions are required.
-
-Configuration
-=============
-
-This module does not require any additional configuration.
+This module extends the functionality of the MRP capabilities of Odoo,
+and to allow you to export the BOM structure to MS Excel .XLS format.
 
 Usage
 =====
 
-In the Bill of Materials form or list views, press 'More > Export BOM
-Structure to Excel'.
+To use this module, you need to:
+
+Go to the Bill of Materials form or list views, press 'More > Export BOM
+Structure to Excel .XLS'.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/8.0
+   :target: https://runbot.odoo-community.org/runbot/131/9.0
 
 .. repo_id is available in https://github.com/OCA/maintainer-tools/blob/master/tools/repos_with_ids.txt
-.. branch is "8.0" for example
+.. branch is "9.0" for example
 
 Bug Tracker
 ===========

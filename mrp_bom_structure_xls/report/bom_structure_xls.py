@@ -10,6 +10,38 @@ from openerp.addons.mrp.report.bom_structure \
 from openerp.tools.translate import _
 
 
+class bom_structure_inh(bom_structure):
+    def __init__(self, cr, uid, name, context):
+        super(bom_structure, self).__init__(cr, uid, name, context=context)
+        self.localcontext.update({
+            'get_children': self.get_children,
+        })
+
+    def get_children(self, object, level=0):
+        result = []
+
+        def _get_rec(object, level):
+            for l in object:
+                res = {}
+                res['pname'] = l.product_id.name
+                res['pcode'] = l.product_id.default_code
+                res['pqty'] = l.product_qty
+                res['uname'] = l.product_uom.name
+                res['level'] = level
+                res['code'] = l.bom_id.code
+                result.append(res)
+                if l.child_line_ids:
+                    level += 1
+                    _get_rec(l.child_line_ids, level)
+                    if level > 0:
+                        level -= 1
+            return result
+
+        children = _get_rec(object,level)
+
+        return children
+
+
 class BomStructureXls(report_xls):
     column_sizes = [40, 20, 20, 40, 20, 20, 20]
 
@@ -122,4 +154,4 @@ class BomStructureXls(report_xls):
                                                   _p, data)
 
 
-BomStructureXls('report.bom.structure.xls', 'mrp.bom', parser=bom_structure)
+BomStructureXls('report.bom.structure.xls', 'mrp.bom', parser=bom_structure_inh)

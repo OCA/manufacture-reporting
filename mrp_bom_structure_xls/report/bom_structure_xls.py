@@ -10,7 +10,7 @@ from openerp.addons.mrp.report.bom_structure \
 from openerp.tools.translate import _
 
 
-class bom_structure_inh(bom_structure):
+class BomStructureInh(bom_structure):
     def __init__(self, cr, uid, name, context):
         super(bom_structure, self).__init__(cr, uid, name, context=context)
         self.localcontext.update({
@@ -154,4 +154,4 @@ class BomStructureXls(report_xls):
                                                   _p, data)
 
 
-BomStructureXls('report.bom.structure.xls', 'mrp.bom', parser=bom_structure_inh)
+BomStructureXls('report.bom.structure.xls', 'mrp.bom', parser=BomStructureInh)

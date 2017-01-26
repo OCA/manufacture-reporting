@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016-2017 Eficent Business and IT Consulting Services S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+  <data>
+
+    <record id="action_bom_structure_xls" model="ir.actions.report.xml">
+      <field name="name">Export BOM Structure to Excel</field>
+      <field name="model">mrp.bom</field>
+      <field name="type">ir.actions.report.xml</field>
+      <field name="report_name">bom.structure.xls</field>
+      <field name="report_type">xls</field>
+      <field name="auto" eval="False"/>
+    </record>
+
+    <record model="ir.values" id="action_bom_structure_xls_values">
+      <field name="name">Export BOM Structure to Excel</field>
+      <field name="key2">client_action_multi</field>
+      <field name="value" eval="'ir.actions.report.xml,' +str(ref('action_bom_structure_xls'))" />
+      <field name="model">mrp.bom</field>
+    </record>   
+    
+  </data>
+</openerp>

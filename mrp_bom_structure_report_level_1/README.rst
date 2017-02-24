@@ -12,8 +12,8 @@ components. So, will not explode into the subcomponents.
 Usage
 =====
 
-* Go to 'Manufacturing / Products / Bill of Materials', select a BOM and go
-to 'Print / BOM Structure (Level 0)'
+* Go to 'Manufacturing / Products / Bill of Materials', select a BOM and
+press 'Print > BOM Structure (Level 1)'
 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
@@ -40,6 +40,7 @@ Contributors
 ------------
 
 * Jordi Ballester <jordi.ballester@eficent.com>
+* Miquel Raich <miquel.raich@eficent.com>
 
 Maintainer
 ----------

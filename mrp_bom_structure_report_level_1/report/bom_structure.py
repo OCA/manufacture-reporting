@@ -35,7 +35,7 @@ class bom_structure(report_sxw.rml_parse):
 
 
 class report_mrpbomstructure_l0(osv.AbstractModel):
-    _name = 'report.mrp_bom_structure_report_level_1.report_mrpbomstructure_l1'
+    _name = 'report.mrp_bom_structure_report_level_1.report_mrp_bs_l1'
     _inherit = 'report.mrp.report_mrpbomstructure'
-    _template = 'mrp_bom_structure_report_level_1.report_mrpbomstructure_l1'
+    _template = 'mrp_bom_structure_report_level_1.report_mrp_bs_l1'
     _wrapped_report_class = bom_structure

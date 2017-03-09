@@ -29,8 +29,7 @@ class BomStructureXlsx(ReportXlsx):
         j += 1
         sheet.write(i, 1, '> '*j)
         sheet.write(i, 2, ch.product_id.default_code or '')
-        sheet.write(i, 3, '[' + ch.product_id.default_code +
-                    '] ' + ch.product_id.name or '')
+        sheet.write(i, 3, ch.product_id.display_name or '')
         sheet.write(i, 4, ch.product_qty)
         sheet.write(i, 5, ch.product_uom.name or '')
         sheet.write(i, 6, ch.bom_id.code or '')

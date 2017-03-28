@@ -11,6 +11,7 @@ This project aim to deal with OpenERP modules related to manage manufacturing re
 - New reports related to manufacturing area
 
 [//]: # (addons)
+
 Unported addons
 ---------------
 addon | version | summary

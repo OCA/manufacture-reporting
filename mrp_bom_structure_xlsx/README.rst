@@ -19,10 +19,7 @@ Structure to Excel'.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/9.0
-
-.. repo_id is available in https://github.com/OCA/manufacture-reporting
-.. branch is "9.0" for example
+   :target: https://runbot.odoo-community.org/runbot/131/10.0
 
 Bug Tracker
 ===========
@@ -44,7 +41,7 @@ Contributors
 ------------
 
 * Jordi Ballester <jordi.ballester@eficent.com>
-* Miquel Raich <miquel.raich@eficent.com>
+* Miquel Raïch <miquel.raich@eficent.com>
 * Lois Rilo Antelo <lois.rilo@eficent.com>
 * Aaron Henriquez <ahenriquez@eficent.com>
 

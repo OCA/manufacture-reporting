@@ -5,8 +5,8 @@
 
 import logging
 
-from openerp.addons.mrp.report.bom_structure import bom_structure
-from openerp.addons.mrp_bom_structure_xlsx.report.bom_structure_xlsx import \
+from odoo.report import report_sxw
+from odoo.addons.mrp_bom_structure_xlsx.report.bom_structure_xlsx import \
     BomStructureXlsx
 
 _logger = logging.getLogger(__name__)
@@ -30,11 +30,11 @@ class BomStructureXlsxL1(BomStructureXlsx):
         sheet.write(i, 2, ch.product_id.default_code or '')
         sheet.write(i, 3, ch.product_id.display_name or '')
         sheet.write(i, 4, ch.product_qty)
-        sheet.write(i, 5, ch.product_uom.name or '')
+        sheet.write(i, 5, ch.product_uom_id.name or '')
         sheet.write(i, 6, ch.bom_id.code or '')
         i += 1
         return i
 
 
 BomStructureXlsxL1('report.bom.structure.xlsx.l1', 'mrp.bom',
-                   parser=bom_structure)
+                   parser=report_sxw.rml_parse)

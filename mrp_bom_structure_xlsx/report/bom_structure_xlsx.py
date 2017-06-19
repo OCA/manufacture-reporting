@@ -4,16 +4,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
-
-from openerp.addons.mrp.report.bom_structure \
-    import bom_structure
-
-from openerp.tools.translate import _
+from odoo.report import report_sxw
+from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
 try:
-    from openerp.addons.report_xlsx.report.report_xlsx import ReportXlsx
+    from odoo.addons.report_xlsx.report.report_xlsx import ReportXlsx
 except ImportError:
     _logger.debug("report_xlsx not installed, Excel export non functional")
 
@@ -31,7 +28,7 @@ class BomStructureXlsx(ReportXlsx):
         sheet.write(i, 2, ch.product_id.default_code or '')
         sheet.write(i, 3, ch.product_id.display_name or '')
         sheet.write(i, 4, ch.product_qty)
-        sheet.write(i, 5, ch.product_uom.name or '')
+        sheet.write(i, 5, ch.product_uom_id.name or '')
         sheet.write(i, 6, ch.bom_id.code or '')
         i += 1
         for child in ch.child_line_ids:
@@ -72,7 +69,7 @@ class BomStructureXlsx(ReportXlsx):
             sheet.write(i, 2, o.product_id.default_code or '', bold)
             sheet.write(i, 3, o.product_id.name or '', bold)
             sheet.write(i, 4, o.product_qty, bold)
-            sheet.write(i, 5, o.product_uom.name or '', bold)
+            sheet.write(i, 5, o.product_uom_id.name or '', bold)
             sheet.write(i, 6, o.code or '', bold)
             i += 1
             j = 0
@@ -80,4 +77,5 @@ class BomStructureXlsx(ReportXlsx):
                 i = self.print_bom_children(ch, sheet, i, j)
 
 
-BomStructureXlsx('report.bom.structure.xlsx', 'mrp.bom', parser=bom_structure)
+BomStructureXlsx('report.bom.structure.xlsx', 'mrp.bom',
+                 parser=report_sxw.rml_parse)

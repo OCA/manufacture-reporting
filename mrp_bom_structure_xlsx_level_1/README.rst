@@ -17,11 +17,11 @@ To use this module, you need to:
 
 #. Go to 'Manufacturing / Products / Bill of Materials'
 #. Select a BOM or more BOMS
-#. Go to 'More / Export BOM Structure to Excel'.
+#. Go to 'Action / Export BOM Structure (Level 1) to Excel'.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/9.0
+   :target: https://runbot.odoo-community.org/runbot/131/10.0
 
 Bug Tracker
 ===========

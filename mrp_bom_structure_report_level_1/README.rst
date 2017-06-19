@@ -14,14 +14,14 @@ Usage
 
 To use this module, you need to:
 
-#. Go to 'Manufacturing / Products / Bill of Materials'
+#. Go to 'Manufacturing / Master Data / Bill of Materials'
 #. Select a BOM and
 #. Go to 'Print > BOM Structure (Level 1)'
 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/9.0
+   :target: https://runbot.odoo-community.org/runbot/131/10.0
 
 Bug Tracker
 ===========
@@ -43,7 +43,7 @@ Contributors
 ------------
 
 * Jordi Ballester <jordi.ballester@eficent.com>
-* Miquel Raich <miquel.raich@eficent.com>
+* Miquel Raïch <miquel.raich@eficent.com>
 
 Maintainer
 ----------

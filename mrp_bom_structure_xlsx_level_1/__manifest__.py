@@ -5,7 +5,7 @@
 
 {
     'name': "Export BOM Structure (Level 1) to Excel .XLSX",
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'category': 'Manufacturing',
     'author': "Eficent, Odoo Community Association (OCA)",
     'website': 'https://github.com/OCA/manufacture-reporting',

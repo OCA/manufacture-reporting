@@ -12,6 +12,13 @@ This project aim to deal with OpenERP modules related to manage manufacturing re
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 10.0.1.0.0 | Export Bill of Materials Structure
+
+
 Unported addons
 ---------------
 addon | version | summary

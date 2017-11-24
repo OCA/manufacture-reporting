@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        string="BOM Structure (Level 1)"
+        id="action_report_bom_structure_level_1"
+        model="mrp.bom"
+        name="mrp_bom_structure_report_level_1.report_mrp_bs_l1"
+        file="mrp_bom_structure_report_level_1.report_mrp_bs_l1"
+        report_type="qweb-pdf"
+    />
+</odoo>

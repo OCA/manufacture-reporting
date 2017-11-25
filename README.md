@@ -16,6 +16,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[mrp_bom_structure_report_level_1](mrp_bom_structure_report_level_1/) | 10.0.1.0.0 | MRP BOM Structure Report Level 1
 [mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 10.0.1.0.0 | Export Bill of Materials Structure
 [mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 10.0.1.0.0 | Export BOM Structure (Level 1) to Excel .XLSX
 

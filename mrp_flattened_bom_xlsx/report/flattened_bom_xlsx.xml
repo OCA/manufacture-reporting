@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Eficent Business and IT Consulting Services S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="action_flattened_bom_xlsx" model="ir.actions.report.xml">
+        <field name="name">Export Flattened BOM Excel</field>
+        <field name="model">mrp.bom</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="report_name">flattened.bom.xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="auto" eval="False"/>
+    </record>
+
+    <record model="ir.values" id="action_flattened_bom_xlsx_values">
+        <field name="name">Export Flattened BOM Excel</field>
+        <field name="key2">client_action_multi</field>
+        <field name="value" eval="'ir.actions.report.xml,' +str(ref('action_flattened_bom_xlsx'))"/>
+        <field name="model">mrp.bom</field>
+    </record>
+
+</odoo>

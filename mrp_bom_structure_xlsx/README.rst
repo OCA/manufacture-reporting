@@ -9,17 +9,26 @@ Export BOM Structure to Excel .XLSX
 This module extends the functionality of the MRP capabilities of Odoo,
 and allow you to export the BOM structure to MS Excel .XLSX format.
 
+Installation
+============
+
+To install this module, you need to:
+
+#. Go to apps
+#. Look for mrp_bom_structure_xlsx module
+#. Click install
+
 Usage
 =====
 
 To use this module, you need to:
 
-Go to the Bill of Materials form or list views, press 'More > Export BOM
+Go to the Bill of Materials form or list views, press 'Print > Export BOM
 Structure to Excel'.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/10.0
+   :target: https://runbot.odoo-community.org/runbot/131/11.0
 
 Bug Tracker
 ===========

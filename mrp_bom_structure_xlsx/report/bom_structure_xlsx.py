@@ -1,25 +1,17 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 #   (http://www.eficent.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
-from odoo.report import report_sxw
+from odoo import models
 from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
-try:
-    from odoo.addons.report_xlsx.report.report_xlsx import ReportXlsx
-except ImportError:
-    _logger.debug("report_xlsx not installed, Excel export non functional")
 
-    class ReportXlsx(object):
-        def __init__(self, *args, **kwargs):
-            pass
-
-
-class BomStructureXlsx(ReportXlsx):
+class BomStructureXlsx(models.AbstractModel):
+    _name = 'report.mrp_bom_structure_xlsx.bom_structure_xlsx'
+    _inherit = 'report.report_xlsx.abstract'
 
     def print_bom_children(self, ch, sheet, row, level):
         i, j = row, level
@@ -27,8 +19,9 @@ class BomStructureXlsx(ReportXlsx):
         sheet.write(i, 1, '> '*j)
         sheet.write(i, 2, ch.product_id.default_code or '')
         sheet.write(i, 3, ch.product_id.display_name or '')
-        sheet.write(i, 4, ch.product_qty)
-        sheet.write(i, 5, ch.product_uom_id.name or '')
+        sheet.write(i, 4, ch.product_uom_id._compute_quantity(
+            ch.product_qty, ch.product_id.uom_id) or '')
+        sheet.write(i, 5, ch.product_id.uom_id.name or '')
         sheet.write(i, 6, ch.bom_id.code or '')
         i += 1
         for child in ch.child_line_ids:
@@ -38,7 +31,7 @@ class BomStructureXlsx(ReportXlsx):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties({
-            'comments': 'Created with Python and XlsxWriter from Odoo 9.0'})
+            'comments': 'Created with Python and XlsxWriter from Odoo 11.0'})
         sheet = workbook.add_worksheet(_('BOM Structure'))
         sheet.set_landscape()
         sheet.fit_to_pages(1, 0)
@@ -75,7 +68,3 @@ class BomStructureXlsx(ReportXlsx):
             j = 0
             for ch in o.bom_line_ids:
                 i = self.print_bom_children(ch, sheet, i, j)
-
-
-BomStructureXlsx('report.bom.structure.xlsx', 'mrp.bom',
-                 parser=report_sxw.rml_parse)

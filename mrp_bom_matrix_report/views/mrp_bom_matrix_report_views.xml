@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_bom_matrix_report__form_view" model="ir.ui.view">
+        <field name="name">mrp.bom.matrix.report.form</field>
+        <field name="model">mrp.bom.matrix.report</field>
+        <field name="arch" type="xml">
+            <form string="MRP BOM Matrix Report" create="0" delete="0">
+                <sheet>
+                    <group name="basic">
+                        <field name="parent_template_id"/>
+                        <field name="parent_category_id"/>
+                        <field name="component_id"/>
+                        <field name="count_parent_usage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mrp_bom_matrix_report_tree_view" model="ir.ui.view">
+        <field name="name">mrp.bom.matrix.report.tree</field>
+        <field name="model">mrp.bom.matrix.report</field>
+        <field name="arch" type="xml">
+            <tree string="MRP BOM Matrix Report" create="0" delete="0">
+                <field name="parent_template_id"/>
+                <field name="parent_category_id"/>
+                <field name="component_id"/>
+                <field name="count_parent_usage"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mrp_bom_matrix_report_pivot" model="ir.ui.view">
+        <field name="name">mrp.bom.matrix.report.pivot</field>
+        <field name="model">mrp.bom.matrix.report</field>
+        <field name="arch" type="xml">
+            <pivot string="MRP BOM Matrix Report">
+                <field name="parent_template_id" type="col"/>
+                <field name="component_id" type="row"/>
+                <field name="count_parent_usage" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="mrp_bom_matrix_report_search_view" model="ir.ui.view">
+        <field name="name">mrp.bom.matrix.report.search</field>
+        <field name="model">mrp.bom.matrix.report</field>
+        <field name="arch" type="xml">
+            <search string="Report MRP BOM Matrix">
+                <field name="parent_template_id"/>
+                <field name="parent_category_id"/>
+                <field name="component_id"/>
+                <field name="count_parent_usage"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_mrp_bom_matrix_report" model="ir.actions.act_window">
+        <field name="name">BOM Matrix</field>
+        <field name="res_model">mrp.bom.matrix.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="search_view_id" ref="mrp_bom_matrix_report_search_view"/>
+        <field name="view_id" ref="mrp_bom_matrix_report_tree_view"/>
+    </record>
+
+    <menuitem action="action_mrp_bom_matrix_report"
+              id="menu_mrp_bom_matrix_report"
+              name="BOM Matrix"
+              parent="mrp.menu_mrp_reporting"/>
+
+</odoo>

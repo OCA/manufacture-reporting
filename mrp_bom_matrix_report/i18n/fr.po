@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_bom_matrix_report
+#
+# Translators:
+# Quentin THEURET <odoo@kerpeo.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-15 03:40+0000\n"
+"PO-Revision-Date: 2018-02-15 03:40+0000\n"
+"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2018\n"
+"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_count_parent_usage
+msgid "# Uses in Parent"
+msgstr "# Utilisés dans le parent"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.actions.act_window,name:mrp_bom_matrix_report.action_mrp_bom_matrix_report
+#: model:ir.ui.menu,name:mrp_bom_matrix_report.menu_mrp_bom_matrix_report
+msgid "BOM Matrix"
+msgstr "Matrice de nomenclature"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_component_id
+msgid "Component Product"
+msgstr "Produit composant"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report__form_view
+#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_pivot
+#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_tree_view
+msgid "MRP BOM Matrix Report"
+msgstr "Rapport des matrices de nomenclatures"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_parent_category_id
+msgid "Parent Product Category"
+msgstr "Catégorie du produit parent"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_parent_template_id
+msgid "Parent Product Template"
+msgstr "Modèle du produit parent"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_search_view
+msgid "Report MRP BOM Matrix"
+msgstr "Rapport des matrices de nomenclatures"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model,name:mrp_bom_matrix_report.model_mrp_bom_matrix_report
+msgid "mrp.bom.matrix.report"
+msgstr "mrp.bom.matrix.report"

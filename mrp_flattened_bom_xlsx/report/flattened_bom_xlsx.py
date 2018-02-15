@@ -1,25 +1,17 @@
-# -*- coding: utf-8 -*-
-# Copyright 2017 Eficent Business and IT Consulting Services S.L.
+# Copyright 2018 Eficent Business and IT Consulting Services S.L.
 #   (http://www.eficent.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
-from odoo.report import report_sxw
+from odoo import models
 from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
-try:
-    from odoo.addons.report_xlsx.report.report_xlsx import ReportXlsx
-except ImportError:
-    _logger.debug("report_xlsx not installed, Excel export non functional")
 
-    class ReportXlsx(object):
-        def __init__(self, *args, **kwargs):
-            pass
-
-
-class FlattenedBomXlsx(ReportXlsx):
+class FlattenedBomXlsx(models.AbstractModel):
+    _name = 'report.mrp_flattened_bom_xlsx.flattened_bom_xlsx'
+    _inherit = 'report.report_xlsx.abstract'
 
     def print_flattened_bom_lines(self, bom, requirements, sheet, row):
         i = row
@@ -30,7 +22,7 @@ class FlattenedBomXlsx(ReportXlsx):
         sheet.write(i, 4, bom.product_uom_id.name or '')
         sheet.write(i, 5, bom.code or '')
         i += 1
-        for product, total_qty in requirements.iteritems():
+        for product, total_qty in requirements.items():
             sheet.write(i, 1, product.default_code or '')
             sheet.write(i, 2, product.display_name or '')
             sheet.write(i, 3, total_qty or 0.0)
@@ -41,7 +33,7 @@ class FlattenedBomXlsx(ReportXlsx):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties({
-            'comments': 'Created with Python and XlsxWriter from Odoo 10.0'})
+            'comments': 'Created with Python and XlsxWriter from Odoo 11.0'})
         sheet = workbook.add_worksheet(_('Flattened BOM'))
         sheet.set_landscape()
         sheet.fit_to_pages(1, 0)
@@ -68,7 +60,3 @@ class FlattenedBomXlsx(ReportXlsx):
         for o in objects:
             totals = o._get_flattened_totals()
             i = self.print_flattened_bom_lines(o, totals, sheet, i)
-
-
-FlattenedBomXlsx('report.flattened.bom.xlsx', 'mrp.bom',
-                 parser=report_sxw.rml_parse)

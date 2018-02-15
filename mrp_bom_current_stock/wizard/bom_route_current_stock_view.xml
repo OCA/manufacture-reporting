@@ -24,7 +24,6 @@
                             type="object"
                             string="Explode"
                             class="oe_highlight"/>
-                    or
                     <button special="cancel"
                             string="Cancel"/>
                 </footer>
@@ -53,7 +52,7 @@
                     </field>
                 </group>
                 <footer>
-                    <button name="%(mrp_bom_current_stock.action_report_bom_structure)d"
+                    <button name="%(mrp_bom_current_stock.action_report_bom_current_stock)d"
                             type="action" string="Print Report"
                             class="oe_highlight"/>
                     or

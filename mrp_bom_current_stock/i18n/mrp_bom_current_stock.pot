@@ -1,0 +1,221 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_bom_current_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "BOM Current Stock Report"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "BOM Ref"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
+#: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
+msgid "BoM Current Stock Explosion"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_bom_level
+msgid "BoM Level"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_bom_line
+msgid "BoM line"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock
+msgid "BoM: Current Stock Report"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
+msgid "Close"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_create_uid
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_create_date
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_display_name
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
+msgid "Explode"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_explosion_id
+msgid "Explosion"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
+msgid "Explosion result"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_id
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock___last_update
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_write_uid
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_write_date
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "Level"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_ids
+msgid "Line"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "Location"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
+msgid "Print Report"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "Product"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_qty
+msgid "Product Quantity"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_uom_id
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_uom_id
+msgid "Product Unit of Measure"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_id
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_id
+msgid "Product Variant"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "Qty Available (Location)"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_qty_available_in_source_loc
+msgid "Qty Available in Source"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_qty
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock
+msgid "Quantity"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
+msgid "Select product and location to explode"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
+msgid "Set the source location for every component."
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_location_id
+msgid "Source location"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_bom_id
+msgid "Starting Bill of Materials"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_location_id
+msgid "Starting location"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock_product_uom_id
+msgid "Unit of Measure (Unit of Measure) is the unit of measurement for the inventory control"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock
+msgid "mrp.bom.current.stock"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock_line
+msgid "mrp.bom.current.stock.line"
+msgstr ""
+
+#. module: mrp_bom_current_stock
+#: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
+msgid "or"
+msgstr ""
+

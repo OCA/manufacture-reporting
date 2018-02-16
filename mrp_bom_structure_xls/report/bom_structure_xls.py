@@ -37,7 +37,7 @@ class BomStructureInh(bom_structure):
                         level -= 1
             return result
 
-        children = _get_rec(object,level)
+        children = _get_rec(object, level)
 
         return children
 

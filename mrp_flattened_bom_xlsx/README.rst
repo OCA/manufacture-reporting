@@ -24,10 +24,12 @@ Usage
 
 To use this module, you need to:
 
-#. Go to 'Manufacturing / Products / Bill of Materials'
-#. Select a BOM or more BOMS
-*(Could be interesting to modify quantities of these BOMs)*
-#. Go to 'Action / Export Flattened BOM to Excel'.
+1. Go to 'Manufacturing / Products / Bill of Materials'
+
+2. Select a BOM or more *(Could be interesting to modify quantities of these BOMs)*
+
+3. Go to 'Action / Export Flattened BOM to Excel'.
+
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

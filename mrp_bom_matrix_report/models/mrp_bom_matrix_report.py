@@ -2,24 +2,34 @@
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, fields
-from openerp import tools
+from odoo import api, fields, models
+from odoo import tools
 
 
-class ReportMrpBomMatrix(models.Model):
-    _name = 'report.mrp.bom.matrix'
+class MrpBomMatrixReport(models.Model):
+    _name = 'mrp.bom.matrix.report'
     _auto = False
 
-    component_id = fields.Many2one(comodel_name='product.product',
-                                   string='Component Product', readonly=True)
-    parent_template_id = fields.Many2one(comodel_name='product.template',
-                                         string='Parent Product Template',
-                                         readonly=True)
-    parent_category_id = fields.Many2one(comodel_name='product.category',
-                                         string='Parent Product Category',
-                                         store=True, readonly=True)
-    count_parent_usage = fields.Integer(string='# Uses in Parent',
-                                        readonly=True)
+    component_id = fields.Many2one(
+        comodel_name='product.product',
+        string='Component Product',
+        readonly=True,
+    )
+    parent_template_id = fields.Many2one(
+        comodel_name='product.template',
+        string='Parent Product Template',
+        readonly=True,
+    )
+    parent_category_id = fields.Many2one(
+        comodel_name='product.category',
+        string='Parent Product Category',
+        store=True,
+        readonly=True,
+    )
+    count_parent_usage = fields.Integer(
+        string='# Uses in Parent',
+        readonly=True,
+    )
 
     def _select(self):
         select_str = """
@@ -91,13 +101,21 @@ class ReportMrpBomMatrix(models.Model):
         where_str = """"""
         return where_str
 
-    def init(self, cr):
-        tools.drop_view_if_exists(cr, self._table)
+    @api.model_cr
+    def init(self):
+        tools.drop_view_if_exists(self._cr, self._table)
         # pylint: disable=E8103
-        cr.execute("""CREATE or REPLACE VIEW %s as (
-            %s
-            %s
-            %s
-            %s
-            )""" % (self._table, self._select(), self._from(), self._where(),
-                    self._group_by()))
+        self._cr.execute(
+            """CREATE or REPLACE VIEW {} as (
+            {}
+            {}
+            {}
+            {}
+            )""".format(
+                self._table,
+                self._select(),
+                self._from(),
+                self._where(),
+                self._group_by(),
+            )
+        )

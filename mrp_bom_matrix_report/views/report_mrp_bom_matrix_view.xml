@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="report_mrp_bom_form_view" model="ir.ui.view">
-        <field name="name">report.mrp.bom.matrix.form</field>
-        <field name="model">report.mrp.bom.matrix</field>
+        <field name="name">mrp.bom.matrix.report.form</field>
+        <field name="model">mrp.bom.matrix.report</field>
         <field name="arch" type="xml">
             <form string="Report MRP BOM Matrix">
                 <group name="basic" create="0" delete="0">
@@ -16,8 +17,8 @@
     </record>
 
     <record id="report_mrp_bom_tree_view" model="ir.ui.view">
-        <field name="name">report.mrp.bom.matrix.tree</field>
-        <field name="model">report.mrp.bom.matrix</field>
+        <field name="name">mrp.bom.matrix.report.tree</field>
+        <field name="model">mrp.bom.matrix.report</field>
         <field name="arch" type="xml">
             <tree string="Report MRP BOM Matrix" create="0" delete="0">
                 <field name="parent_template_id"/>
@@ -29,8 +30,8 @@
     </record>
 
     <record id="report_mrp_bom_matrix_pivot" model="ir.ui.view">
-        <field name="name">report.mrp.bom.matrix.pivot</field>
-        <field name="model">report.mrp.bom.matrix</field>
+        <field name="name">mrp.bom.matrix.report.pivot</field>
+        <field name="model">mrp.bom.matrix.report</field>
         <field name="arch" type="xml">
             <pivot string="Report MRP BOM Matrix" create="0" delete="0">
                 <field name="parent_template_id" type="col"/>
@@ -41,8 +42,8 @@
     </record>
 
     <record id="report_mrp_bom_search_view" model="ir.ui.view">
-        <field name="name">report.mrp.bom.matrix.search</field>
-        <field name="model">report.mrp.bom.matrix</field>
+        <field name="name">mrp.bom.matrix.report.search</field>
+        <field name="model">mrp.bom.matrix.report</field>
         <field name="arch" type="xml">
             <search string="Report MRP BOM Matrix">
                 <field name="parent_template_id"/>
@@ -55,7 +56,7 @@
 
     <record id="action_report_mrp_bom_matrix" model="ir.actions.act_window">
         <field name="name">BOM Matrix</field>
-        <field name="res_model">report.mrp.bom.matrix</field>
+        <field name="res_model">mrp.bom.matrix.report</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form,pivot</field>
         <field name="search_view_id" ref="report_mrp_bom_search_view"/>

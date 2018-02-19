@@ -1,4 +1,4 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+.. image:: https://img.shields.io/badge/license-AGPL--3-blue.png
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
@@ -14,7 +14,7 @@ Usage
 
 To use this module, you need to:
 
-#. Go to *Manufacturing > BoM Current Stock Explosion*.
+#. Go to *Manufacturing > Master Data > BoM Current Stock Explosion*.
 #. Select Product, BoM and location and click on *Explode*.
 #. Set the proper location (if desired) for all the components displayed if you
    haven't done so in the related BoMs.
@@ -22,7 +22,7 @@ To use this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/129/9.0
+   :target: https://runbot.odoo-community.org/runbot/129/10.0
 
 Bug Tracker
 ===========

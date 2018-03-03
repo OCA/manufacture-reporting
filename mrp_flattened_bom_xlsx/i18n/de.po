@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_flattened_bom_xlsx
+# 
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-22 12:13+0000\n"
+"PO-Revision-Date: 2018-02-22 12:13+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:56
+#, python-format
+msgid "BOM Name"
+msgstr "SL-Name"
+
+#. module: mrp_flattened_bom_xlsx
+#: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: model:ir.actions.report.xml,name:mrp_flattened_bom_xlsx.action_flattened_bom_xlsx
+msgid "Export Flattened BOM Excel"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:45
+#, python-format
+msgid "Flattened BOM"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:58
+#, python-format
+msgid "Product Name"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:57
+#, python-format
+msgid "Product Reference"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:59
+#, python-format
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:61
+#, python-format
+msgid "Reference"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:60
+#, python-format
+msgid "Unit of Measure"
+msgstr ""

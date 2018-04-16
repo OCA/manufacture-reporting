@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="mrp_order_report_stock_location"
+              inherit_id="mrp.report_mrporder">
+        <xpath expr="//table/thead/tr/th[@class='text-right']"
+               position="after">
+            <th groups="stock.group_stock_multi_locations">
+                <strong>Location</strong>
+            </th>
+        </xpath>
+        <xpath expr="//table/tbody/t/tr/td[@class='text-right']"
+               position="after">
+            <td>
+                <t t-foreach="line.move_line_ids" t-as="ml">
+                    <span t-field="ml.location_id"
+                          groups="stock.group_stock_multi_locations"/>
+                </t>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Eficent Business and IT Consulting Services S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+        <report
+        id="bom_structure_xlsx_l1"
+        model="mrp.bom"
+        string="Export BOM Structure (Level 1) to Excel"
+        report_type="xlsx"
+        name="mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
+        file="mrp_bom"
+        attachment_use="False"
+    />
+
+</odoo>

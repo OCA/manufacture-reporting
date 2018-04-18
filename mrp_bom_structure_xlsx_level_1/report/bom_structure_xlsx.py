@@ -1,27 +1,17 @@
-# -*- coding: utf-8 -*-
-# Copyright 2016-2017 Eficent Business and IT Consulting Services S.L.
+# Copyright 2018 Eficent Business and IT Consulting Services S.L.
 #   (http://www.eficent.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
 
-from odoo.report import report_sxw
 from odoo.addons.mrp_bom_structure_xlsx.report.bom_structure_xlsx import \
     BomStructureXlsx
 
 _logger = logging.getLogger(__name__)
 
-try:
-    from openerp.addons.report_xlsx.report.report_xlsx import ReportXlsx
-except ImportError:
-    _logger.debug("report_xlsx not installed, Excel export non functional")
-
-    class ReportXlsx(object):
-        def __init__(self, *args, **kwargs):
-            pass
-
 
 class BomStructureXlsxL1(BomStructureXlsx):
+    _name = 'report.mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1'
 
     def print_bom_children(self, ch, sheet, row, level):
         i, j = row, level
@@ -34,7 +24,3 @@ class BomStructureXlsxL1(BomStructureXlsx):
         sheet.write(i, 6, ch.bom_id.code or '')
         i += 1
         return i
-
-
-BomStructureXlsxL1('report.bom.structure.xlsx.l1', 'mrp.bom',
-                   parser=report_sxw.rml_parse)

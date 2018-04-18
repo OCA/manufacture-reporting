@@ -1,4 +1,4 @@
-.. image:: https://img.shields.io/badge/license-AGPLv3-blue.svg
+.. image:: https://img.shields.io/badge/license-AGPLv3-blue.png
    :target: https://www.gnu.org/licenses/agpl.html
    :alt: License: AGPL-3
 
@@ -17,11 +17,11 @@ To use this module, you need to:
 
 #. Go to 'Manufacturing / Products / Bill of Materials'
 #. Select a BOM or more BOMS
-#. Go to 'Action / Export BOM Structure (Level 1) to Excel'.
+#. Go to 'Print / Export BOM Structure (Level 1) to Excel'.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/10.0
+   :target: https://runbot.odoo-community.org/runbot/131/11.0
 
 Bug Tracker
 ===========
@@ -37,7 +37,7 @@ Credits
 Images
 ------
 
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
+* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.png>`_.
 
 Contributors
 ------------

@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-manufacture-reporting Odoo addons",
     version=version,
     install_requires=[
+        'odoo10-addon-mrp_bom_current_stock',
         'odoo10-addon-mrp_bom_matrix_report',
         'odoo10-addon-mrp_bom_structure_report_level_1',
         'odoo10-addon-mrp_bom_structure_xlsx',

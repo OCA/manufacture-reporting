@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo11-addon-mrp_bom_structure_xlsx',
         'odoo11-addon-mrp_bom_structure_xlsx_level_1',
         'odoo11-addon-mrp_flattened_bom_xlsx',
+        'odoo11-addon-mrp_order_report_stock_location',
     ],
     classifiers=[
         'Programming Language :: Python',

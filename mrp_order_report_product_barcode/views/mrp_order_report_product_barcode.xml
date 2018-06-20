@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="mrp_order_report_product_barcode"
+              inherit_id="mrp.report_mrporder">
+        <xpath expr="//table/thead/tr/th[@class='text-right']"
+               position="after">
+            <th class="text-center"><strong>Barcode</strong></th>
+        </xpath>
+        <xpath expr="//table/tbody/t/tr/td[@class='text-right']"
+               position="after">
+            <td class="text-center">
+                <t t-if="line.product_id.tracking == 'none'">
+                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.barcode, 300, 50)" style="width:300px;height:50px;margin-top:50px"/>
+                </t>
+                <t t-else="">
+                    <t t-foreach="line.active_move_line_ids" t-as="mline">
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', mline.lot_id.name, 300, 50)" style="width:300px;height:50px;margin-top:50px"/>
+                    </t>
+                </t>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

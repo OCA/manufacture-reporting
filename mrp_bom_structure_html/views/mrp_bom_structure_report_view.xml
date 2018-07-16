@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_mrp_bom_structure">
+        <t t-call="mrp.mrp_bom_structure_report"/>
+    </template>
+
+     <report
+      id="action_report_mrp_bom_structure"
+      model="mrp.bom"
+      string="BoM Structure Preview"
+      report_type="qweb-html"
+      name="mrp.mrp_bom_structure_report"
+      file="mrp.mrp_bom_structure_report"
+      />
+
+</odoo>

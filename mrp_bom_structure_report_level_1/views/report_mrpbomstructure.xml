@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<template id="report_mrp_bs_l1">
-    <t t-call="report.html_container">
-        <t t-call="report.internal_layout">
+<template id="mrp_bs_l1">
+    <t t-call="web.html_container">
+        <t t-call="web.internal_layout">
             <div class="page">
                 <h2>BOM Structure</h2>
                 <table class="table table-condensed">
@@ -18,11 +18,11 @@
                             <tr style="font-weight: bold;">
                                 <td>
                                     <span t-field="o.product_id.default_code"/>
-                                    <span t-field="o.product_tmpl_id.name"/>
+                                    <span t-field="o.display_name"/>
                                 </td>
                                 <td>
                                     <span t-field="o.product_qty"/>
-                                    <span groups="product.group_uom" t-field="o.product_uom.name"/>
+                                    <span groups="product.group_uom" t-field="o.product_uom_id.name"/>
                                 </td>
                                 <td>
                                     <span t-field="o.code"/>
@@ -34,7 +34,7 @@
                                     <span t-esc="l['pname']"/>
                                 </td>
                                 <td>
-                                    <span t-esc="formatLang(l['pqty'])"/>
+                                    <span t-esc="l['pqty']"/>
                                     <span t-esc="l['uname']" groups="product.group_uom"/>
                                 </td>
                                 <td>

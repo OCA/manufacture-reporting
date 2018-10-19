@@ -11,8 +11,11 @@ class MrpBom(models.Model):
 
     @api.multi
     def _get_flattened_totals(self, factor=1, totals=None):
-        """
-        Generate a summary of product quantities as a dict of flattened BOM
+        """Calculate the **unitary** product requirements of flattened BOM.
+        *Unit* means that the requirements are computed for one unit of the
+        default UoM of the product.
+        :returns: dict: keys are components and values are aggregated quantity
+        in the product default UoM.
         """
         self.ensure_one()
         if totals is None:

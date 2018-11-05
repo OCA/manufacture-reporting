@@ -58,5 +58,8 @@ class FlattenedBomXlsx(models.AbstractModel):
         i = 2
 
         for o in objects:
-            totals = o._get_flattened_totals()
+            # We need to calculate the totals for the BoM qty and UoM:
+            starting_factor = o.product_uom_id._compute_quantity(
+                o.product_qty, o.product_tmpl_id.uom_id, round=False)
+            totals = o._get_flattened_totals(factor=starting_factor)
             i = self.print_flattened_bom_lines(o, totals, sheet, i)

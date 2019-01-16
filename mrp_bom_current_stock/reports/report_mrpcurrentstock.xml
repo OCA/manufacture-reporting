@@ -22,8 +22,7 @@
                                 <tr style="font-weight: bold;">
                                     <td>0</td>
                                     <td>
-                                        <span t-field="o.product_id.default_code"/>
-                                        <span t-field="o.product_id.name"/>
+                                        <span t-field="o.product_id.display_name"/>
                                     </td>
                                     <td>
                                         <span t-field="o.product_qty"/>
@@ -46,7 +45,7 @@
                                     <td>
                                         <span style="color: white;"
                                               t-esc="'... '*(l.bom_level)"/>
-                                        <span t-esc="l.product_id.name"/>
+                                        <span t-esc="l.product_id.display_name"/>
                                     </td>
                                     <td>
                                         <span t-esc="l.product_qty"/>

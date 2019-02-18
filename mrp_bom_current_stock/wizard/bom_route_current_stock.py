@@ -54,15 +54,14 @@ class BomRouteCurrentStock(models.TransientModel):
             self.location_id = self.bom_id.location_id
 
     @api.model
-    def _prepare_line(self, bom_line, level, factor):
+    def _prepare_line(self, bom_line, location, level, factor):
         return {
             'product_id': bom_line.product_id.id,
             'bom_line': bom_line.id,
             'bom_level': level,
             'product_qty': bom_line.product_qty * factor,
             'product_uom_id': bom_line.product_uom_id.id,
-            'location_id': (bom_line.location_id.id
-                            if bom_line.location_id else False),
+            'location_id': location.id if location else False,
             'explosion_id': self.id,
         }
 
@@ -71,25 +70,22 @@ class BomRouteCurrentStock(models.TransientModel):
         self.ensure_one()
         line_obj = self.env['mrp.bom.current.stock.line']
 
-        def _create_lines(bom, level=0, factor=1):
+        def _create_lines(bom, location, level=0, factor=1):
             level += 1
             for line in bom.bom_line_ids:
-                vals = self._prepare_line(line, level, factor)
+                vals = self._prepare_line(line, location, level, factor)
                 line_obj.create(vals)
-                location = line.location_id
                 line_boms = line.product_id.bom_ids
-                bom = line_boms.filtered(
-                    lambda bom: bom.location_id == location
-                ) or line_boms.filtered(lambda b: not b.location_id)
-                if bom:
+                if line_boms:
                     line_qty = line.product_uom_id._compute_quantity(
                         line.product_qty,
                         bom.product_uom_id,
                     )
                     new_factor = factor * line_qty / bom.product_qty
-                    _create_lines(bom[0], level, new_factor)
+                    for line_bom in line_boms:
+                        _create_lines(line_bom, location, level, new_factor)
 
-        _create_lines(self.bom_id)
+        _create_lines(self.bom_id, self.location_id)
         return {
             'type': 'ir.actions.act_window',
             'name': 'Open lines',
@@ -109,6 +105,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
 
     explosion_id = fields.Many2one(
         comodel_name='mrp.bom.current.stock',
+        readonly=True
     )
     product_id = fields.Many2one(
         comodel_name='product.product',
@@ -136,13 +133,18 @@ class BomRouteCurrentStockLine(models.TransientModel):
     bom_line = fields.Many2one(
         comodel_name="mrp.bom.line",
         string="BoM line",
+        redonly=True
     )
     qty_available_in_source_loc = fields.Float(
         string="Qty Available in Source",
         compute="_compute_qty_available_in_source_loc",
+        redonly=True
     )
+    bom_id = fields.Many2one(comodel_name="mrp.bom", string="Parent BoM",
+                             related='bom_line.bom_id', redonly=True)
 
     @api.multi
+    @api.onchange('location_id')
     def _compute_qty_available_in_source_loc(self):
         for record in self:
             product_available = record.product_id.with_context(

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <template id="report_mrpbom_current_stock">
+    <template id="report_mrpbom_current_stock_pdf">
         <t t-call="web.html_container">
             <t t-call="web.internal_layout">
                 <div class="page">
@@ -10,12 +10,17 @@
                          <table class="table table-condensed">
                             <thead>
                                 <tr>
+                                    <th>Location:</th>
+                                    <td>
+                                        <span t-field="o.location_id.display_name"/>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th>Level</th>
                                     <th>Product</th>
                                     <th>Quantity</th>
                                     <th>Location</th>
                                     <th>Qty Available (Location)</th>
-                                    <th>BOM Ref</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,13 +34,7 @@
                                         <span groups="product.group_uom" t-field="o.product_uom_id.name"/>
                                     </td>
                                     <td>
-                                        <span t-field="o.location_id.name"/>
-                                    </td>
-                                    <td>
                                         <span/>
-                                    </td>
-                                    <td>
-                                        <span t-field="o.bom_id.code"/>
                                     </td>
                                 </tr>
                                 <tr t-foreach="o.line_ids" t-as="l">
@@ -53,15 +52,12 @@
                                               groups="product.group_uom"/>
                                     </td>
                                     <td>
-                                        <span t-field="l.location_id.name"/>
+                                        <span t-field="l.location_id.display_name"/>
                                     </td>
                                     <td>
                                         <span t-field="l.qty_available_in_source_loc"/>
                                         <span t-esc="l.product_uom_id.name"
                                               groups="product.group_uom"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="l.bom_line.bom_id.code"/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -73,10 +69,20 @@
     </template>
 
     <report
-        string="BoM: Current Stock Report"
-        id="action_report_bom_current_stock"
+        string="BoM: Current Stock Report PDF"
+        id="action_report_bom_current_stock_pdf"
         model="mrp.bom.current.stock"
-        name="mrp_bom_current_stock.report_mrpbom_current_stock"
+        name="mrp_bom_current_stock.report_mrpbom_current_stock_pdf"
         report_type="qweb-pdf"/>
+
+    <report
+        id="action_report_bom_current_stock_xlsx"
+        model="mrp.bom.current.stock"
+        string="BoM: Current Stock Report XLSX"
+        report_type="xlsx"
+        name="mrp_bom_current_stock.report_mrpbom_current_stock_xlsx"
+        file="mrp_bom"
+        attachment_use="False"
+    />
 
 </odoo>

@@ -19,6 +19,7 @@
                                     <th>Level</th>
                                     <th>Product</th>
                                     <th>Quantity</th>
+                                    <th>Location</th>
                                     <th>Qty Available (Location)</th>
                                 </tr>
                             </thead>
@@ -49,6 +50,9 @@
                                         <span t-esc="l.product_qty"/>
                                         <span t-esc="l.product_uom_id.name"
                                               groups="product.group_uom"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="l.location_id.display_name"/>
                                     </td>
                                     <td>
                                         <span t-field="l.qty_available_in_source_loc"/>

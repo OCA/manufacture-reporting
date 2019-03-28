@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo11-addon-mrp_bom_current_stock',
         'odoo11-addon-mrp_bom_matrix_report',
         'odoo11-addon-mrp_bom_structure_html',
+        'odoo11-addon-mrp_bom_structure_report',
         'odoo11-addon-mrp_bom_structure_report_level_1',
         'odoo11-addon-mrp_bom_structure_xlsx',
         'odoo11-addon-mrp_bom_structure_xlsx_level_1',

@@ -1,228 +1,222 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * mrp_bom_current_stock
+#	* mrp_bom_current_stock
 #
-# Translators:
-# Quentin THEURET <odoo@kerpeo.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-15 03:59+0000\n"
-"PO-Revision-Date: 2018-02-15 03:59+0000\n"
-"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2018\n"
-"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
-"Language: fr\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "BOM Ref"
-msgstr "Ref. nomenclature"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "BOM Stock Report"
-msgstr "Rapport de stock des nomenclatures"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
 #: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
 msgid "BoM Current Stock Explosion"
-msgstr "Explosion en stock de la nomenclature actuelle"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_bom_level
 msgid "BoM Level"
-msgstr "Niveau de nomenclature"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_bom_line
 msgid "BoM line"
-msgstr "Ligne de nomenclature"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report.xml,name:mrp_bom_current_stock.action_report_bom_structure
 msgid "BoM: Current Stock Report"
-msgstr "Rapport de stock de la nomenclature actuelle"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_create_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_create_uid
 msgid "Created by"
-msgstr "Créé par"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_create_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_create_date
 msgid "Created on"
-msgstr "Créé le"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_display_name
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_display_name
 msgid "Display Name"
-msgstr "Nom affiché"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Explode"
-msgstr "Exploser"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_explosion_id
 msgid "Explosion id"
-msgstr "id de l'explosion"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Explosion result"
-msgstr "Résultat de l'explosion"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock___last_update
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line___last_update
 msgid "Last Modified on"
-msgstr "Dernière modification le"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_write_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_write_uid
 msgid "Last Updated by"
-msgstr "Dernière mise à jour par"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_write_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_write_date
 msgid "Last Updated on"
-msgstr "Dernière mise à jour le"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "Level"
-msgstr "Niveau"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_ids
 msgid "Line ids"
-msgstr "Ids des lignes"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "Location"
-msgstr "Emplacement"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Print Report"
-msgstr "Imprimer le rapport"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "Product"
-msgstr "Produit"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_qty
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_qty
 msgid "Product Quantity"
-msgstr "Quantité de produit"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_tmpl_id
 msgid "Product Template"
-msgstr "Modèle de produit"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_uom_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_uom_id
 msgid "Product Unit of Measure"
-msgstr "Unité de mesure du produit"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_product_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_id
 msgid "Product Variant"
-msgstr "Variante du produit"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "Qty Available (Location)"
-msgstr "Quantité disponible (Emplacement)"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_qty_available_in_source_loc
 msgid "Qty Available in Source"
-msgstr "Quantité disponible dans la source"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbomstructure
 msgid "Quantity"
-msgstr "Quantité"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Select product and location to explode"
-msgstr "Sélectionner le produit et l'emplacement pour exploser"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Set the source location for every component."
-msgstr "Définir l'emplacement source pour tous les composants"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line_location_id
 msgid "Source location"
-msgstr "Emplacement source"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_bom_id
 msgid "Starting Bill of Materials"
-msgstr "Démarrage des nomenclatures"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_location_id
 msgid "Starting location"
-msgstr "Emplacement de démarrage"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock_product_uom_id
-msgid ""
-"Unit of Measure (Unit of Measure) is the unit of measurement for the "
-"inventory control"
-msgstr "L'unité de mesure est l'unité de mesure pour le contrôle d'inventaire"
+msgid "Unit of Measure (Unit of Measure) is the unit of measurement for the inventory control"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock
 msgid "mrp.bom.current.stock"
-msgstr "mrp.bom.current.stock"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock_line
 msgid "mrp.bom.current.stock.line"
-msgstr "mrp.bom.current.stock.line"
+msgstr ""
 
 #. module: mrp_bom_current_stock
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "or"
-msgstr "ou"
+msgstr ""
+

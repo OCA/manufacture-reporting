@@ -38,6 +38,11 @@ msgid "Attachments"
 msgstr ""
 
 #. module: mrp_bom_structure_report
+#: model:ir.actions.report,name:mrp_bom_structure_report.action_report_bom_structure
+msgid "BOM Structure & Cost"
+msgstr ""
+
+#. module: mrp_bom_structure_report
 #: model:ir.model,name:mrp_bom_structure_report.model_report_mrp_bom_structure_report_report_bom_structure
 msgid "BOM Structure Report"
 msgstr ""
@@ -58,7 +63,6 @@ msgstr ""
 #. module: mrp_bom_structure_report
 #. openerp-web
 #: code:addons/mrp_bom_structure_report/static/src/xml/mrp.xml:32
-#: model:ir.actions.report,name:mrp_bom_structure_report.action_report_bom_structure
 #, python-format
 msgid "BoM Structure"
 msgstr ""

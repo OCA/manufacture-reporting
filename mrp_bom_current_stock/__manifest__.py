@@ -6,7 +6,7 @@
     "name": "MRP BoM Current Stock",
     "summary": "Add a report that explodes the bill of materials and show the "
                "stock available in the source location.",
-    "version": "11.0.2.0.0",
+    "version": "11.0.2.0.1",
     "category": "Manufacture",
     "website": "https://github.com/OCA/manufacture-reporting",
     "author": "Eficent, Odoo Community Association (OCA)",

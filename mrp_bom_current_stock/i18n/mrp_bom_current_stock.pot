@@ -32,7 +32,7 @@ msgid "BoM Level"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:50
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:51
 #, python-format
 msgid "BoM Reference"
 msgstr ""
@@ -128,7 +128,7 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:49
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:50
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Level"
@@ -140,7 +140,7 @@ msgid "Line"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:54
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:56
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Location"
@@ -157,13 +157,13 @@ msgid "Parent BoM"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:56
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:57
 #, python-format
 msgid "Parent BoM Ref"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:57
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:58
 #, python-format
 msgid "Parent Product Ref"
 msgstr ""
@@ -184,7 +184,7 @@ msgid "Product Quantity"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:51
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:52
 #, python-format
 msgid "Product Reference"
 msgstr ""
@@ -207,7 +207,7 @@ msgid "Product Variant"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:55
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:54
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Qty Available (Location)"
@@ -219,7 +219,7 @@ msgid "Qty Available in Source"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:52
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:53
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_product_qty
 #: model:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
@@ -257,7 +257,7 @@ msgid "Unit of Measure (Unit of Measure) is the unit of measurement for the inve
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:53
+#: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:55
 #, python-format
 msgid "UoM"
 msgstr ""

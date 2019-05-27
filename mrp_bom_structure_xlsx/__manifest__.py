@@ -4,7 +4,7 @@
 
 {
     'name': "Export BOM Structure to Excel .XLSX",
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Manufacturing',
     'summary': 'Export Bill of Materials Structure',
     'author': "Eficent, Odoo Community Association (OCA)",

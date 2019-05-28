@@ -14,7 +14,7 @@ class TestFlattenedBom(common.SavepointCase):
         cls.bom_obj = cls.env['mrp.bom']
         cls.bom_line_obj = cls.env['mrp.bom.line']
 
-        cls.uom_dozen = cls.env.ref('product.product_uom_dozen')
+        cls.uom_dozen = cls.env.ref('uom.product_uom_dozen')
 
         # Create products:
         cls.product_top = cls.product_obj.create({

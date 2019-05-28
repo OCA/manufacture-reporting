@@ -31,7 +31,7 @@ msgid "BOM Structure"
 msgstr "Struktur-SL"
 
 #. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx_display_name
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -41,12 +41,12 @@ msgid "Export BOM Structure to Excel"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx_id
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx__id
 msgid "ID"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx___last_update
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx____last_update
 msgid "Last Modified on"
 msgstr ""
 

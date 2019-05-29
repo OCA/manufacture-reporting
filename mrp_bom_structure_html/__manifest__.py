@@ -4,7 +4,7 @@
 
 {
     'name': "Preview BOM Structure to HTML",
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Manufacturing',
     'summary': 'Preview Bill of Materials Structure',
     'author': "Eficent, Odoo Community Association (OCA)",

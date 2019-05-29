@@ -2,7 +2,7 @@
 <odoo>
 
     <template id="report_mrp_bom_structure">
-        <t t-call="mrp.mrp_bom_structure_report"/>
+        <t t-call="mrp.report_bom_structure"/>
     </template>
 
      <report
@@ -10,8 +10,8 @@
       model="mrp.bom"
       string="BoM Structure Preview"
       report_type="qweb-html"
-      name="mrp.mrp_bom_structure_report"
-      file="mrp.mrp_bom_structure_report"
+      name="mrp.report_bom_structure"
+      file="mrp.report_bom_structure"
       />
 
 </odoo>

@@ -14,11 +14,11 @@ class TestMRPBomCurrentStock(common.SavepointCase):
         cls.bom_obj = cls.env['mrp.bom']
         cls.bom_line_obj = cls.env['mrp.bom.line']
 
-        cls.uom_unit = cls.env.ref('product.product_uom_unit')
-        cls.uom_dozen = cls.env.ref('product.product_uom_dozen')
-        cls.uom_meter = cls.env.ref('product.product_uom_meter')
-        cls.uom_kgm = cls.env.ref('product.product_uom_kgm')
-        cls.uom_gm = cls.env.ref("product.product_uom_gram")
+        cls.uom_unit = cls.env.ref('uom.product_uom_unit')
+        cls.uom_dozen = cls.env.ref('uom.product_uom_dozen')
+        cls.uom_meter = cls.env.ref('uom.product_uom_meter')
+        cls.uom_kgm = cls.env.ref('uom.product_uom_kgm')
+        cls.uom_gm = cls.env.ref('uom.product_uom_gram')
 
         cls.stock_loc = cls.env.ref('stock.stock_location_stock')
 

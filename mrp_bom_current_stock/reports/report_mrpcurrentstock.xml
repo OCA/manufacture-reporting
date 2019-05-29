@@ -31,7 +31,7 @@
                                     </td>
                                     <td>
                                         <span t-field="o.product_qty"/>
-                                        <span groups="product.group_uom" t-field="o.product_uom_id.name"/>
+                                        <span groups="uom.group_uom" t-field="o.product_uom_id.name"/>
                                     </td>
                                     <td>
                                         <span/>
@@ -49,7 +49,7 @@
                                     <td>
                                         <span t-esc="l.product_qty"/>
                                         <span t-esc="l.product_uom_id.name"
-                                              groups="product.group_uom"/>
+                                              groups="uom.group_uom"/>
                                     </td>
                                     <td>
                                         <span t-field="l.location_id.display_name"/>
@@ -57,7 +57,7 @@
                                     <td>
                                         <span t-field="l.qty_available_in_source_loc"/>
                                         <span t-esc="l.product_uom_id.name"
-                                              groups="product.group_uom"/>
+                                              groups="uom.group_uom"/>
                                     </td>
                                 </tr>
                             </tbody>

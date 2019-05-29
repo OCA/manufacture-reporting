@@ -8,6 +8,7 @@ from odoo.addons import decimal_precision as dp
 
 class BomRouteCurrentStock(models.TransientModel):
     _name = "mrp.bom.current.stock"
+    _description = 'MRP Bom Route Current Stock'
 
     bom_id = fields.Many2one(
         comodel_name="mrp.bom",
@@ -30,7 +31,7 @@ class BomRouteCurrentStock(models.TransientModel):
         digits=dp.get_precision('Product Unit of Measure'),
     )
     product_uom_id = fields.Many2one(
-        comodel_name="product.uom",
+        comodel_name="uom.uom",
         related="bom_id.product_uom_id",
     )
     location_id = fields.Many2one(
@@ -106,6 +107,7 @@ class BomRouteCurrentStock(models.TransientModel):
 
 class BomRouteCurrentStockLine(models.TransientModel):
     _name = "mrp.bom.current.stock.line"
+    _description = 'MRP Bom Route Current Stock Line'
 
     explosion_id = fields.Many2one(
         comodel_name='mrp.bom.current.stock',
@@ -126,7 +128,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
         digits=dp.get_precision('Product Unit of Measure'),
     )
     product_uom_id = fields.Many2one(
-        comodel_name='product.uom',
+        comodel_name='uom.uom',
         string='Product Unit of Measure',
         readonly=True,
     )

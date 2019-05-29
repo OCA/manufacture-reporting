@@ -47,7 +47,7 @@
                             <field name="product_qty" readonly="1"/>
                             <field name="qty_available_in_source_loc" readonly="1"/>
                             <field name="product_uom_id"
-                                   groups="product.group_uom" readonly="1"/>
+                                   groups="uom.group_uom" readonly="1"/>
                             <field name="location_id"/>
                             <field name="bom_id" readonly="1"/>
                         </tree>

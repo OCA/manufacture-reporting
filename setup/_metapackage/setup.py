@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-mrp_bom_current_stock',
+        'odoo12-addon-mrp_bom_matrix_report',
         'odoo12-addon-mrp_bom_structure_xlsx',
         'odoo12-addon-mrp_flattened_bom_xlsx',
     ],

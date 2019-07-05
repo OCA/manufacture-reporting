@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_count_parent_usage
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__count_parent_usage
 msgid "# Uses in Parent"
 msgstr "# Utilisés dans le parent"
 
@@ -30,44 +30,44 @@ msgid "BOM Matrix"
 msgstr "Matrice de nomenclature"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_component_id
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__component_id
 msgid "Component Product"
 msgstr "Produit composant"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_display_name
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__display_name
 msgid "Display Name"
 msgstr "Nom affiché"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_id
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__id
 msgid "ID"
 msgstr "ID"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report___last_update
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report____last_update
 msgid "Last Modified on"
 msgstr "Dernière modification le"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report__form_view
-#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_pivot
-#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_tree_view
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report__form_view
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_pivot
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_tree_view
 msgid "MRP BOM Matrix Report"
 msgstr "Rapport des matrices de nomenclatures"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_parent_category_id
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__parent_category_id
 msgid "Parent Product Category"
 msgstr "Catégorie du produit parent"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report_parent_template_id
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__parent_template_id
 msgid "Parent Product Template"
 msgstr "Modèle du produit parent"
 
 #. module: mrp_bom_matrix_report
-#: model:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_search_view
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_search_view
 msgid "Report MRP BOM Matrix"
 msgstr "Rapport des matrices de nomenclatures"
 

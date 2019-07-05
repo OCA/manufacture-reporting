@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_bom_matrix_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__count_parent_usage
+msgid "# Uses in Parent"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.actions.act_window,name:mrp_bom_matrix_report.action_mrp_bom_matrix_report
+#: model:ir.ui.menu,name:mrp_bom_matrix_report.menu_mrp_bom_matrix_report
+msgid "BOM Matrix"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__component_id
+msgid "Component Product"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report__form_view
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_pivot
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_tree_view
+msgid "MRP BOM Matrix Report"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__parent_category_id
+msgid "Parent Product Category"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report__parent_template_id
+msgid "Parent Product Template"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_search_view
+msgid "Report MRP BOM Matrix"
+msgstr ""
+
+#. module: mrp_bom_matrix_report
+#: model:ir.model,name:mrp_bom_matrix_report.model_mrp_bom_matrix_report
+msgid "mrp.bom.matrix.report"
+msgstr ""
+

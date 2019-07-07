@@ -106,7 +106,7 @@ msgid "No data available."
 msgstr ""
 
 #. module: mrp_bom_structure_report
-#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:310
+#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:311
 #: model:ir.ui.view,arch_db:mrp_bom_structure_report.report_mrp_bom_line
 #, python-format
 msgid "Operations"
@@ -193,8 +193,8 @@ msgid "Variant:"
 msgstr ""
 
 #. module: mrp_bom_structure_report
-#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:313
-#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:323
+#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:314
+#: code:addons/mrp_bom_structure_report/reports/mrp_report_bom_structure.py:324
 #, python-format
 msgid "minutes"
 msgstr ""

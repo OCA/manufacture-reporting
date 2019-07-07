@@ -4,7 +4,7 @@
 
 {
     "name": "MRP BoM Structure Report",
-    "version": "11.0.1.1.0",
+    "version": "11.0.1.2.0",
     "author": "Odoo SA, Eficent, Odoo Community Association (OCA)",
     "website": "https://www.github.com/OCA/manufacture-reporting",
     "category": "Manufacture Reporting",

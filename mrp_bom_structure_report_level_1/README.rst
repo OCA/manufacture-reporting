@@ -6,7 +6,7 @@
 MRP BOM Structure Report Level 1
 ================================
 
-This module adds a PDF report in BOM's to print just the first level of
+This module adds a PDF report in BoM's to print just the first level of
 components. So, will not explode into the subcomponents.
 
 Usage
@@ -15,21 +15,21 @@ Usage
 To use this module, you need to:
 
 #. Go to 'Manufacturing / Master Data / Bill of Materials'
-#. Select a BOM and
-#. Go to 'Print > BOM Structure (Level 1)'
+#. Select a BoM and
+#. Go to 'Print > BoM Structure (Level 1)'
 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/131/11.0
+   :target: https://runbot.odoo-community.org/runbot/131/12.0
 
 Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/manufacture-reporting/issues>`_. In case of trouble,
-please check there if your issue has already been reported. If you spotted it
-first, help us smash it by providing detailed and welcomed feedback.
+<https://github.com/OCA/manufacture-reporting/issues>`_. In case of trouble, please
+check there if your issue has already been reported. If you spotted it first,
+help us smash it by providing detailed and welcomed feedback.
 
 Credits
 =======

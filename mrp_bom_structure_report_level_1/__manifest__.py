@@ -4,13 +4,13 @@
 
 {
     "name": "MRP BOM Structure Report Level 1",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "author": "Eficent, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/manufacture-reporting",
     "category": "Manufacture",
     "depends": ["mrp"],
     "data": [
-        "views/report_mrpbomstructure.xml",
+        "report/mrp_report_bom_structure_level_1.xml",
         "views/mrp_bom_view.xml",
     ],
     "license": "AGPL-3",

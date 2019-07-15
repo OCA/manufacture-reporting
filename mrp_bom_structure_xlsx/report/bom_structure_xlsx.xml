@@ -6,7 +6,7 @@
     <report
         id="bom_structure_xlsx"
         model="mrp.bom"
-        string="Export BOM Structure to Excel"
+        string="Export BoM Structure to Excel"
         report_type="xlsx"
         name="mrp_bom_structure_xlsx.bom_structure_xlsx"
         file="mrp_bom"

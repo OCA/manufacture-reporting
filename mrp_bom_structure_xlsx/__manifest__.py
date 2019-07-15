@@ -3,10 +3,10 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': "Export BOM Structure to Excel .XLSX",
+    'name': "MRP BOM Structure XLSX",
     'version': '12.0.1.0.0',
     'category': 'Manufacturing',
-    'summary': 'Export Bill of Materials Structure',
+    'summary': 'Export BoM Structure to Excel .XLSX',
     'author': "Eficent, Odoo Community Association (OCA)",
     'website': 'https://github.com/OCA/manufacture-reporting',
     'license': 'AGPL-3',

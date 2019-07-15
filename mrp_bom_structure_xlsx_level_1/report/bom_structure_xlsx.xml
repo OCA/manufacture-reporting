@@ -3,13 +3,13 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
 
-        <report
+    <report
         id="bom_structure_xlsx_l1"
         model="mrp.bom"
-        string="Export BOM Structure (Level 1) to Excel"
+        string="Export BoM Structure (Level 1) to Excel"
         report_type="xlsx"
         name="mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
-        file="mrp_bom"
+        file="mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
         attachment_use="False"
     />
 

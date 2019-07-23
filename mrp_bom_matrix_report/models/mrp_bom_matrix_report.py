@@ -6,6 +6,7 @@ from odoo import models, fields, tools, api
 
 class MrpBomMatrixReport(models.Model):
     _name = 'mrp.bom.matrix.report'
+    _description = 'MRP BoM Matrix Report'
     _auto = False
 
     component_id = fields.Many2one(

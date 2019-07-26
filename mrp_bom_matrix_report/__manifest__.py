@@ -3,7 +3,7 @@
 
 {
     "name": "MRP BOM Matrix Report",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "license": "AGPL-3",
     "author": "Eficent,"
               "Odoo Community Association (OCA)",

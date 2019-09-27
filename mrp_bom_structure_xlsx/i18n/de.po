@@ -37,7 +37,7 @@ msgstr ""
 
 #. module: mrp_bom_structure_xlsx
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx.bom_structure_xlsx
-msgid "Export BOM Structure to Excel"
+msgid "Export BoM Structure to Excel"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx

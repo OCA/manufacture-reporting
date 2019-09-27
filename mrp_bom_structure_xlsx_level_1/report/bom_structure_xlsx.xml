@@ -4,12 +4,12 @@
 <odoo>
 
     <report
-        id="bom_structure_xlsx"
+        id="bom_structure_xlsx_l1"
         model="mrp.bom"
-        string="Export BoM Structure to Excel"
+        string="Export BoM Structure (Level 1) to Excel"
         report_type="xlsx"
-        name="mrp_bom_structure_xlsx.bom_structure_xlsx"
-        file="mrp_bom"
+        name="mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
+        file="mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
         attachment_use="False"
     />
 

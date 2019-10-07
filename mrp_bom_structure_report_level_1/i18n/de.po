@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_bom_structure_report_level_1
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Rudolf Schnapka <rs@techno-flex.de>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 05:21+0000\n"
+"PO-Revision-Date: 2017-03-28 05:21+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>, 2017\n"
+"Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
+msgid "BOM Name"
+msgstr "SL-Name"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
+msgid "BOM Ref"
+msgstr "SL-Ref"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
+msgid "BOM Structure"
+msgstr "Struktur-SL"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.actions.report,name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
+msgid "BOM Structure (Level 1)"
+msgstr "SL-Hierarchie (Stufe 1)"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
+msgid "Quantity"
+msgstr "Menge"
+
+#~ msgid "Display Name"
+#~ msgstr "Anzeigebezeichnung"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Zuletzt geändert am"
+
+#~ msgid "report.mrp_bom_structure_report_level_1.report_mrp_bs_l1"
+#~ msgstr "report.mrp_bom_structure_report_level_1.report_mrp_bs_l1"

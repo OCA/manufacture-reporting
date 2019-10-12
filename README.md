@@ -9,5 +9,3 @@ This project aim to deal with OpenERP modules related to manage manufacturing re
 - Standard reports rewritten in other report engines.
 - Enhacements or extensions of the standard reports.
 - New reports related to manufacturing area
-
-

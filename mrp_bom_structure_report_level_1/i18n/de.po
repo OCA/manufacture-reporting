@@ -20,38 +20,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: mrp_bom_structure_report_level_1
-#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
-msgid "BOM Name"
-msgstr "SL-Name"
-
-#. module: mrp_bom_structure_report_level_1
-#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
-msgid "BOM Ref"
-msgstr "SL-Ref"
-
-#. module: mrp_bom_structure_report_level_1
-#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
-msgid "BOM Structure"
-msgstr "Struktur-SL"
-
-#. module: mrp_bom_structure_report_level_1
-#: model:ir.actions.report,name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
-msgid "BOM Structure (Level 1)"
+#: model:ir.model,name:mrp_bom_structure_report_level_1.model_report_mrp_bom_structure_report_level_1_mrp_bs_l1
+#, fuzzy
+#| msgid "BOM Structure (Level 1)"
+msgid "BOM Structure Report Level 1"
 msgstr "SL-Hierarchie (Stufe 1)"
 
 #. module: mrp_bom_structure_report_level_1
-#: model:ir.ui.view,arch_db:mrp_bom_structure_report_level_1.mrp_bs_l1
-msgid "Quantity"
-msgstr "Menge"
+#: model:ir.actions.report,name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
+#, fuzzy
+#| msgid "BOM Structure (Level 1)"
+msgid "BoM Structure (Level 1)"
+msgstr "SL-Hierarchie (Stufe 1)"
 
-#~ msgid "Display Name"
-#~ msgstr "Anzeigebezeichnung"
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_report_level_1.field_report_mrp_bom_structure_report_level_1_mrp_bs_l1__display_name
+msgid "Display Name"
+msgstr "Anzeigebezeichnung"
 
-#~ msgid "ID"
-#~ msgstr "ID"
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_report_level_1.field_report_mrp_bom_structure_report_level_1_mrp_bs_l1__id
+msgid "ID"
+msgstr "ID"
 
-#~ msgid "Last Modified on"
-#~ msgstr "Zuletzt geändert am"
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_report_level_1.field_report_mrp_bom_structure_report_level_1_mrp_bs_l1____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: mrp_bom_structure_report_level_1
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:41
+#, python-format
+msgid "Operations"
+msgstr ""
+
+#. module: mrp_bom_structure_report_level_1
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:44
+#, python-format
+msgid "minutes"
+msgstr ""
+
+#~ msgid "BOM Name"
+#~ msgstr "SL-Name"
+
+#~ msgid "BOM Ref"
+#~ msgstr "SL-Ref"
+
+#~ msgid "BOM Structure"
+#~ msgstr "Struktur-SL"
+
+#~ msgid "Quantity"
+#~ msgstr "Menge"
 
 #~ msgid "report.mrp_bom_structure_report_level_1.report_mrp_bs_l1"
 #~ msgstr "report.mrp_bom_structure_report_level_1.report_mrp_bs_l1"

@@ -1,11 +1,10 @@
-# Copyright 2017 Eficent Business and IT Consulting Services S.L.
-#   (http://www.eficent.com)
+# Copyright 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
 
-from odoo import models
-from odoo.tools.translate import _
+from odoo import _, models
+from odoo.exceptions import CacheMiss
 
 _logger = logging.getLogger(__name__)
 
@@ -29,8 +28,18 @@ class BomStructureXlsx(models.AbstractModel):
         sheet.write(i, 5, ch.product_id.uom_id.name or "")
         sheet.write(i, 6, ch.bom_id.code or "")
         i += 1
-        for child in ch.child_line_ids:
-            i = self.print_bom_children(child, sheet, i, j)
+        # self.env.cache.invalidate()
+        try:
+            for child in ch.child_line_ids:
+                i = self.print_bom_children(child, sheet, i, j)
+
+        except CacheMiss:
+            # The Bom has no childs, thus it is the last level.
+            # When a BoM has no childs, chlid_line_ids is None, this creates a
+            # CacheMiss Error. However, this is expected because there really
+            # cannot be child_line_ids.
+            pass
+
         j -= 1
         return i
 

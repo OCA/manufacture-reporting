@@ -9,10 +9,7 @@
     "website": "https://github.com/OCA/manufacture-reporting",
     "category": "Manufacture",
     "depends": ["mrp"],
-    "data": [
-        "report/mrp_report_bom_structure_level_1.xml",
-        "views/mrp_bom_view.xml",
-    ],
+    "data": ["report/mrp_report_bom_structure_level_1.xml", "views/mrp_bom_view.xml"],
     "license": "AGPL-3",
-    'installable': True,
+    "installable": True,
 }

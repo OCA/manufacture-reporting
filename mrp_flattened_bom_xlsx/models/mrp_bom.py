@@ -1,8 +1,8 @@
-# Copyright 2018 Eficent Business and IT Consulting Services S.L.
-#   (http://www.eficent.com)
+# Copyright 2018 ForgeFlow S.L.
+#   (http://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, models
+from odoo import models
 
 
 class MrpBom(models.Model):
@@ -10,7 +10,6 @@ class MrpBom(models.Model):
 
     _inherit = "mrp.bom"
 
-    @api.multi
     def _get_flattened_totals(self, factor=1, totals=None):
         """Calculate the **unitary** product requirements of flattened BOM.
         *Unit* means that the requirements are computed for one unit of the

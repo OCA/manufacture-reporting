@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017-2019 Eficent Business and IT Consulting Services S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+
+    <report
+        string="BoM Structure (Level 1)"
+        id="action_report_bom_structure_level_1"
+        model="mrp.bom"
+        name="mrp_bom_structure_report_level_1.mrp_bs_l1"
+        file="mrp_bom_structure_report_level_1.mrp_bs_l1"
+        report_type="qweb-pdf"
+        print_report_name="'BoM Structure - %s' % object.display_name"
+    />
+
+</odoo>

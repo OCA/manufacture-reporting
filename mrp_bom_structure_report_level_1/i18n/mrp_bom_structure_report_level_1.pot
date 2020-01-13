@@ -1,17 +1,22 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* mrp_bom_structure_report_level_1
+# 	* mrp_bom_structure_report_level_1
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: mrp_bom_structure_report_level_1
+#: model:ir.actions.report,print_report_name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
+msgid "'BoM Structure - %s' % object.display_name"
+msgstr ""
 
 #. module: mrp_bom_structure_report_level_1
 #: model:ir.model,name:mrp_bom_structure_report_level_1.model_report_mrp_bom_structure_report_level_1_mrp_bs_l1
@@ -39,14 +44,13 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: mrp_bom_structure_report_level_1
-#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:41
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:0
 #, python-format
 msgid "Operations"
 msgstr ""
 
 #. module: mrp_bom_structure_report_level_1
-#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:44
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:0
 #, python-format
 msgid "minutes"
 msgstr ""
-

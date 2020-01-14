@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo13-addon-mrp_bom_structure_report_level_1',
+        'odoo13-addon-mrp_bom_structure_xlsx',
     ],
     classifiers=[
         'Programming Language :: Python',

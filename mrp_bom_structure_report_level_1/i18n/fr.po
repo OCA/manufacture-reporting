@@ -19,6 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: mrp_bom_structure_report_level_1
+#: model:ir.actions.report,print_report_name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
+msgid "'BoM Structure - %s' % object.display_name"
+msgstr ""
+
+#. module: mrp_bom_structure_report_level_1
 #: model:ir.model,name:mrp_bom_structure_report_level_1.model_report_mrp_bom_structure_report_level_1_mrp_bs_l1
 msgid "BOM Structure Report Level 1"
 msgstr ""
@@ -44,13 +49,13 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: mrp_bom_structure_report_level_1
-#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:41
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:0
 #, python-format
 msgid "Operations"
 msgstr ""
 
 #. module: mrp_bom_structure_report_level_1
-#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:44
+#: code:addons/mrp_bom_structure_report_level_1/report/mrp_report_bom_structure_level_1.py:0
 #, python-format
 msgid "minutes"
 msgstr ""

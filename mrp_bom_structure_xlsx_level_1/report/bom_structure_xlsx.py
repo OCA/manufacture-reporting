@@ -10,6 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class BomStructureXlsxL1(models.AbstractModel):
     _name = "report.mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
+    _description = "BOM Structure XLSX Level 1 Report"
     _inherit = "report.mrp_bom_structure_xlsx.bom_structure_xlsx"
 
     def print_bom_children(self, ch, sheet, row, level):

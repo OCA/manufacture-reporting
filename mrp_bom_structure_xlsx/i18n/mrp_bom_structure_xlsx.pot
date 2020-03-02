@@ -26,6 +26,11 @@ msgid "BOM Structure"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
+#: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
+msgid "BOM Structure XLSX Report"
+msgstr ""
+
+#. module: mrp_bom_structure_xlsx
 #: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx__display_name
 msgid "Display Name"
 msgstr ""
@@ -79,9 +84,4 @@ msgstr ""
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
-
-#. module: mrp_bom_structure_xlsx
-#: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
-msgid "report.mrp_bom_structure_xlsx.bom_structure_xlsx"
 msgstr ""

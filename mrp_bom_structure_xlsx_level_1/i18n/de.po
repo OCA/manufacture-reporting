@@ -19,6 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.model,name:mrp_bom_structure_xlsx_level_1.model_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1
+#, fuzzy
+#| msgid "Export BOM Structure (Level 1) to Excel"
+msgid "BOM Structure XLSX Level 1 Report"
+msgstr "Exportiere SL-Hierarchie (Stufe 1) nach Excel"
+
+#. module: mrp_bom_structure_xlsx_level_1
 #: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1__display_name
 msgid "Display Name"
 msgstr ""
@@ -38,9 +45,4 @@ msgstr ""
 #. module: mrp_bom_structure_xlsx_level_1
 #: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1____last_update
 msgid "Last Modified on"
-msgstr ""
-
-#. module: mrp_bom_structure_xlsx_level_1
-#: model:ir.model,name:mrp_bom_structure_xlsx_level_1.model_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1
-msgid "report.mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1"
 msgstr ""

@@ -1,5 +1,4 @@
-# Copyright 2018 Eficent Business and IT Consulting Services S.L.
-#   (http://www.eficent.com)
+# Copyright 2018-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import logging
@@ -13,6 +12,7 @@ _logger = logging.getLogger(__name__)
 class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
     _name = "report.mrp_bom_current_stock.report_mrpbom_current_stock_xlsx"
     _inherit = "report.report_xlsx.abstract"
+    _description = "MRP BOM Current Stock XLSX Report"
 
     @staticmethod
     def _print_bom_children(ch, sheet, row):

@@ -1,10 +1,8 @@
 # Copyright 2018 Camptocamp SA
-# Copyright 2017 Eficent Business and IT Consulting Services S.L.
+# Copyright 2017-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
-
-from odoo.addons import decimal_precision as dp
 
 
 class BomRouteCurrentStock(models.TransientModel):
@@ -26,7 +24,7 @@ class BomRouteCurrentStock(models.TransientModel):
         related="product_id.product_tmpl_id",
     )
     product_qty = fields.Float(
-        related="bom_id.product_qty", digits=dp.get_precision("Product Unit of Measure")
+        related="bom_id.product_qty", digits="Product Unit of Measure"
     )
     product_uom_id = fields.Many2one(
         comodel_name="uom.uom", related="bom_id.product_uom_id"
@@ -40,7 +38,8 @@ class BomRouteCurrentStock(models.TransientModel):
 
     @api.onchange("product_id")
     def _onchange_product_id(self):
-        self.bom_id = self.env["mrp.bom"]._bom_find(product_tmpl=self.product_id)
+        if self.product_id:
+            self.bom_id = self.env["mrp.bom"]._bom_find(product_tmpl=self.product_id)
 
     @api.onchange("bom_id")
     def _onchange_bom_id(self):
@@ -61,7 +60,6 @@ class BomRouteCurrentStock(models.TransientModel):
             "explosion_id": self.id,
         }
 
-    @api.multi
     def do_explode(self):
         self.ensure_one()
         line_obj = self.env["mrp.bom.current.stock.line"]
@@ -88,7 +86,6 @@ class BomRouteCurrentStock(models.TransientModel):
             "type": "ir.actions.act_window",
             "name": "Open lines",
             "view_mode": "form",
-            "view_type": "form",
             "res_model": "mrp.bom.current.stock",
             "view_id": self.env.ref(
                 "mrp_bom_current_stock.mrp_bom_current_stock_view_form2"
@@ -108,9 +105,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
     )
     bom_level = fields.Integer(string="BoM Level", readonly=True)
     product_qty = fields.Float(
-        string="Product Quantity",
-        readonly=True,
-        digits=dp.get_precision("Product Unit of Measure"),
+        string="Product Quantity", readonly=True, digits="Product Unit of Measure"
     )
     product_uom_id = fields.Many2one(
         comodel_name="uom.uom", string="Product Unit of Measure", readonly=True
@@ -133,7 +128,6 @@ class BomRouteCurrentStockLine(models.TransientModel):
         redonly=True,
     )
 
-    @api.multi
     @api.onchange("location_id")
     def _compute_qty_available_in_source_loc(self):
         for record in self:

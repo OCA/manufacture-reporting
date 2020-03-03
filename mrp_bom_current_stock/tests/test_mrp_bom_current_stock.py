@@ -1,4 +1,4 @@
-# 2018 Eficent Business and IT Consulting Services S.L.
+# Copyright 2018-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 import odoo.tests.common as common
@@ -161,11 +161,11 @@ class TestMRPBomCurrentStock(common.SavepointCase):
             }
         )
 
-    def _product_change_qty(self, product, new_qty, location):
+    def _product_change_qty(self, product, new_qty):
         values = {
             "product_id": product.id,
             "new_quantity": new_qty,
-            "location_id": location.id,
+            "product_tmpl_id": product.product_tmpl_id.id,
         }
         wizard = self.env["stock.change.product.qty"].create(values)
         wizard.change_product_qty()
@@ -184,7 +184,7 @@ class TestMRPBomCurrentStock(common.SavepointCase):
         self.assertEquals(self.wizard.location_id, self.stock_loc)
         for i, line in enumerate(lines):
             self.assertEqual(line.product_qty, sol[i])
-            self._product_change_qty(line.product_id, line.product_qty, self.stock_loc)
+            self._product_change_qty(line.product_id, line.product_qty)
         lines._compute_qty_available_in_source_loc()
         for line in lines:
             available = line.product_id.product_tmpl_id.uom_id._compute_quantity(

@@ -71,7 +71,6 @@
     <record id="mrp_bom_current_stock_action" model="ir.actions.act_window">
         <field name="name">BoM Current Stock Explosion</field>
         <field name="res_model">mrp.bom.current.stock</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>

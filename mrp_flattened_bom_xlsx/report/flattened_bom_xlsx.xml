@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2018 ForgeFlow S.L.
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <report
         id="flattened_bom_xlsx"
         model="mrp.bom"
@@ -12,5 +11,4 @@
         file="mrp_bom"
         attachment_use="False"
     />
-
 </odoo>

@@ -41,6 +41,11 @@ msgid "Flattened BOM"
 msgstr ""
 
 #. module: mrp_flattened_bom_xlsx
+#: model:ir.model,name:mrp_flattened_bom_xlsx.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
+msgid "Flattened BOM XLSX"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
 msgid "ID"
 msgstr ""
@@ -78,9 +83,4 @@ msgstr ""
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
-
-#. module: mrp_flattened_bom_xlsx
-#: model:ir.model,name:mrp_flattened_bom_xlsx.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
-msgid "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"
 msgstr ""

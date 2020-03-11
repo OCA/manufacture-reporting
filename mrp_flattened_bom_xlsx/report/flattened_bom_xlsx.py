@@ -13,6 +13,7 @@ _logger = logging.getLogger(__name__)
 class FlattenedBomXlsx(models.AbstractModel):
     _name = "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"
     _inherit = "report.report_xlsx.abstract"
+    _description = "Flattened BOM XLSX"
 
     def print_flattened_bom_lines(self, bom, requirements, sheet, row):
         i = row

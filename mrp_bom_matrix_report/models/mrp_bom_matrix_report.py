@@ -1,34 +1,27 @@
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, fields, tools, api
+from odoo import api, fields, models, tools
 
 
 class MrpBomMatrixReport(models.Model):
-    _name = 'mrp.bom.matrix.report'
-    _description = 'MRP BoM Matrix Report'
+    _name = "mrp.bom.matrix.report"
+    _description = "MRP BoM Matrix Report"
     _auto = False
 
     component_id = fields.Many2one(
-        comodel_name='product.product',
-        string='Component Product',
-        readonly=True,
+        comodel_name="product.product", string="Component Product", readonly=True
     )
     parent_template_id = fields.Many2one(
-        comodel_name='product.template',
-        string='Parent Product Template',
-        readonly=True,
+        comodel_name="product.template", string="Parent Product Template", readonly=True
     )
     parent_category_id = fields.Many2one(
-        comodel_name='product.category',
-        string='Parent Product Category',
+        comodel_name="product.category",
+        string="Parent Product Category",
         store=True,
         readonly=True,
     )
-    count_parent_usage = fields.Integer(
-        string='# Uses in Parent',
-        readonly=True,
-    )
+    count_parent_usage = fields.Integer(string="# Uses in Parent", readonly=True)
 
     def _select(self):
         select_str = """

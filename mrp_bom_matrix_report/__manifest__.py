@@ -3,17 +3,11 @@
 
 {
     "name": "MRP BOM Matrix Report",
-    "version": "12.0.1.0.1",
+    "version": "13.0.1.0.0",
     "license": "AGPL-3",
-    "author": "Eficent,"
-              "Odoo Community Association (OCA)",
+    "author": "Eficent, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/manufacture-reporting",
     "category": "Manufacturing",
-    "depends": [
-        "mrp",
-    ],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/mrp_bom_matrix_report_views.xml",
-    ],
+    "depends": ["mrp"],
+    "data": ["security/ir.model.access.csv", "views/mrp_bom_matrix_report_views.xml"],
 }

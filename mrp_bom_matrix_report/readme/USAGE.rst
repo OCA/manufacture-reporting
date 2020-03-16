@@ -1,1 +1,1 @@
-* Go to 'Manufacturing / Master Data / BOM Matrix'.
+* Go to *Manufacturing > Reporting > BOM Matrix*.

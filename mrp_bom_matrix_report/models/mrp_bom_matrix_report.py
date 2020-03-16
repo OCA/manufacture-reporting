@@ -1,7 +1,7 @@
-# Copyright 2017 Eficent Business and IT Consulting Services S.L.
+# Copyright 2017-20 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models, tools
+from odoo import fields, models, tools
 
 
 class MrpBomMatrixReport(models.Model):
@@ -93,7 +93,6 @@ class MrpBomMatrixReport(models.Model):
         where_str = """"""
         return where_str
 
-    @api.model_cr
     def init(self):
         tools.drop_view_if_exists(self._cr, self._table)
         # pylint: disable=E8103

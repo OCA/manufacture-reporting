@@ -34,6 +34,21 @@ class BomRouteCurrentStock(models.TransientModel):
         comodel_name="uom.uom",
         related="bom_id.product_uom_id",
     )
+    qty_able_to_produce = fields.Float(
+        string="Quantity Able to Produce Immediately",
+        compute="_compute_available_qty",
+        help="This is the quantity of top level product that can be "
+             "manufactured directly with only one production order without "
+             "the need of any extra operation, i.e., taking into account only"
+             "level 1."
+    )
+    total_qty_able_to_produce = fields.Float(
+        string="Total Quantity Able to Produce",
+        compute="_compute_available_qty",
+        help="This is the quantity of top level product that can be "
+             "manufactured with what is currently on stock taking into account"
+             "all components in the BoM."
+    )
     location_id = fields.Many2one(
         comodel_name="stock.location",
         string="Starting location",
@@ -46,7 +61,7 @@ class BomRouteCurrentStock(models.TransientModel):
     @api.onchange('product_id')
     def _onchange_product_id(self):
         self.bom_id = self.env['mrp.bom']._bom_find(
-            product_tmpl=self.product_id,
+            product=self.product_id,
         )
 
     @api.onchange('bom_id')
@@ -103,6 +118,36 @@ class BomRouteCurrentStock(models.TransientModel):
             'target': 'new',
             'res_id': self.id,
         }
+
+    @api.onchange("line_ids")
+    def _compute_available_qty(self):
+        max_level = max(self.line_ids.mapped("bom_level"))
+        product_available = self.product_id.with_context(
+            location=self.location_id.id
+        )._product_available()[self.product_id.id]['qty_available']
+        on_hand_qty = self.product_id.product_tmpl_id.uom_id._compute_quantity(
+            product_available,
+            self.product_uom_id,
+        )
+        last_bom_id = self.bom_id.id
+        for level in range(1, max_level+1):
+            minimum_qty = False
+            for line in self.line_ids.filtered(
+                lambda x: x.bom_level == level and x.bom_id.id == last_bom_id
+            ):
+                line_qty = line.qty_available_in_source_loc / line.product_qty
+                if isinstance(minimum_qty, bool) or line_qty < minimum_qty:
+                    minimum_qty = line_qty
+                    bom_id = list(
+                        set(line.product_id.bom_ids.ids) &
+                        set(self.line_ids.mapped("bom_id").ids)
+                    )
+                    if bom_id:
+                        last_bom_id = bom_id[0]
+            on_hand_qty += minimum_qty
+            if level == 1:
+                self.qty_able_to_produce = on_hand_qty
+        self.total_qty_able_to_produce = on_hand_qty
 
 
 class BomRouteCurrentStockLine(models.TransientModel):

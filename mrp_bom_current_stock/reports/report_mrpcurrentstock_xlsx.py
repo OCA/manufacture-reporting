@@ -43,6 +43,8 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
         sheet.set_column(5, 5, 7)
         sheet.set_column(6, 6, 20)
         sheet.set_column(7, 8, 40)
+        sheet.set_column(9, 9, 40)
+        sheet.set_column(10, 10, 40)
 
         title_style = workbook.add_format({'bold': True,
                                            'bg_color': '#FFFFCC',
@@ -56,6 +58,8 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
                        _('Location'),
                        _('Parent BoM Ref'),
                        _('Parent Product Ref'),
+                       _('Quantity Able to Produce Immediately'),
+                       _('Total Quantity Able to Produce'),
                        ]
         sheet.set_row(0, None, None, {'collapsed': 1})
         sheet.write_row(1, 0, sheet_title, title_style)
@@ -71,6 +75,9 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
             sheet.write(i, 3, o.product_qty or '', bold)
             sheet.write(i, 5, o.product_uom_id.name or '', bold)
             sheet.write(i, 6, o.location_id.name or '', bold)
+
+            sheet.write(i, 9, o.qty_able_to_produce or '', bold)
+            sheet.write(i, 10, o.total_qty_able_to_produce or '', bold)
             i += 1
             for ch in o.line_ids:
                 i = self._print_bom_children(ch, sheet, i)

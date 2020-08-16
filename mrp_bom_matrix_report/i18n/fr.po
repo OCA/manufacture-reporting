@@ -59,7 +59,6 @@ msgstr "Rapport des matrices de nomenclatures"
 #. module: mrp_bom_matrix_report
 #: model:ir.model,name:mrp_bom_matrix_report.model_mrp_bom_matrix_report
 #, fuzzy
-#| msgid "MRP BOM Matrix Report"
 msgid "MRP BoM Matrix Report"
 msgstr "Rapport des matrices de nomenclatures"
 

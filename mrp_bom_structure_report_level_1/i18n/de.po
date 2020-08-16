@@ -27,14 +27,12 @@ msgstr ""
 #. module: mrp_bom_structure_report_level_1
 #: model:ir.model,name:mrp_bom_structure_report_level_1.model_report_mrp_bom_structure_report_level_1_mrp_bs_l1
 #, fuzzy
-#| msgid "BOM Structure (Level 1)"
 msgid "BOM Structure Report Level 1"
 msgstr "SL-Hierarchie (Stufe 1)"
 
 #. module: mrp_bom_structure_report_level_1
 #: model:ir.actions.report,name:mrp_bom_structure_report_level_1.action_report_bom_structure_level_1
 #, fuzzy
-#| msgid "BOM Structure (Level 1)"
 msgid "BoM Structure (Level 1)"
 msgstr "SL-Hierarchie (Stufe 1)"
 

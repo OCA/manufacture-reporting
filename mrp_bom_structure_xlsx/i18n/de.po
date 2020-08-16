@@ -33,7 +33,6 @@ msgstr "Struktur-SL"
 #. module: mrp_bom_structure_xlsx
 #: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
 #, fuzzy
-#| msgid "BOM Structure"
 msgid "BOM Structure XLSX Report"
 msgstr "Struktur-SL"
 

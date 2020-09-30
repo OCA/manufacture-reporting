@@ -9,7 +9,7 @@
     "version": "13.0.1.0.0",
     "category": "Manufacture",
     "website": "https://github.com/OCA/manufacture-reporting",
-    "author": "Eficent, Odoo Community Association (OCA)",
+    "author": "ForgeFlow, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["mrp_bom_location", "report_xlsx"],
     "data": [

@@ -23,7 +23,7 @@ MRP BOM Structure XLSX
     :target: https://runbot.odoo-community.org/runbot/131/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module extends the functionality of the MRP capabilities of Odoo,
 and allow you to export the BoM structure to MS Excel .XLSX format.
@@ -71,10 +71,10 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Jordi Ballester <jordi.ballester@eficent.com>
-* Miquel Raïch <miquel.raich@eficent.com>
-* Lois Rilo Antelo <lois.rilo@eficent.com>
-* Aaron Henriquez <ahenriquez@eficent.com>
+* Jordi Ballester <jordi.ballester@forgeflow.com>
+* Miquel Raïch <miquel.raich@forgeflow.com>
+* Lois Rilo Antelo <lois.rilo@forgeflow.com>
+* Aaron Henriquez <ahenriquez@forgeflow.com>
 * Bhavesh Odedra <bodedra@opensourceintegrators.com>
 
 Maintainers

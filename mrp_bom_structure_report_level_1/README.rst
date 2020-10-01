@@ -23,7 +23,7 @@ MRP BOM Structure Report Level 1
     :target: https://runbot.odoo-community.org/runbot/131/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 This module adds a PDF report in BoM's to print just the first level of
 components. So, will not explode into the subcomponents.

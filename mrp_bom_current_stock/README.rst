@@ -23,7 +23,7 @@ MRP BoM Current Stock
     :target: https://runbot.odoo-community.org/runbot/131/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 This modules extend the Manufacturing App adding a report that explodes the
 bill of materials and show the stock available in the source location.

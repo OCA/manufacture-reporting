@@ -26,7 +26,6 @@ msgstr ""
 #. module: mrp_bom_structure_xlsx_level_1
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx_level_1.bom_structure_xlsx_l1
 #, fuzzy
-#| msgid "Export BOM Structure (Level 1) to Excel"
 msgid "Export BoM Structure (Level 1) to Excel"
 msgstr "Exportiere SL-Hierarchie (Stufe 1) nach Excel"
 

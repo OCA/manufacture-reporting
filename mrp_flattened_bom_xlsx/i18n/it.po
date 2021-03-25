@@ -6,82 +6,85 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-03-25 15:46+0000\n"
+"Last-Translator: Marco Calcagni <mcalcagni@dinamicheaziendali.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:48
 #, python-format
 msgid "BOM Name"
-msgstr ""
+msgstr "Nome Distinta Base"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom
 msgid "Bill of Material"
-msgstr ""
+msgstr "Distinta Base"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.actions.report,name:mrp_flattened_bom_xlsx.flattened_bom_xlsx
 msgid "Export Flattened BOM Structure to Excel"
-msgstr ""
+msgstr "Esporta Distinta base ai materiali di base"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:37
 #, python-format
 msgid "Flattened BOM"
-msgstr ""
+msgstr "Distinta Base ai materiali di base"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:50
 #, python-format
 msgid "Product Name"
-msgstr ""
+msgstr "Descrizione Prodotto"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:49
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Riferimento Prodotto"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:51
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Quantità"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:53
 #, python-format
 msgid "Reference"
-msgstr ""
+msgstr "Riferimento"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:52
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unità di Misura"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
+#, fuzzy
 msgid "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"
-msgstr ""
+msgstr "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"

@@ -71,9 +71,10 @@ class BomRouteCurrentStock(models.TransientModel):
                 line_obj.create(vals)
                 location = line.location_id
                 line_boms = line.product_id.bom_ids
-                boms = line_boms.filtered(
-                    lambda bom: bom.location_id == location
-                ) or line_boms.filtered(lambda b: not b.location_id)
+                boms = (
+                    line_boms.filtered(lambda bom: bom.location_id == location)
+                    or line_boms
+                )
                 if boms:
                     line_qty = line.product_uom_id._compute_quantity(
                         line.product_qty, boms[0].product_uom_id

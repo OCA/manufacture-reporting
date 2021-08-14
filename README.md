@@ -17,9 +17,9 @@ TODO: add repo description.
 
 Available addons
 ----------------
-addon | version | summary
---- | --- | ---
-[mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 14.0.1.0.1 | Export BoM Structure to Excel .XLSX
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 14.0.1.0.1 |  | Export BoM Structure to Excel .XLSX
 
 [//]: # (end addons)
 

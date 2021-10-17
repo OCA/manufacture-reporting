@@ -1,0 +1,13 @@
+
+<odoo>
+    <record id="mrp_bom_fixed_quantity_view_form" model="ir.ui.view">
+        <field name ="name">mrp.bom.fixed.quantity.view.form</field>
+        <field name ="model">mrp.bom</field>
+        <field name ="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bom_line_ids']/tree/field[@name='product_qty']" position="before">
+                <field name="fixed_quantity" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

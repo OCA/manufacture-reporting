@@ -32,17 +32,15 @@ class MrpBom(models.Model):
                 sub_bom._get_flattened_totals(new_factor, totals)
             else:
                 if totals.get(line.product_id):
-                    totals[line.product_id] += (
-                        factor
-                        * line.product_uom_id._compute_quantity(
-                            line.product_qty, line.product_id.uom_id, round=False
-                        )
+                    totals[
+                        line.product_id
+                    ] += factor * line.product_uom_id._compute_quantity(
+                        line.product_qty, line.product_id.uom_id, round=False
                     )
                 else:
-                    totals[line.product_id] = (
-                        factor
-                        * line.product_uom_id._compute_quantity(
-                            line.product_qty, line.product_id.uom_id, round=False
-                        )
+                    totals[
+                        line.product_id
+                    ] = factor * line.product_uom_id._compute_quantity(
+                        line.product_qty, line.product_id.uom_id, round=False
                     )
         return totals

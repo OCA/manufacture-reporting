@@ -6,7 +6,7 @@ from odoo import models
 
 
 class MrpBom(models.Model):
-    """ Defines bills of material for a product or a product template """
+    """Defines bills of material for a product or a product template"""
 
     _inherit = "mrp.bom"
 

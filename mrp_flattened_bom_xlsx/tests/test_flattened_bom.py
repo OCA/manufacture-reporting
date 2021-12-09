@@ -1,10 +1,10 @@
 # Copyright 2018 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-import odoo.tests.common as common
+from odoo.tests.common import TransactionCase
 
 
-class TestFlattenedBom(common.SavepointCase):
+class TestFlattenedBom(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super(TestFlattenedBom, cls).setUpClass()

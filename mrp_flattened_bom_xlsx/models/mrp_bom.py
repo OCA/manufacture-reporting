@@ -24,7 +24,7 @@ class MrpBom(models.Model):
             self.product_qty, self.product_tmpl_id.uom_id, round=False
         )
         for line in self.bom_line_ids:
-            sub_bom = self._bom_find(product=line.product_id)
+            sub_bom = self.env["mrp.bom"]._bom_find(line.product_id)[line.product_id]
             if sub_bom:
                 new_factor = factor * line.product_uom_id._compute_quantity(
                     line.product_qty, line.product_id.uom_id, round=False

@@ -115,18 +115,18 @@ class BomRouteCurrentStockLine(models.TransientModel):
         comodel_name="stock.location", string="Source location"
     )
     bom_line = fields.Many2one(
-        comodel_name="mrp.bom.line", string="BoM line", redonly=True
+        comodel_name="mrp.bom.line", string="BoM line", readonly=True
     )
     qty_available_in_source_loc = fields.Float(
         string="Qty Available in Source",
         compute="_compute_qty_available_in_source_loc",
-        redonly=True,
+        readonly=True,
     )
     bom_id = fields.Many2one(
         comodel_name="mrp.bom",
         string="Parent BoM",
         related="bom_line.bom_id",
-        redonly=True,
+        readonly=True,
     )
 
     @api.onchange("location_id")

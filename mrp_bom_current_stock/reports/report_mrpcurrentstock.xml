@@ -75,20 +75,27 @@
             </t>
         </t>
     </template>
-    <report
-        string="BoM: Current Stock Report PDF"
-        id="action_report_bom_current_stock_pdf"
-        model="mrp.bom.current.stock"
-        name="mrp_bom_current_stock.report_mrpbom_current_stock_pdf"
-        report_type="qweb-pdf"
-    />
-    <report
-        id="action_report_bom_current_stock_xlsx"
-        model="mrp.bom.current.stock"
-        string="BoM: Current Stock Report XLSX"
-        report_type="xlsx"
-        name="mrp_bom_current_stock.report_mrpbom_current_stock_xlsx"
-        file="mrp_bom"
-        attachment_use="False"
-    />
+    <record id="action_report_bom_current_stock_pdf" model="ir.actions.report">
+        <field name="name">BoM: Current Stock Report PDF</field>
+        <field name="model">mrp.bom.current.stock</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >mrp_bom_current_stock.report_mrpbom_current_stock_pdf</field>
+        <field
+            name="report_file"
+        >mrp_bom_current_stock.report_mrpbom_current_stock_pdf</field>
+        <field name="binding_type">report</field>
+    </record>
+     <record id="action_report_bom_current_stock_xlsx" model="ir.actions.report">
+        <field name="name">BoM: Current Stock Report XLSX</field>
+        <field name="model">mrp.bom.current.stock</field>
+        <field name="report_type">xlsx</field>
+        <field
+            name="report_name"
+        >mrp_bom_current_stock.report_mrpbom_current_stock_xlsx</field>
+        <field name="report_file">mrp_bom</field>
+        <field name="binding_type">report</field>
+        <field name="attachment_use">False</field>
+    </record>
 </odoo>

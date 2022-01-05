@@ -2,13 +2,12 @@
 <!-- Copyright 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <report
-        id="bom_structure_xlsx"
-        model="mrp.bom"
-        string="Export BoM Structure to Excel"
-        report_type="xlsx"
-        name="mrp_bom_structure_xlsx.bom_structure_xlsx"
-        file="mrp_bom"
-        attachment_use="False"
-    />
+    <record id="bom_structure_xlsx" model="ir.actions.report">
+        <field name="name">Export BoM Structure to Excel</field>
+        <field name="model">mrp.bom</field>
+        <field name="type">ir.actions.report</field>
+        <field name="report_name">mrp_bom_structure_xlsx.bom_structure_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">mrp_bom</field>
+    </record>
 </odoo>

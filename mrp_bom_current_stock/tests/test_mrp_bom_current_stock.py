@@ -181,7 +181,7 @@ class TestMRPBomCurrentStock(common.SavepointCase):
         self.wizard.do_explode()
         sol = (1, 1, 200, 0.01, 1, 2.4)
         lines = self.wizard.line_ids
-        self.assertEquals(self.wizard.location_id, self.stock_loc)
+        self.assertEqual(self.wizard.location_id, self.stock_loc)
         for i, line in enumerate(lines):
             self.assertEqual(line.product_qty, sol[i])
             self._product_change_qty(line.product_id, line.product_qty)

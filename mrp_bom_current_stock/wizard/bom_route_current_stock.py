@@ -39,7 +39,9 @@ class BomRouteCurrentStock(models.TransientModel):
     @api.onchange("product_id")
     def _onchange_product_id(self):
         if self.product_id:
-            self.bom_id = self.env["mrp.bom"]._bom_find(product_tmpl=self.product_id)
+            self.bom_id = self.env["mrp.bom"]._bom_find(products=self.product_id)[
+                self.product_id
+            ]
 
     @api.onchange("bom_id")
     def _onchange_bom_id(self):
@@ -134,7 +136,17 @@ class BomRouteCurrentStockLine(models.TransientModel):
         for record in self:
             product_available = record.product_id.with_context(
                 location=record.location_id.id
-            )._product_available()[record.product_id.id]["qty_available"]
+            )._compute_quantities_dict(
+                self._context.get("lot_id"),
+                self._context.get("owner_id"),
+                self._context.get("package_id"),
+                self._context.get("from_date"),
+                self._context.get("to_date"),
+            )[
+                record.product_id.id
+            ][
+                "qty_available"
+            ]
             res = record.product_id.product_tmpl_id.uom_id._compute_quantity(
                 product_available, record.product_uom_id
             )

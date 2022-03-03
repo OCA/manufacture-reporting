@@ -5,6 +5,7 @@
     <record id="bom_structure_xlsx" model="ir.actions.report">
         <field name="name">Export BoM Structure to Excel</field>
         <field name="model">mrp.bom</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_bom" />
         <field name="type">ir.actions.report</field>
         <field name="report_name">mrp_bom_structure_xlsx.bom_structure_xlsx</field>
         <field name="report_type">xlsx</field>

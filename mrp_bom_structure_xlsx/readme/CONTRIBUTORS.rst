@@ -3,3 +3,4 @@
 * Lois Rilo Antelo <lois.rilo@forgeflow.com>
 * Aaron Henriquez <ahenriquez@forgeflow.com>
 * Bhavesh Odedra <bodedra@opensourceintegrators.com>
+* Juany Davila <juany.davila@forgeflow.com>

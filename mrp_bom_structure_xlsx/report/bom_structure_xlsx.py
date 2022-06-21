@@ -34,12 +34,12 @@ class BomStructureXlsx(models.AbstractModel):
             for child in ch.child_line_ids:
                 i = self.print_bom_children(child, sheet, i, j)
 
-        except CacheMiss:
+        except CacheMiss as e:
             # The Bom has no childs, thus it is the last level.
             # When a BoM has no childs, chlid_line_ids is None, this creates a
             # CacheMiss Error. However, this is expected because there really
             # cannot be child_line_ids.
-            pass
+            _logger.warning(e)
 
         j -= 1
         return i

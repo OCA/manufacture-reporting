@@ -102,6 +102,7 @@ class BomRouteCurrentStock(models.TransientModel):
         self.ensure_one()
         self._create_lines(self.bom_id, factor=self.desired_quantity)
         self.compute_potencial_qty()
+        self.expand_availability()
         return {
             "type": "ir.actions.act_window",
             "name": "Open lines",
@@ -114,6 +115,11 @@ class BomRouteCurrentStock(models.TransientModel):
             "res_id": self.id,
         }
 
+    def expand_availability(self):
+        self.line_ids.search(
+            [("explosion_id", "=", self.id), ("bom_level", "=", 1)]
+        ).expand_availability(self.availability)
+
     def compute_potencial_qty(self):
         level_1_lines = self.line_ids.search(
             [("explosion_id", "=", self.id), ("bom_level", "=", 1)]
@@ -124,7 +130,7 @@ class BomRouteCurrentStock(models.TransientModel):
             if min_availability > line_availability:
                 min_availability = line_availability
         self.potencial_qty = min_availability
-        if self.potencial_qty > self.desired_quantity:
+        if self.potencial_qty >= self.desired_quantity:
             self.availability = "available"
         else:
             self.availability = "not available"
@@ -196,6 +202,25 @@ class BomRouteCurrentStockLine(models.TransientModel):
             )
             record.qty_available_in_source_loc = res
 
+    def expand_availability(self, parent_availability):
+        for rec in self:
+            if parent_availability == "available":
+                rec.availability = "available"
+            for line in rec.product_id.bom_ids.bom_line_ids:
+                self.env["mrp.bom.current.stock.line"].search(
+                    [
+                        ("product_id", "=", line.product_id.id),
+                        ("bom_line", "=", line.id),
+                        ("bom_level", "=", rec.bom_level + 1),
+                        ("product_uom_id", "=", line.product_uom_id.id),
+                        (
+                            "explosion_id",
+                            "=",
+                            rec.explosion_id.id,
+                        ),
+                    ]
+                ).expand_availability(rec.availability)
+
     def potencial_qty(self, level=0, factor=1):
         level += 1
         boms = self.product_id.bom_ids
@@ -225,11 +250,22 @@ class BomRouteCurrentStockLine(models.TransientModel):
                         ),
                     ]
                 )
-                line_availability = bom_line.potencial_qty(level=level, factor=factor)
-                if min_availability > line_availability:
-                    min_availability = line_availability
+                if bom_line.product_id.type == "service":
+                    bom_line.availability = "available"
+                else:
+                    line_availability = bom_line.potencial_qty(
+                        level=level, factor=factor * bom_line.bom_line.product_qty
+                    )
+                    if min_availability > line_availability:
+                        min_availability = line_availability
 
-        if self.qty_available_in_source_loc + min_availability >= self.product_qty:
+        if (
+            self.qty_available_in_source_loc + min_availability >= self.product_qty
+            and self.bom_line.child_bom_id.type != "phantom"
+        ) or (
+            min_availability >= self.product_qty
+            and self.bom_line.child_bom_id.type == "phantom"
+        ):
             self.availability = "available"
         if self.product_qty // factor == 0:
             return 0

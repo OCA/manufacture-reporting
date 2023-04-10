@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-03-22 15:22+0000\n"
+"PO-Revision-Date: 2023-04-10 16:31+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -21,39 +21,39 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "BOM Current Stock Report"
-msgstr "BoM Report Giacenza attuale"
+msgstr "Resoconto giacenza attuale DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
 #: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
 msgid "BoM Current Stock Explosion"
-msgstr "BoM Esploso Giacenza attuale"
+msgstr "Esploso giacenza attuale DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_level
 msgid "BoM Level"
-msgstr "Livello BoM"
+msgstr "Livello DiBa"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:51
 #, python-format
 msgid "BoM Reference"
-msgstr "Riferimento BoM"
+msgstr "Riferimento DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_line
 msgid "BoM line"
-msgstr "Riga BoM"
+msgstr "Riga DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_pdf
 msgid "BoM: Current Stock Report PDF"
-msgstr "BoM: Report PDF Giacenza attuale"
+msgstr "DiBa: resoconto PDF giacenza attuale"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_xlsx
 msgid "BoM: Current Stock Report XLSX"
-msgstr "BoM: Report XLSX Giacenza attuale"
+msgstr "DiBa: Resoconto XLSX giacenza attuale"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
@@ -102,7 +102,7 @@ msgstr "Risultato espolso"
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Export XLSX"
-msgstr "Export XLSX"
+msgstr "Esporta XLSX"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__id
@@ -157,23 +157,23 @@ msgstr "Ubicazione:"
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock
 msgid "MRP Bom Route Current Stock"
-msgstr "MRP BoM Rotta Giacenza attuale"
+msgstr "Giacenza attuale rotta DiBa MRP"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock_line
 msgid "MRP Bom Route Current Stock Line"
-msgstr "MRP BoM Riga Rotta Giacenza attuale"
+msgstr "Riga giacenza attuale rotta DiBa MRP"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_id
 msgid "Parent BoM"
-msgstr "BoM Padre"
+msgstr "Padre DiBa"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:57
 #, python-format
 msgid "Parent BoM Ref"
-msgstr "Riferimenti BoM Padre"
+msgstr "Riferimento DiBa Padre"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:58

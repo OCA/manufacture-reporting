@@ -263,6 +263,14 @@ msgid "Starting location"
 msgstr ""
 
 #. module: mrp_bom_current_stock
+#: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__product_qty
+msgid ""
+"This should be the smallest quantity that this product can be produced in. "
+"If the BOM contains operations, make sure the work center capacity is "
+"accurate."
+msgstr ""
+
+#. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
 msgid "Unit of Measure"
 msgstr ""

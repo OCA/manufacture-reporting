@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-04-10 14:16+0000\n"
+"PO-Revision-Date: 2023-04-10 16:35+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -27,18 +27,18 @@ msgstr "Resoconto giacenza attuale DiBa"
 #: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
 #: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
 msgid "BoM Current Stock Explosion"
-msgstr ""
+msgstr "Esploso giacenza attuale DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_level
 msgid "BoM Level"
-msgstr ""
+msgstr "Livello DiBa"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "BoM Reference"
-msgstr ""
+msgstr "Riferimento DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_line

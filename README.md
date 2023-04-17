@@ -1,11 +1,37 @@
-[![Build Status](https://travis-ci.org/OCA/manufacture-reporting.svg?branch=13.0)](https://travis-ci.org/OCA/manufacture-reporting)
-[![Coverage Status](https://coveralls.io/repos/OCA/manufacture-reporting/badge.png?branch=13.0)](https://coveralls.io/r/OCA/manufacture-reporting?branch=13.0)
 
-Manufacture Reports
-===================
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/manufacture-reporting&target_branch=13.0)
+[![Pre-commit Status](https://github.com/OCA/manufacture-reporting/actions/workflows/pre-commit.yml/badge.svg?branch=13.0)](https://github.com/OCA/manufacture-reporting/actions/workflows/pre-commit.yml?query=branch%3A13.0)
+[![Build Status](https://github.com/OCA/manufacture-reporting/actions/workflows/test.yml/badge.svg?branch=13.0)](https://github.com/OCA/manufacture-reporting/actions/workflows/test.yml?query=branch%3A13.0)
+[![codecov](https://codecov.io/gh/OCA/manufacture-reporting/branch/13.0/graph/badge.svg)](https://codecov.io/gh/OCA/manufacture-reporting)
+[![Translation Status](https://translation.odoo-community.org/widgets/manufacture-reporting-13-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/manufacture-reporting-13-0/?utm_source=widget)
 
-This project aim to deal with OpenERP modules related to manage manufacturing related reports in various ways:
+<!-- /!\ do not modify above this line -->
 
-- Standard reports rewritten in other report engines.
-- Enhacements or extensions of the standard reports.
-- New reports related to manufacturing area
+# Manufacture Reports
+
+This project aim to deal with Odoo modules related to manage manufacturing related reports
+
+<!-- /!\ do not modify below this line -->
+
+<!-- prettier-ignore-start -->
+
+[//]: # (addons)
+
+This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+
+[//]: # (end addons)
+
+<!-- prettier-ignore-end -->
+
+## Licenses
+
+This repository is licensed under [AGPL-3.0](LICENSE).
+
+However, each module can have a totally different license, as long as they adhere to Odoo Community Association (OCA)
+policy. Consult each module's `__manifest__.py` file, which contains a `license` key
+that explains its license.
+
+----
+OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit
+organization whose mission is to support the collaborative development of Odoo features
+and promote its widespread use.

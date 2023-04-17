@@ -1,6 +1,7 @@
 
 [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/manufacture-reporting&target_branch=14.0)
-[![Build Status](https://travis-ci.com/OCA/manufacture-reporting.svg?branch=14.0)](https://travis-ci.com/OCA/manufacture-reporting)
+[![Pre-commit Status](https://github.com/OCA/manufacture-reporting/actions/workflows/pre-commit.yml/badge.svg?branch=14.0)](https://github.com/OCA/manufacture-reporting/actions/workflows/pre-commit.yml?query=branch%3A14.0)
+[![Build Status](https://github.com/OCA/manufacture-reporting/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/OCA/manufacture-reporting/actions/workflows/test.yml?query=branch%3A14.0)
 [![codecov](https://codecov.io/gh/OCA/manufacture-reporting/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/manufacture-reporting)
 [![Translation Status](https://translation.odoo-community.org/widgets/manufacture-reporting-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/manufacture-reporting-14-0/?utm_source=widget)
 
@@ -8,7 +9,7 @@
 
 # manufacture-reporting
 
-TODO: add repo description.
+This project aim to deal with Odoo modules related to manage manufacturing related reports.
 
 <!-- /!\ do not modify below this line -->
 

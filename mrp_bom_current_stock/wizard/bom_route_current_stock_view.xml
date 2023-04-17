@@ -37,9 +37,14 @@
         <field name="arch" type="xml">
             <form>
                 <group name="step_2" string="Explosion result">
-                    <p>Set the source location for every component.</p><br></br>
+                    <br/>
                     <field name="product_id" readonly="1"/>
                     <field name="bom_id" readonly="1"/>
+                    <br/>
+                    <field name="qty_able_to_produce" readonly="1"/>
+                    <field name="total_qty_able_to_produce" readonly="1"/>
+                    <br/><br/>
+                    <p>Set the source location for every component.</p>
                     <field name="line_ids" nolabel="1" colspan="2">
                         <tree create="0" delete="0" editable="1">
                             <field name="bom_level" readonly="1"/>

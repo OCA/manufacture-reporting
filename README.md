@@ -17,7 +17,16 @@ This project aim to deal with Odoo modules related to manage manufacturing relat
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[mrp_bom_current_stock](mrp_bom_current_stock/) | 13.0.1.0.1 |  | Add a report that explodes the bill of materials and show the stock available in the source location.
+[mrp_bom_matrix_report](mrp_bom_matrix_report/) | 13.0.1.0.0 |  | MRP BOM Matrix Report
+[mrp_bom_structure_report_level_1](mrp_bom_structure_report_level_1/) | 13.0.1.0.0 |  | MRP BOM Structure Report Level 1
+[mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 13.0.1.0.1 |  | Export BoM Structure to Excel .XLSX
+[mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 13.0.1.0.1 |  | Export BOM Structure (Level 1) to Excel .XLSX
+[mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 13.0.1.0.0 |  | Export Flattened BOM to Excel
 
 [//]: # (end addons)
 

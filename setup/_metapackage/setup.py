@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo14-addon-mrp_bom_structure_xlsx_level_1',
         'odoo14-addon-mrp_flattened_bom_xlsx',
         'odoo14-addon-mrp_flattened_bom_xlsx_direct_materials_cost',
+        'odoo14-addon-mrp_flattened_bom_xlsx_subcontracting_cost',
     ],
     classifiers=[
         'Programming Language :: Python',

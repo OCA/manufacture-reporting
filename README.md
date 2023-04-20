@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 14.0.1.0.0 |  | Export BOM Structure (Level 1) to Excel .XLSX
 [mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 14.0.1.0.0 |  | Export Flattened BOM to Excel
 [mrp_flattened_bom_xlsx_direct_materials_cost](mrp_flattened_bom_xlsx_direct_materials_cost/) | 14.0.1.0.0 |  | Export Flattened BOM to Excel with direct materials cost
+[mrp_flattened_bom_xlsx_labour_cost](mrp_flattened_bom_xlsx_labour_cost/) | 14.0.1.0.0 |  | Export Flattened BOM to Excel with labour cost
 [mrp_flattened_bom_xlsx_subcontracting_cost](mrp_flattened_bom_xlsx_subcontracting_cost/) | 14.0.1.0.0 |  | Export Flattened BOM to Excel with subcontracting cost
 
 [//]: # (end addons)

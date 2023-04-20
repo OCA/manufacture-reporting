@@ -8,5 +8,7 @@
         <field name="report_type">xlsx</field>
         <field name="report_name">mrp_flattened_bom_xlsx.flattened_bom_xlsx</field>
         <field name="report_file">mrp_bom</field>
+        <field name="binding_model_id" ref="model_mrp_bom" />
+        <field name="binding_type">report</field>
     </record>
 </odoo>

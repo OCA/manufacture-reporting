@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-01-18 12:04+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-05-17 03:45+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:48
 #, python-format
 msgid "BOM Name"
-msgstr "Nome Distinta Base"
+msgstr "Nome distinta base"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom
 msgid "Bill of Material"
-msgstr "Distinta Base"
+msgstr "Distinta base"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
@@ -35,13 +35,13 @@ msgstr "Nome visualizzato"
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.actions.report,name:mrp_flattened_bom_xlsx.flattened_bom_xlsx
 msgid "Export Flattened BOM Structure to Excel"
-msgstr "Esporta Distinta base ai materiali di base"
+msgstr "Esporta distinta base tecnica in Excel"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:37
 #, python-format
 msgid "Flattened BOM"
-msgstr "Distinta Base ai materiali di base"
+msgstr "Distinta base tecnica"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
@@ -63,7 +63,7 @@ msgstr "Descrizione Prodotto"
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:49
 #, python-format
 msgid "Product Reference"
-msgstr "Riferimento Prodotto"
+msgstr "Riferimento prodotto"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:51

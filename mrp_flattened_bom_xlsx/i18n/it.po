@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-05-17 03:55+0000\n"
+"PO-Revision-Date: 2023-05-17 14:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "BOM Name"
-msgstr "Nome distinta base"
+msgstr "Nome DiBa"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom

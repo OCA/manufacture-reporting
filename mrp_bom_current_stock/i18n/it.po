@@ -6,232 +6,234 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-05-17 12:34+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "BOM Current Stock Report"
-msgstr ""
+msgstr "Resoconto giacenza attuale DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
 #: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
 msgid "BoM Current Stock Explosion"
-msgstr ""
+msgstr "Esploso giacenza attuale DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_level
 msgid "BoM Level"
-msgstr ""
+msgstr "Livello DiBa"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "BoM Reference"
-msgstr ""
+msgstr "Riferimento DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_line
 msgid "BoM line"
-msgstr ""
+msgstr "Riga DiBa"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_pdf
 msgid "BoM: Current Stock Report PDF"
-msgstr ""
+msgstr "DiBa: resoconto PDF giacenza attuale"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_xlsx
 msgid "BoM: Current Stock Report XLSX"
-msgstr ""
+msgstr "DiBa: resoconto XLSX giacenza attuale"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__create_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__create_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__display_name
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__display_name
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome da visualizzare"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Explode"
-msgstr ""
+msgstr "Espandi"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__explosion_id
 msgid "Explosion"
-msgstr ""
+msgstr "Esploso"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Explosion result"
-msgstr ""
+msgstr "Risultato espolso"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Export XLSX"
-msgstr ""
+msgstr "Esporta XLSX"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock____last_update
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line____last_update
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__write_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__write_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Level"
-msgstr ""
+msgstr "Livello"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__line_ids
 msgid "Line"
-msgstr ""
+msgstr "Riga"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Location"
-msgstr ""
+msgstr "Ubicazione"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 msgid "Location:"
-msgstr ""
+msgstr "Ubicazione:"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx
 msgid "MRP BOM Current Stock XLSX Report"
-msgstr ""
+msgstr "Resoconto XLSX giacenza attuale DiBa MRP"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock
 msgid "MRP Bom Route Current Stock"
-msgstr ""
+msgstr "Giacenza attuale rotta DiBa MRP"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock_line
 msgid "MRP Bom Route Current Stock Line"
-msgstr ""
+msgstr "Riga giacenza attuale rotta DiBa MRP"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_id
 msgid "Parent BoM"
-msgstr ""
+msgstr "DiBa padre"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Parent BoM Ref"
-msgstr ""
+msgstr "Riferimento DiBa padre"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Parent Product Ref"
-msgstr ""
+msgstr "Riferimento prodotto padre"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Print PDF"
-msgstr ""
+msgstr "Stampa PDF"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 msgid "Product"
-msgstr ""
+msgstr "Prodotto"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_qty
 msgid "Product Quantity"
-msgstr ""
+msgstr "Quantità prodotto"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Riferimento prodotto"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_tmpl_id
 msgid "Product Template"
-msgstr ""
+msgstr "Modello prodotto"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_uom_id
 msgid "Product Unit of Measure"
-msgstr ""
+msgstr "Unità di misura del prodotto"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_id
 msgid "Product Variant"
-msgstr ""
+msgstr "Variante prodotto"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Qty Available (Location)"
-msgstr ""
+msgstr "Qta. disponibile (ubicazione)"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__qty_available_in_source_loc
 msgid "Qty Available in Source"
-msgstr ""
+msgstr "Qta. disponibile in sorgente"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
@@ -239,37 +241,37 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Quantità"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Select product and location to explode"
-msgstr ""
+msgstr "Selezionare il prodotto e l'ubicazione da esplodere"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Set the source location for every component."
-msgstr ""
+msgstr "Impostare l'ubicazione di origine per ogni componente."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__location_id
 msgid "Source location"
-msgstr ""
+msgstr "Ubicazione di origine"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__bom_id
 msgid "Starting Bill of Materials"
-msgstr ""
+msgstr "Distinta base di partenza"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__location_id
 msgid "Starting location"
-msgstr ""
+msgstr "Ubicazione di partenza"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unità di misura"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
@@ -277,14 +279,16 @@ msgid ""
 "Unit of Measure (Unit of Measure) is the unit of measurement for the "
 "inventory control"
 msgstr ""
+"Unità di misura (Unità di misura) è l'unità di misura per il controllo di "
+"inventario"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "UoM"
-msgstr ""
+msgstr "UdM"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "or"
-msgstr ""
+msgstr "o"

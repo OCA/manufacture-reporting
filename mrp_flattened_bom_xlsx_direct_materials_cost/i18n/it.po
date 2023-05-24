@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-05-17 12:34+0000\n"
+"PO-Revision-Date: 2023-05-24 10:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_mrp_bom
@@ -43,7 +43,7 @@ msgstr "Costo materiali diretti"
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_product_product__display_name
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Nome visualizzato"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx

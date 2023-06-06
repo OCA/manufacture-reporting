@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 13.0.1.0.1 |  | Export BoM Structure to Excel .XLSX
 [mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 13.0.1.0.1 |  | Export BOM Structure (Level 1) to Excel .XLSX
 [mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 13.0.1.0.0 |  | Export Flattened BOM to Excel
+[mrp_flattened_bom_xlsx_direct_materials_cost](mrp_flattened_bom_xlsx_direct_materials_cost/) | 13.0.1.0.0 |  | Export Flattened BOM to Excel with direct materials cost
 
 [//]: # (end addons)
 

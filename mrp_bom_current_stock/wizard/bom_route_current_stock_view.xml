@@ -7,20 +7,43 @@
         <field name="model">mrp.bom.current.stock</field>
         <field name="arch" type="xml">
             <form>
+                <p>
+                    It is necessary to differentiate between the two types of explosion.
+                </p>
+                <p>
+                    - One Level: Allows you to evaluate what the potential quantity is in the event
+                    that only the selected product in particular should be manufactured. In other
+                    words, it emulates a manufacturing order.
+                </p>
+                <p>
+                    - All Levels: Allows you to evaluate what is the total potential amount that could
+                    be manufactured if all the existing material in the specified locations were used.
+                </p>
+                <p>
+                    As a final comment, it is necessary to indicate that in the event that a component
+                    is repeated in different BoMs, it is possible that the potential quantity is not
+                    correctly computed since it is not taken into account that if it is being used by
+                    a BoM, it cannot be used by another.
+                </p>
                 <group name="step_1" string="Select product and location to explode">
-                    <field
-                        name="product_id"
-                        domain="[('bom_ids','!=',False),('bom_ids.type','!=','phantom')]"
-                    />
+                    <field name="product_id" domain="[('bom_ids','!=',False)]" />
                     <field name="product_tmpl_id" invisible="1" />
                     <field
                         name="bom_id"
-                        domain="['&amp;', '|', ('product_id','=',product_id),
-                           '&amp;', ('product_tmpl_id.product_variant_ids','=',product_id),
-                           ('product_id','=',False), ('type', '=', 'normal')]"
+                        domain="['|', ('product_id','=',product_id),
+                           '&amp;', ('product_id', 'in', 'product_tmpl_id.product_variant_ids'),
+                           ('product_id','=',False)]"
                     />
                     <field name="location_id" />
-                    <field name="desired_quantity" />
+                    <label for="desired_qty" />
+                    <div class="o_row">
+                        <field name="desired_qty" />
+                        <field
+                            name="product_uom_id"
+                            class="oe_inline"
+                            groups="uom.group_uom"
+                        />
+                    </div>
                     <field name="explosion_type" widget="radio" />
                 </group>
                 <footer>
@@ -43,47 +66,43 @@
                 <group name="step_2" string="Explosion result">
                     <p>Set the source location for every component.</p>
                     <br />
-                    <field name="product_id" readonly="1" />
-                    <field name="bom_id" readonly="1" />
-                    <div>
-                        <label
-                            for="potencial_qty"
-                            style="padding-right:15px;font-weight:bold;"
-                            string="Potencial Quantity"
-                        />
+                    <group>
+                        <field name="product_id" readonly="1" />
+                        <field name="bom_id" readonly="1" />
                         <field
-                            name="potencial_qty"
+                            name="location_id"
                             readonly="1"
-                            style="padding-right:5px"
+                            attrs="{'invisible': [('location_id', '=', False)]}"
                         />
-                        /
-                        <label for="desired_quantity" string="" readonly="1" />
-                        <field name="desired_quantity" readonly="1" class="oe_inline" />
-                        <span
-                            class='text-bf'
-                            style="padding-left:20px"
-                        >Desired Quantity</span>
-                    </div>
-                    <field name="availability" readonly="1" />
+                        <field name="product_uom_id" groups="uom.group_uom" />
+                    </group>
+                    <group>
+                        <field name="qty_available_in_source_loc" />
+                        <field name="potential_qty_rounded" readonly="1" />
+                        <field name="desired_qty" readonly="1" />
+                        <field name="availability" readonly="1" />
+                    </group>
                     <field name="line_ids" nolabel="1" colspan="2">
                         <tree
                             create="0"
                             delete="0"
                             editable="1"
-                            decoration-danger="availability=='not available'"
-                            default_order="availability desc"
+                            decoration-danger="availability=='not_available'"
                         >
                             <field name="bom_level" readonly="1" />
                             <field name="product_id" readonly="1" />
+                            <field name="bom_id" readonly="1" />
+                            <field name="bom_type" readonly="1" />
                             <field name="product_qty" readonly="1" />
-                            <field name="availability" readonly="1" />
                             <field name="qty_available_in_source_loc" readonly="1" />
+                            <field name="potential_qty" readonly="1" />
                             <field
                                 name="product_uom_id"
                                 groups="uom.group_uom"
                                 readonly="1"
                             />
-                            <field name="bom_id" readonly="1" />
+                            <field name="availability" readonly="1" />
+                            <field name="parent_bom_id" readonly="1" />
                             <field name="location_id" />
                         </tree>
                     </field>

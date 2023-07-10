@@ -87,7 +87,7 @@ msgid "Explode"
 msgstr ""
 
 #. module: mrp_bom_current_stock
-#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__explosion_id
+#: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__wizard_id
 msgid "Explosion"
 msgstr ""
 

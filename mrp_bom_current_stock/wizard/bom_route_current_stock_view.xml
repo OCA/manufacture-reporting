@@ -8,16 +8,13 @@
         <field name="arch" type="xml">
             <form>
                 <group name="step_1" string="Select product and location to explode">
-                    <field
-                        name="product_id"
-                        domain="[('bom_ids','!=',False),('bom_ids.type','!=','phantom')]"
-                    />
+                    <field name="product_id" domain="[('bom_ids','!=',False)]" />
                     <field name="product_tmpl_id" invisible="1" />
                     <field
                         name="bom_id"
-                        domain="['&amp;', '|', ('product_id','=',product_id),
+                        domain="['|', ('product_id','=',product_id),
                            '&amp;', ('product_tmpl_id.product_variant_ids','=',product_id),
-                           ('product_id','=',False), ('type', '=', 'normal')]"
+                           ('product_id','=',False)]"
                     />
                     <field name="location_id" />
                 </group>

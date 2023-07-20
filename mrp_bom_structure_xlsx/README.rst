@@ -78,7 +78,6 @@ Contributors
 * Bhavesh Odedra <bodedra@opensourceintegrators.com>
 * Juany Davila <juany.davila@forgeflow.com>
 
-
 Maintainers
 ~~~~~~~~~~~
 

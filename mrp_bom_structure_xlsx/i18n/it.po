@@ -6,68 +6,70 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-09-04 19:37+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Name"
-msgstr ""
+msgstr "Nome DiBa"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Structure"
-msgstr ""
+msgstr "Struttura DiBa"
 
 #. module: mrp_bom_structure_xlsx
 #: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
 msgid "BOM Structure XLSX Report"
-msgstr ""
+msgstr "Resoconto XLSX struttura DiBa"
 
 #. module: mrp_bom_structure_xlsx
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx.bom_structure_xlsx
 msgid "Export BoM Structure to Excel"
-msgstr ""
+msgstr "Esporta struttura DiBa in Excel"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Level"
-msgstr ""
+msgstr "Livello"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Name"
-msgstr ""
+msgstr "Nome prodotto"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Riferimento prodotto"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Quantità"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Reference"
-msgstr ""
+msgstr "Riferimento"
 
 #. module: mrp_bom_structure_xlsx
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unità di misura"

@@ -3,18 +3,14 @@
 
 from odoo import fields, models
 
-from odoo.addons import decimal_precision as dp
-
-UNIT = dp.get_precision("Product Price")
-
 
 class MrpBom(models.Model):
     _inherit = "mrp.bom"
 
     direct_materials_cost = fields.Float(
-        string="Direct Materials Cost",
+        string="Direct Material Cost",
         compute="_compute_direct_materials_cost",
-        digits=UNIT,
+        digits="Product Price",
     )
 
     def _compute_direct_materials_cost(self):

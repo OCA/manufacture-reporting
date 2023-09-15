@@ -3,18 +3,13 @@
 
 from odoo import fields, models
 
-from odoo.addons import decimal_precision as dp
-
-UNIT = dp.get_precision("Product Price")
-
 
 class MrpBom(models.Model):
     _inherit = "mrp.bom"
 
     subcontracting_cost = fields.Float(
-        string="Subcontracting Cost",
         compute="_compute_subcontracting_cost",
-        digits=UNIT,
+        digits="Product Price",
     )
 
     def _compute_subcontracting_cost(self):
@@ -23,7 +18,7 @@ class MrpBom(models.Model):
             if bom.type == "subcontract" and bom.subcontractor_ids:
                 supplier_info = supplier_info_obj.search(
                     [
-                        ("name", "=", bom.subcontractor_ids[0].id),
+                        ("partner_id", "=", bom.subcontractor_ids[0].id),
                         ("product_tmpl_id", "=", bom.product_tmpl_id.id),
                     ],
                     limit=1,

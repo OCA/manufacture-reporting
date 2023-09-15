@@ -3,17 +3,11 @@
 
 from odoo import fields, models
 
-from odoo.addons import decimal_precision as dp
-
-UNIT = dp.get_precision("Product Price")
-
 
 class MrpBom(models.Model):
     _inherit = "mrp.bom"
 
-    labour_cost = fields.Float(
-        string="Labour Cost", compute="_compute_labour_cost", digits=UNIT
-    )
+    labour_cost = fields.Float(compute="_compute_labour_cost", digits="Product Price")
 
     def _compute_labour_cost(self):
         for bom in self:

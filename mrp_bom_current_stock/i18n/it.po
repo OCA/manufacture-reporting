@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* mrp_bom_current_stock
+# 	* mrp_bom_current_stock
 #
 msgid ""
 msgstr ""
@@ -266,7 +266,9 @@ msgstr "Ubicazione di partenza"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
-msgid "Unit of Measure (Unit of Measure) is the unit of measurement for the inventory control"
+msgid ""
+"Unit of Measure (Unit of Measure) is the unit of measurement for the "
+"inventory control"
 msgstr ""
 "Unità di misura (Unità di misura) è l'unità di misura per il controllo di "
 "inventario"

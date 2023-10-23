@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_flattened_bom_xlsx
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-30 07:37+0000\n"
+"PO-Revision-Date: 2023-05-30 07:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "BOM Name"
+msgstr "Nome DiBa"
+
+#. module: mrp_flattened_bom_xlsx
+#: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Distinta base"
+
+#. module: mrp_flattened_bom_xlsx
+#: model:ir.actions.report,name:mrp_flattened_bom_xlsx.flattened_bom_xlsx
+msgid "Export Flattened BOM Structure to Excel"
+msgstr "Esporta distinata base tecnica in Excel"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Flattened BOM"
+msgstr "Distinta base tecnica"
+
+#. module: mrp_flattened_bom_xlsx
+#: model:ir.model,name:mrp_flattened_bom_xlsx.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
+msgid "Flattened BOM XLSX"
+msgstr "XLSX distinta base tecnica"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Product Name"
+msgstr "Nome prodotto"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Product Reference"
+msgstr "Riferimento prodotto"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Reference"
+msgstr "Riferimento"
+
+#. module: mrp_flattened_bom_xlsx
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Unit of Measure"
+msgstr "Unità di misura"

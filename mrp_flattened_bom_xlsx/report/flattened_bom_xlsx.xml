@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 ForgeFlow S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <report
+        id="flattened_bom_xlsx"
+        model="mrp.bom"
+        string="Export Flattened BOM Structure to Excel"
+        report_type="xlsx"
+        name="mrp_flattened_bom_xlsx.flattened_bom_xlsx"
+        file="mrp_bom"
+        attachment_use="False"
+    />
+
+</odoo>

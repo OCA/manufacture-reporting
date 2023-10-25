@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 16.0.1.0.0 |  | Export Flattened BOM to Excel
+[mrp_flattened_bom_xlsx_direct_materials_cost](mrp_flattened_bom_xlsx_direct_materials_cost/) | 16.0.1.0.0 |  | Export Flattened BOM to Excel with direct materials cost
 
 [//]: # (end addons)
 

@@ -30,6 +30,8 @@ class FlattenedBomXlsx(models.AbstractModel):
             sheet.write(i, 3, total_qty or 0.0)
             sheet.write(i, 4, product.uom_id.name or "")
             sheet.write(i, 5, product.code or "")
+            sheet.write(i, 6, product.standard_price or "")
+            sheet.write(i, 7, product.standard_price * total_qty or "")
             i += 1
         return i
 
@@ -55,6 +57,8 @@ class FlattenedBomXlsx(models.AbstractModel):
             _("Quantity"),
             _("Unit of Measure"),
             _("Reference"),
+            _("Unit Cost"),
+            _("Total Cost"),
         ]
         sheet.set_row(0, None, None, {"collapsed": 1})
         sheet.write_row(1, 0, sheet_title, title_style)

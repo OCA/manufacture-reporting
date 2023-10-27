@@ -34,6 +34,12 @@ class BomRouteCurrentStock(models.TransientModel):
     location_id = fields.Many2one(
         comodel_name="stock.location", string="Source location"
     )
+    exclude_location_ids = fields.Many2many(
+        comodel_name="stock.location",
+        string="Exclude locations",
+        domain="[('id', 'child_of', location_id), ('id', '!=', location_id)]",
+        help="Select only the parent location you want to exclude.",
+    )
     line_ids = fields.One2many(
         comodel_name="mrp.bom.current.stock.line",
         inverse_name="wizard_id",
@@ -73,6 +79,15 @@ class BomRouteCurrentStock(models.TransientModel):
         if self.bom_id.location_id:
             self.location_id = self.bom_id.location_id
 
+    def _get_exclude_locations_qty(self, product_id, location_id):
+        qty = 0
+        for exclude_location_id in self.exclude_location_ids:
+            if exclude_location_id.is_sublocation_of(location_id):
+                qty += product_id.with_context(
+                    location=exclude_location_id.id
+                ).qty_available
+        return qty
+
     def _get_outgoing_reservation_qty(self, product_id, location_id):
         # Copy of stock.buffer.`_get_outgoing_reservation_qty` method.
         domain = [
@@ -82,7 +97,11 @@ class BomRouteCurrentStock(models.TransientModel):
         lines = self.env["stock.move.line"].search(domain)
         lines = lines.filtered(
             lambda line: line.location_id.is_sublocation_of(location_id)
-            and not line.location_dest_id.is_sublocation_of(location_id)
+            and not line.location_id.is_sublocation_of(self.exclude_location_ids)
+            and (
+                not line.location_dest_id.is_sublocation_of(location_id)
+                or line.location_dest_id.is_sublocation_of(self.exclude_location_ids)
+            )
         )
         return sum(lines.mapped("product_qty"))
 
@@ -95,6 +114,10 @@ class BomRouteCurrentStock(models.TransientModel):
                     location=rec.location_id.id
                 ).qty_available
                 available_qty -= rec._get_outgoing_reservation_qty(
+                    rec.product_id,
+                    rec.location_id,
+                )
+                available_qty -= rec._get_exclude_locations_qty(
                     rec.product_id,
                     rec.location_id,
                 )
@@ -121,9 +144,7 @@ class BomRouteCurrentStock(models.TransientModel):
             "bom_line_id": bom_line.id,
             "bom_level": level,
             "product_qty": bom_line.product_qty * factor,
-            "location_id": (
-                bom_line.location_id.id if bom_line.location_id else self.location_id.id
-            ),
+            "location_id": self.location_id.id,
             "wizard_id": self.id,
         }
 
@@ -193,6 +214,8 @@ class BomRouteCurrentStock(models.TransientModel):
         action["context"] = {
             "default_bom_id": self.bom_id.id,
             "default_product_id": self.product_id.id,
+            "default_location_id": self.location_id.id,
+            "default_exclude_location_ids": self.exclude_location_ids.ids,
             "default_desired_qty": self.desired_qty,
             "default_explosion_type": self.explosion_type,
         }
@@ -275,6 +298,10 @@ class BomRouteCurrentStockLine(models.TransientModel):
                     location=rec.location_id.id
                 ).qty_available
                 available_qty -= rec.wizard_id._get_outgoing_reservation_qty(
+                    rec.product_id,
+                    rec.location_id,
+                )
+                available_qty -= rec.wizard_id._get_exclude_locations_qty(
                     rec.product_id,
                     rec.location_id,
                 )

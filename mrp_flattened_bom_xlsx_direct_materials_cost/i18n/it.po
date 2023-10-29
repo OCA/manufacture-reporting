@@ -22,28 +22,23 @@ msgid "Bill of Material"
 msgstr "Distinta base"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Currency"
 msgstr "Valuta"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__direct_materials_cost
+msgid "Direct Material Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Direct Materials"
 msgstr "Materiali diretti"
-
-#. module: mrp_flattened_bom_xlsx_direct_materials_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__direct_materials_cost
-msgid "Direct Materials Cost"
-msgstr "Costo materiali diretti"
-
-#. module: mrp_flattened_bom_xlsx_direct_materials_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__display_name
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_product_product__display_name
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
@@ -51,26 +46,14 @@ msgid "Flattened BOM XLSX"
 msgstr "XLSX distinta base tecnica"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__id
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_product_product__id
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
-msgid "ID"
-msgstr "ID"
-
-#. module: mrp_flattened_bom_xlsx_direct_materials_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom____last_update
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_product_product____last_update
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Material Cost"
 msgstr "Costo materiale"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Material Unit Cost"
@@ -78,5 +61,20 @@ msgstr "Costo unitario materiale"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_product_product
-msgid "Product"
-msgstr "Prodotto"
+msgid "Product Variant"
+msgstr ""
+
+#~ msgid "Direct Materials Cost"
+#~ msgstr "Costo materiali diretti"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Product"
+#~ msgstr "Prodotto"

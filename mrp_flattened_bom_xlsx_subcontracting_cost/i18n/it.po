@@ -22,16 +22,11 @@ msgid "Bill of Material"
 msgstr "Distinta base"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Currency"
 msgstr "Valuta"
-
-#. module: mrp_flattened_bom_xlsx_subcontracting_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_mrp_bom__display_name
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_subcontracting_cost.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
@@ -39,60 +34,56 @@ msgid "Flattened BOM XLSX"
 msgstr "XLSX distinta base tecnica"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_mrp_bom__id
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
-msgid "ID"
-msgstr "ID"
-
-#. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Internal Reference"
 msgstr "Riferimento interno"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_mrp_bom____last_update
-#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Level"
 msgstr "Livello"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Main BOM"
 msgstr "DiBa principale"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Partner Name"
 msgstr "Nome partner"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Product Name"
 msgstr "Nome prodotto"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Quantity"
 msgstr "Quantità"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Subcontracted BOM"
 msgstr "DiBa subappaltato"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_subcontracting_cost.field_mrp_bom__subcontracting_cost
 #, python-format
@@ -100,19 +91,31 @@ msgid "Subcontracting Cost"
 msgstr "Costo subappalto"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Subcontracting Costs"
 msgstr "Costi subappalto"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Subcontracting Unit Cost"
 msgstr "Costo unitario subappalto"
 
 #. module: mrp_flattened_bom_xlsx_subcontracting_cost
+#. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx_subcontracting_cost/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
 msgstr "Unità di misura"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"

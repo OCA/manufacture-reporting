@@ -17,12 +17,14 @@ msgstr ""
 "X-Generator: Weblate 4.16.4\n"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Name"
 msgstr "Nome DiBa"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Structure"
@@ -34,57 +36,57 @@ msgid "BOM Structure XLSX Report"
 msgstr "Resoconto XLSX struttura DiBa"
 
 #. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: mrp_bom_structure_xlsx
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx.bom_structure_xlsx
 msgid "Export BoM Structure to Excel"
 msgstr "Esporta struttura DiBa in Excel"
 
 #. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx__id
-msgid "ID"
-msgstr "ID"
-
-#. module: mrp_bom_structure_xlsx
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx.field_report_mrp_bom_structure_xlsx_bom_structure_xlsx____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Level"
 msgstr "Livello"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Name"
 msgstr "Nome prodotto"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Reference"
 msgstr "Riferimento prodotto"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Quantity"
 msgstr "Quantità"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Reference"
 msgstr "Riferimento"
 
 #. module: mrp_bom_structure_xlsx
+#. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
 msgstr "Unità di misura"
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"

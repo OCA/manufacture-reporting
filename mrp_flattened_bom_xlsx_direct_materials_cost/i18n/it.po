@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-05-24 10:09+0000\n"
+"PO-Revision-Date: 2023-11-12 17:38+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -31,7 +31,7 @@ msgstr "Valuta"
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__direct_materials_cost
 msgid "Direct Material Cost"
-msgstr ""
+msgstr "Costo materiale diretto"
 
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #. odoo-python
@@ -62,7 +62,7 @@ msgstr "Costo unitario materiale"
 #. module: mrp_flattened_bom_xlsx_direct_materials_cost
 #: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_product_product
 msgid "Product Variant"
-msgstr ""
+msgstr "Variante prodotto"
 
 #~ msgid "Direct Materials Cost"
 #~ msgstr "Costo materiali diretti"

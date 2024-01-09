@@ -17,7 +17,11 @@ TODO: add repo description.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 17.0.1.0.0 |  | Export BoM Structure to Excel .XLSX
 
 [//]: # (end addons)
 

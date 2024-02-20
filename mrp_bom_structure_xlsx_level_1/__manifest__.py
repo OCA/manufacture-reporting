@@ -3,7 +3,7 @@
 
 {
     "name": "MRP BOM Structure XLSX Level 1",
-    "version": "14.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Manufacturing",
     "summary": "Export BOM Structure (Level 1) to Excel .XLSX",
     "author": "ForgeFlow, Odoo Community Association (OCA)",

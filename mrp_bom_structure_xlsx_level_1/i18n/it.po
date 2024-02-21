@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_bom_structure_xlsx_level_1
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-05-17 12:34+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.model,name:mrp_bom_structure_xlsx_level_1.model_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1
+msgid "BOM Structure XLSX Level 1 Report"
+msgstr "Resoconto XLSX struttura DiBa"
+
+#. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.actions.report,name:mrp_bom_structure_xlsx_level_1.bom_structure_xlsx_l1
+msgid "Export BoM Structure (Level 1) to Excel"
+msgstr "Esporta struttura DiBa (livello 1) in Excel"
+
+#. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_bom_structure_xlsx_level_1
+#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"

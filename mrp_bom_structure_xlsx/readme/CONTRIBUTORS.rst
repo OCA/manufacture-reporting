@@ -3,3 +3,7 @@
 * Lois Rilo Antelo <lois.rilo@forgeflow.com>
 * Aaron Henriquez <ahenriquez@forgeflow.com>
 * Bhavesh Odedra <bodedra@opensourceintegrators.com>
+
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Víctor Martínez

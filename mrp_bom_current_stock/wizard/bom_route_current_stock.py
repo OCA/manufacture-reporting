@@ -74,11 +74,6 @@ class BomRouteCurrentStock(models.TransientModel):
         if self.product_id:
             self.bom_id = self.env["mrp.bom"]._bom_find(product=self.product_id)
 
-    @api.onchange("bom_id")
-    def _onchange_bom_id(self):
-        if self.bom_id.location_id:
-            self.location_id = self.bom_id.location_id
-
     def _get_exclude_locations_qty(self, product_id, location_id):
         qty = 0
         for exclude_location_id in self.exclude_location_ids:
@@ -313,12 +308,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
     @api.depends("bom_line_id")
     def _compute_bom_id(self):
         for rec in self:
-            boms = (
-                rec.bom_line_id.product_id.bom_ids.filtered(
-                    lambda bom: bom.location_id == rec.location_id
-                )
-                or rec.bom_line_id.product_id.bom_ids
-            )
+            boms = rec.bom_line_id.product_id.bom_ids
             rec.bom_id = boms[0] if boms else None
 
     @api.depends("product_qty", "qty_available_in_source_loc")

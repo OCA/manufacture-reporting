@@ -18,8 +18,9 @@
                                     <th>Level</th>
                                     <th>Product</th>
                                     <th>Quantity</th>
-                                    <th>Location</th>
                                     <th>Qty Available (Location)</th>
+                                    <th>Potential Qty</th>
+                                    <th>Location</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,14 +59,21 @@
                                         />
                                     </td>
                                     <td>
-                                        <span t-field="l.location_id.display_name" />
-                                    </td>
-                                    <td>
                                         <span t-field="l.qty_available_in_source_loc" />
                                         <span
                                             t-esc="l.product_uom_id.name"
                                             groups="uom.group_uom"
                                         />
+                                    </td>
+                                    <td>
+                                        <span t-field="l.potential_qty" />
+                                        <span
+                                            t-esc="l.product_uom_id.name"
+                                            groups="uom.group_uom"
+                                        />
+                                    </td>
+                                    <td>
+                                        <span t-field="l.location_id.display_name" />
                                     </td>
                                 </tr>
                             </tbody>

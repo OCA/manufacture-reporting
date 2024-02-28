@@ -18,14 +18,15 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
     def _print_bom_children(ch, sheet, row):
         i = row
         sheet.write(i, 0, ch.bom_level or "")
-        sheet.write(i, 1, ch.bom_line.bom_id.code or "")
+        sheet.write(i, 1, ch.bom_id.code or "")
         sheet.write(i, 2, ch.product_id.product_tmpl_id.display_name or "")
         sheet.write(i, 3, ch.product_qty or "")
         sheet.write(i, 4, ch.qty_available_in_source_loc or 0.0)
-        sheet.write(i, 5, ch.product_uom_id.name or "")
-        sheet.write(i, 6, ch.location_id.name or "")
-        sheet.write(i, 7, ch.bom_id.code or "")
-        sheet.write(i, 8, ch.bom_id.product_tmpl_id.display_name or "")
+        sheet.write(i, 5, ch.potential_qty or 0.0)
+        sheet.write(i, 6, ch.product_uom_id.name or "")
+        sheet.write(i, 7, ch.location_id.name or "")
+        sheet.write(i, 8, ch.parent_bom_id.code or "")
+        sheet.write(i, 9, ch.parent_bom_id.product_tmpl_id.display_name or "")
         i += 1
         return i
 
@@ -40,10 +41,10 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
         sheet.set_column(0, 0, 5)
         sheet.set_column(1, 2, 40)
         sheet.set_column(3, 3, 10)
-        sheet.set_column(4, 4, 20)
-        sheet.set_column(5, 5, 7)
-        sheet.set_column(6, 6, 20)
-        sheet.set_column(7, 8, 40)
+        sheet.set_column(4, 5, 20)
+        sheet.set_column(6, 6, 7)
+        sheet.set_column(7, 7, 20)
+        sheet.set_column(8, 9, 40)
 
         title_style = workbook.add_format(
             {"bold": True, "bg_color": "#FFFFCC", "bottom": 1}
@@ -54,6 +55,7 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
             _("Product Reference"),
             _("Quantity"),
             _("Qty Available (Location)"),
+            _("Potential Qty"),
             _("UoM"),
             _("Location"),
             _("Parent BoM Ref"),
@@ -69,10 +71,11 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
             sheet.write(i, 0, "0", bold)
             sheet.write(i, 1, o.bom_id.code or "", bold)
             sheet.write(i, 2, o.product_tmpl_id.name or "", bold)
-
             sheet.write(i, 3, o.product_qty or "", bold)
-            sheet.write(i, 5, o.product_uom_id.name or "", bold)
-            sheet.write(i, 6, o.location_id.name or "", bold)
+            sheet.write(i, 4, o.qty_available_in_source_loc or 0.0, bold)
+            sheet.write(i, 5, o.potential_qty or 0.0, bold)
+            sheet.write(i, 6, o.product_uom_id.name or "", bold)
+            sheet.write(i, 7, o.location_id.name or "", bold)
             i += 1
             for ch in o.line_ids:
                 i = self._print_bom_children(ch, sheet, i)

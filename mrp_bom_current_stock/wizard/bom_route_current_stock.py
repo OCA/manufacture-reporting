@@ -74,11 +74,6 @@ class BomRouteCurrentStock(models.TransientModel):
         if self.product_id:
             self.bom_id = self.env["mrp.bom"]._bom_find(product=self.product_id)
 
-    @api.onchange("bom_id")
-    def _onchange_bom_id(self):
-        if self.bom_id.location_id:
-            self.location_id = self.bom_id.location_id
-
     def _get_exclude_locations_qty(self, product_id, location_id):
         qty = 0
         for exclude_location_id in self.exclude_location_ids:

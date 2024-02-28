@@ -35,6 +35,7 @@
                            ('product_id','=',False)]"
                     />
                     <field name="location_id" />
+                    <field name="exclude_location_ids" widget="many2many_tags" />
                     <label for="desired_qty" />
                     <div class="o_row">
                         <field name="desired_qty" />
@@ -73,6 +74,11 @@
                             name="location_id"
                             readonly="1"
                             attrs="{'invisible': [('location_id', '=', False)]}"
+                        />
+                        <field
+                            name="exclude_location_ids"
+                            readonly="1"
+                            widget="many2many_tags"
                         />
                         <field name="product_uom_id" groups="uom.group_uom" />
                     </group>

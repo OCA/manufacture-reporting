@@ -7,7 +7,7 @@ from odoo.tests.common import TransactionCase
 class TestFlattenedBom(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestFlattenedBom, cls).setUpClass()
+        super().setUpClass()
 
         cls.product_obj = cls.env["product.product"]
         cls.bom_obj = cls.env["mrp.bom"]

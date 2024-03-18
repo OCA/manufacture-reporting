@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 17.0.1.0.1 |  | Export BoM Structure to Excel .XLSX
+[mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 17.0.1.0.0 |  | Export Flattened BOM to Excel
 
 [//]: # (end addons)
 

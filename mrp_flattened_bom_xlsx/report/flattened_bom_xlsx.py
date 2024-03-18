@@ -2,12 +2,8 @@
 #   (http://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-import logging
-
 from odoo import models
 from odoo.tools.translate import _
-
-_logger = logging.getLogger(__name__)
 
 
 class FlattenedBomXlsx(models.AbstractModel):

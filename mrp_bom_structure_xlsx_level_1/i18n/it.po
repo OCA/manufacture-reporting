@@ -22,21 +22,15 @@ msgid "BOM Structure XLSX Level 1 Report"
 msgstr "Resoconto XLSX struttura DiBa"
 
 #. module: mrp_bom_structure_xlsx_level_1
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
-
-#. module: mrp_bom_structure_xlsx_level_1
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx_level_1.bom_structure_xlsx_l1
 msgid "Export BoM Structure (Level 1) to Excel"
 msgstr "Esporta struttura DiBa (livello 1) in Excel"
 
-#. module: mrp_bom_structure_xlsx_level_1
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1__id
-msgid "ID"
-msgstr "ID"
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
 
-#. module: mrp_bom_structure_xlsx_level_1
-#: model:ir.model.fields,field_description:mrp_bom_structure_xlsx_level_1.field_report_mrp_bom_structure_xlsx_l1_bom_structure_xlsx_l1____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"

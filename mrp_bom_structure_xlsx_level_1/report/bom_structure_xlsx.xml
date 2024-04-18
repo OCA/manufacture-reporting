@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright 2018-19 ForgeFlow S.L. (https://www.forgeflow.com)
+<!-- Copyright 2018-24 ForgeFlow S.L. (https://www.forgeflow.com)
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
     <record id="bom_structure_xlsx_l1" model="ir.actions.report">

@@ -1,9 +1,9 @@
-# Copyright 2018-19 ForgeFlow S.L. (https://www.forgeflow.com)
+# Copyright 2018-24 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
     "name": "MRP BOM Structure XLSX Level 1",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Manufacturing",
     "summary": "Export BOM Structure (Level 1) to Excel .XLSX",
     "author": "ForgeFlow, Odoo Community Association (OCA)",

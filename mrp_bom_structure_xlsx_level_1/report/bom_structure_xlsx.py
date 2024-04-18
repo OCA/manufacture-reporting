@@ -1,11 +1,8 @@
-# Copyright 2018-19 ForgeFlow S.L. (https://www.forgeflow.com))
+# Copyright 2018-24 ForgeFlow S.L. (https://www.forgeflow.com))
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-import logging
 
 from odoo import models
-
-_logger = logging.getLogger(__name__)
 
 
 class BomStructureXlsxL1(models.AbstractModel):

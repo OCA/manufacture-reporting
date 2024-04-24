@@ -12,7 +12,6 @@ class MRPBomStructureReportLevel1(models.AbstractModel):
     def _get_pdf_line(
         self, bom_id, product_id=False, qty=1, child_bom_ids=None, unfolded=False
     ):
-
         if child_bom_ids is None:
             child_bom_ids = []
 

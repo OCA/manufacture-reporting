@@ -29,7 +29,10 @@ MRP BOM Structure Report Level 1
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module adds a PDF report in BoM's to print just the first level of
-components. So, will not explode into the subcomponents.
+components. So, if you have a Bill of Materials (A) for which one of the
+Components also has a Bill of Materials (B), the report will only
+display the Components within the first level for the selected Bill of
+Materials (A), but not the Components from the Bill of Materials (B).
 
 **Table of contents**
 
@@ -41,7 +44,7 @@ Usage
 
 To use this module, you need to:
 
-1. Go to 'Manufacturing / Master Data / Bill of Materials'
+1. Go to 'Manufacturing / Products / Bill of Materials'
 2. Select a BoM and
 3. Go to 'Print > BoM Structure (Level 1)'
 
@@ -68,6 +71,7 @@ Contributors
 
 -  Jordi Ballester <jordi.ballester@forgeflow.com>
 -  Miquel Raïch <miquel.raich@forgeflow.com>
+-  Anaïs López <anais.lopez@forgeflow.com>
 
 Maintainers
 -----------

@@ -1,0 +1,3 @@
+- Jordi Ballester \<<jordi.ballester@forgeflow.com>\>
+- Miquel Raïch \<<miquel.raich@forgeflow.com>\>
+- Anaïs López \<<anais.lopez@forgeflow.com>\>

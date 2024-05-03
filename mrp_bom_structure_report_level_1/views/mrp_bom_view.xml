@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017-2024 ForgeFlow S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <record id="bom_structure_level_1" model="ir.actions.report">
+        <field name="name">BoM Structure (Level 1)</field>
+        <field name="model">mrp.bom</field>
+        <field name="type">ir.actions.report</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_bom" />
+        <field name="report_name">mrp_bom_structure_report_level_1.mrp_bs_l1</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">mrp_bom_structure_report_level_1.mrp_bs_l1</field>
+        <field
+            name="print_report_name"
+        >'BoM Structure - %s' % object.display_name</field>
+    </record>
+</odoo>

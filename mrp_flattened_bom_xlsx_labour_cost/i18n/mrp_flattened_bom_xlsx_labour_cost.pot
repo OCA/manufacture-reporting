@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_flattened_bom_xlsx_labour_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: model:ir.model,name:mrp_flattened_bom_xlsx_labour_cost.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Cost per hour"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Currency"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Duration (hours)"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: model:ir.model,name:mrp_flattened_bom_xlsx_labour_cost.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
+msgid "Flattened BOM XLSX"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_mrp_bom__id
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx__id
+msgid "ID"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Internal Reference"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_mrp_bom__labour_cost
+#, python-format
+msgid "Labour Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Labour Costs"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Labour Unit Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_mrp_bom____last_update
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_labour_cost.field_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Level"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Main BOM"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Operation"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Product Name"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Quantity"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Sub BOMs"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_labour_cost
+#: code:addons/mrp_flattened_bom_xlsx_labour_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Work Center"
+msgstr ""

@@ -3,7 +3,7 @@
 
 {
     "name": "Export Flattened BOM to Excel with direct materials cost",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "Manufacturing",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/manufacture-reporting",

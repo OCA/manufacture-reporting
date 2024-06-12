@@ -11,7 +11,7 @@
     "website": "https://github.com/OCA/manufacture-reporting",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["mrp_bom_location", "report_xlsx"],
+    "depends": ["mrp", "report_xlsx", "stock_helper"],
     "data": [
         "security/ir.model.access.csv",
         "reports/report_mrpcurrentstock.xml",

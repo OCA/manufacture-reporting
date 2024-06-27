@@ -2,14 +2,13 @@
 <!-- Copyright 2018 ForgeFlow S.L.
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <report
-        id="flattened_bom_xlsx"
-        model="mrp.bom"
-        string="Export Flattened BOM Structure to Excel"
-        report_type="xlsx"
-        name="mrp_flattened_bom_xlsx.flattened_bom_xlsx"
-        file="mrp_bom"
-        attachment_use="False"
-    />
-
+    <record id="flattened_bom_xlsx" model="ir.actions.report">
+        <field name="name">Export Flattened BOM Structure to Excel</field>
+        <field name="model">mrp.bom</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">mrp_flattened_bom_xlsx.flattened_bom_xlsx</field>
+        <field name="report_file">mrp_bom</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_bom" />
+        <field name="binding_type">report</field>
+    </record>
 </odoo>

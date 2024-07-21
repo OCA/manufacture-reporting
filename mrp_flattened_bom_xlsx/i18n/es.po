@@ -6,67 +6,69 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2024-07-21 11:58+0000\n"
+"Last-Translator: \"David Alonso (Solvos)\" <david.alonso@solvos.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "BOM Name"
-msgstr ""
+msgstr "Nombre de la LdM"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_mrp_bom
 msgid "Bill of Material"
-msgstr ""
+msgstr "Lista de materiales"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.actions.report,name:mrp_flattened_bom_xlsx.flattened_bom_xlsx
 msgid "Export Flattened BOM Structure to Excel"
-msgstr ""
+msgstr "Exportar estructura aplanada de la LdM a Excel"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Flattened BOM"
-msgstr ""
+msgstr "LdM aplanada"
 
 #. module: mrp_flattened_bom_xlsx
 #: model:ir.model,name:mrp_flattened_bom_xlsx.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
 msgid "Flattened BOM XLSX"
-msgstr ""
+msgstr "XLSX de la LdM aplanada"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Product Name"
-msgstr ""
+msgstr "Nombre del producto"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Referencia del producto"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Reference"
-msgstr ""
+msgstr "Referencia"
 
 #. module: mrp_flattened_bom_xlsx
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unidad de medida"

@@ -8,6 +8,20 @@
                     <h2>BOM Current Stock Report</h2>
                      <t t-foreach="docs" t-as="o">
                          <table class="table table-condensed">
+                             <tr>
+                                <th>Quantity Able to Produce Immediately:</th>
+                                <td>
+                                    <span t-field="o.qty_able_to_produce"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Total Quantity Able to Produce:</th>
+                                <td>
+                                    <span t-field="o.total_qty_able_to_produce"/>
+                                </td>
+                            </tr>
+                         </table>
+                         <table class="table table-condensed">
                             <thead>
                                 <tr>
                                     <th>Location:</th>

@@ -6,76 +6,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2024-11-27 13:06+0000\n"
+"Last-Translator: Quentin Dupont <perso@quentindupont.fr>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Name"
-msgstr ""
+msgstr "Nom de la Nomenclature"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Structure"
-msgstr ""
+msgstr "Structure de la Nomenclature"
 
 #. module: mrp_bom_structure_xlsx
 #: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
 msgid "BOM Structure XLSX Report"
-msgstr ""
+msgstr "Rapport XLSX de la structure de la Nomenclature"
 
 #. module: mrp_bom_structure_xlsx
 #: model:ir.actions.report,name:mrp_bom_structure_xlsx.bom_structure_xlsx
 msgid "Export BoM Structure to Excel"
-msgstr ""
+msgstr "Export de la Nomenclature format Excel"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Level"
-msgstr ""
+msgstr "Niveau"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Name"
-msgstr ""
+msgstr "Nom du Produit"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Référence Produit"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Quantité"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Reference"
-msgstr ""
+msgstr "Référence"
 
 #. module: mrp_bom_structure_xlsx
 #. odoo-python
 #: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unité de mesure"

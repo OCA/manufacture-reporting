@@ -17,22 +17,22 @@ class TestFlattenedBom(TransactionCase):
 
         # Create products:
         cls.product_top = cls.product_obj.create(
-            {"name": "Final Product", "type": "product", "standard_price": 300.0}
+            {"name": "Final Product", "is_storable": True, "standard_price": 300.0}
         )
         cls.product_sub_1 = cls.product_obj.create(
-            {"name": "L01-01", "type": "product", "standard_price": 300.0}
+            {"name": "L01-01", "is_storable": True, "standard_price": 300.0}
         )
         cls.product_sub_2 = cls.product_obj.create(
-            {"name": "L01-02", "type": "product", "standard_price": 300.0}
+            {"name": "L01-02", "is_storable": True, "standard_price": 300.0}
         )
         cls.component_1 = cls.product_obj.create(
-            {"name": "RM 01", "type": "product", "standard_price": 100.0}
+            {"name": "RM 01", "is_storable": True, "standard_price": 100.0}
         )
         cls.component_2 = cls.product_obj.create(
-            {"name": "RM 01", "type": "product", "standard_price": 75.0}
+            {"name": "RM 01", "is_storable": True, "standard_price": 75.0}
         )
         cls.component_3 = cls.product_obj.create(
-            {"name": "RM 03", "type": "product", "standard_price": 75.0}
+            {"name": "RM 03", "is_storable": True, "standard_price": 75.0}
         )
 
         # Create Bills of Materials:

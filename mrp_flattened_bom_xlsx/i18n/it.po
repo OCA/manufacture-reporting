@@ -19,7 +19,6 @@ msgstr ""
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "BOM Name"
 msgstr "Nome DiBa"
 
@@ -36,7 +35,6 @@ msgstr "Esporta distinata base tecnica in Excel"
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Flattened BOM"
 msgstr "Distinta base tecnica"
 
@@ -48,34 +46,29 @@ msgstr "XLSX distinta base tecnica"
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Product Name"
 msgstr "Nome prodotto"
 
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Product Reference"
 msgstr "Riferimento prodotto"
 
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Quantity"
 msgstr "Quantità"
 
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Reference"
 msgstr "Riferimento"
 
 #. module: mrp_flattened_bom_xlsx
 #. odoo-python
 #: code:addons/mrp_flattened_bom_xlsx/report/flattened_bom_xlsx.py:0
-#, python-format
 msgid "Unit of Measure"
 msgstr "Unità di misura"

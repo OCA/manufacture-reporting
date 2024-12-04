@@ -3,7 +3,6 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import models
-from odoo.tools.translate import _
 
 
 class FlattenedBomXlsx(models.AbstractModel):
@@ -33,7 +32,7 @@ class FlattenedBomXlsx(models.AbstractModel):
         workbook.set_properties(
             {"comments": "Created with Python and XlsxWriter from Odoo 11.0"}
         )
-        sheet = workbook.add_worksheet(_("Flattened BOM"))
+        sheet = workbook.add_worksheet(self.env._("Flattened BOM"))
         sheet.set_landscape()
         sheet.fit_to_pages(1, 0)
         sheet.set_zoom(80)
@@ -45,12 +44,12 @@ class FlattenedBomXlsx(models.AbstractModel):
             {"bold": True, "bg_color": "#FFFFCC", "bottom": 1}
         )
         sheet_title = [
-            _("BOM Name"),
-            _("Product Reference"),
-            _("Product Name"),
-            _("Quantity"),
-            _("Unit of Measure"),
-            _("Reference"),
+            self.env._("BOM Name"),
+            self.env._("Product Reference"),
+            self.env._("Product Name"),
+            self.env._("Quantity"),
+            self.env._("Unit of Measure"),
+            self.env._("Reference"),
         ]
         sheet.set_row(0, None, None, {"collapsed": 1})
         sheet.write_row(1, 0, sheet_title, title_style)

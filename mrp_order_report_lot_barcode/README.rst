@@ -2,17 +2,16 @@
     :alt: License: AGPL-3
 
 ==============================================
-Product Barcode on the Production Order Report
+Lot Barcode on the Production Order Report
 ==============================================
 
-This module adds the product code or lot/serial number barcode on the production order report so that manufacturing users can scan barcodes.
+This module adds lot/serial number barcodes on the production order report so that manufacturing users can scan barcodes.
 
 Configuration
 =============
 
 * Check the configuration of your products to make sure:
-  * the barcode field is set
-  * the tracking is configured: No tracking, By Lot Number, By Serial Number
+  * the tracking is configured: By Lot Number, By Serial Number
 * Create a BOM using these products
 
 Usage

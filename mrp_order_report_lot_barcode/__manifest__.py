@@ -2,11 +2,10 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    "name": "Product Barcode on the Production Order",
-    "version": "11.0.1.0.0",
+    "name": "Lot Barcode on the Production Order",
+    "version": "16.0.1.0.0",
     "license": "AGPL-3",
-    "author": "Open Source Integrators,"
-              "Odoo Community Association (OCA)",
+    "author": "Open Source Integrators," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/manufacture-reporting",
     "category": "Manufacturing",
     "depends": [

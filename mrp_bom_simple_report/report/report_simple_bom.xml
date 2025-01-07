@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright (C) 2022 - Today: GRAP (http://www.grap.coop)
+@author: Quentin DUPONT (quentin.dupont@grap.coop)
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <template id="bom_simple_report_xml">
+      <t t-call="web.basic_layout">
+        <t t-foreach="docs" t-as="bom">
+          <!-- One page per BoM -->
+          <div
+                    class="page bom-simple-report-page middle-font-size"
+                    style="page-break-before:always;"
+                >
+            <span>Bill of Material</span>
+            <h2 class="title-h3"><b><span t-out="bom.display_name" /></b></h2>
+
+            <!--
+                Manage printing other than the default BoM quantity
+                @params to set in parent template :
+                  t-set="docs" → BoM
+                  t-set="bom_intermediate_parent_bom_text" → nested BoM
+                  t-set="bom_qty" → desired BoM quantity
+                Call this template with t-foreach to print multiple
+                BoM with multiple BoM quantity
+            -->
+            <t t-if="bom_qty">
+              <t t-set="bom_product_qty" t-value="bom_qty" />
+            </t>
+            <t t-else="">
+              <t t-set="bom_product_qty" t-value="bom.product_qty" />
+            </t>
+
+            <t t-if="bom_intermediate_parent_bom_text">
+              <span
+                            class="bom_intermediate_parent_bom_text"
+                        >↳ Intermediate Bill of Material for
+                <b><span t-esc="bom_intermediate_parent_bom_text" /> <span
+                                    t-out="bom.product_uom_id.name"
+                                /></b>
+                <br />
+              </span>
+              <t t-set="bom_product_qty" t-value="bom_qty" />
+            </t>
+            <t t-else="">
+              <span class="bom_product_qty">
+                <b>Quantity: </b><span t-out="bom_product_qty" /><span
+                                t-out="bom.product_uom_id.name"
+                            />
+                <br />
+              </span>
+            </t>
+
+            <br />
+            <table class="table table-sm table-bordered">
+                <thead>
+                    <tr class="bom_to_prepare_thead th-colored">
+                        <th name="th_bom_line_product" class="text-left">Component</th>
+                        <th
+                                    name="th_bom_line_qty"
+                                    class="text-center width-qty-and-unit"
+                                >Quantity</th>
+                        <th
+                                    name="th_bom_line_uom"
+                                    class="text-left width-qty-and-unit"
+                                >UoM</th>
+                        <th
+                                    name="th_bom_line_free_comment"
+                                    class="text-center width-free-comment"
+                                >Free comment</th>
+                    </tr>
+                </thead>
+                <tbody class="bom_to_prepare_tbody">
+
+                  <!-- Handle possibility of sections & notes -->
+                  <t t-if="'bom_line_with_sectionnote_ids' in bom">
+                    <t t-set="_bom_lines" t-value="bom.bom_line_with_sectionnote_ids" />
+                  </t>
+                  <t t-else="">
+                    <t t-set="_bom_lines" t-value="bom.bom_line_ids" />
+                  </t>
+
+                  <t t-foreach="_bom_lines" t-as="bom_line">
+
+                    <!--
+                        Check if variable bom_line_with_sectionnote_ids exists
+                        (if mrp_bom_widget_sections_and_notes_one2many in installed)
+                    -->
+                    <t t-if="'bom_line_with_sectionnote_ids' in bom">
+                        <t t-if="bom_line.display_type">
+
+                          <!-- SECTIONS -->
+                          <tr t-if="bom_line.display_type == 'line_section'">
+                            <td
+                                                colspan="100%"
+                                                name="td_bom_line_name"
+                                                class="text-left line_section"
+                                            >
+                              <span t-out="bom_line.name" />
+                            </td>
+                          </tr>
+
+                          <!-- NOTES -->
+                          <tr t-elif="bom_line.display_type == 'line_note'">
+                            <td
+                                                colspan="100%"
+                                                name="td_bom_line_name"
+                                                class="text-left line_note"
+                                            >
+                              <span t-field="bom_line.name" />
+                            </td>
+                          </tr>
+
+                        </t>
+                    </t>
+
+                    <!-- COMPONENTS -->
+                    <t t-if="bom_line.product_id">
+                      <tr>
+                        <td name="td_bom_line_product" class="text-left">
+                          <span t-out="bom_line.display_name" />
+                        </td>
+                        <td
+                                            name="td_bom_line_qty"
+                                            class="text-center width-qty-and-unit"
+                                        >
+
+                          <!-- Manage printing other than the default BoM quantity -->
+                          <t t-if="bom_qty">
+                            <!-- Desired quantity is set -->
+                            <t
+                                                    t-set="bom_line_product_qty"
+                                                    t-value="round(bom_line.product_qty * bom_qty / bom.product_qty ,3)"
+                                                />
+                          </t>
+                          <t t-else="">
+                            <t
+                                                    t-set="bom_line_product_qty"
+                                                    t-value="bom_line.product_qty"
+                                                />
+                          </t>
+                          <span t-out="bom_line_product_qty" />
+
+                        </td>
+                        <td name="td_bom_line_uom" class="text-left width-qty-and-unit">
+                          <span t-out="bom_line.product_uom_id.name" />
+                        </td>
+                        <td
+                                            name="td_bom_line_free_comment"
+                                            class="width-free-comment"
+                                        />
+                      </tr>
+                    </t>
+                  </t>
+                </tbody>
+            </table>
+          </div>
+        </t>
+      </t>
+    </template>
+
+</odoo>

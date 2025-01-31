@@ -66,9 +66,7 @@ class FlattenedBomXlsx(models.AbstractModel):
             )
 
             sheet_name = (
-                f"({bom.id}){bom.code}"
-                if bom.code
-                else f"({bom.id}){bom.display_name}"
+                f"({bom.id}){bom.code}" if bom.code else f"({bom.id}){bom.display_name}"
             )
             sheet = workbook.add_worksheet(sheet_name[:31])
             sheet.set_landscape()

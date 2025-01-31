@@ -1,10 +1,9 @@
 # Copyright 2018 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+import io
+import zipfile
 
 from odoo.tests.common import TransactionCase
-import base64
-import zipfile
-import io
 
 class TestFlattenedBom(TransactionCase):
     @classmethod
@@ -124,11 +123,17 @@ class TestFlattenedBom(TransactionCase):
         bom_records = self.bom_top | self.bom_sub_1 | self.bom_sub_2
 
         # Generate the report
-        report_data = report._render_xlsx("mrp_flattened_bom_xlsx.flattened_bom_xlsx", bom_records.ids, data={})
+        report_data = report._render_xlsx(
+            "mrp_flattened_bom_xlsx.flattened_bom_xlsx", bom_records.ids, data={}
+        )
         report_bytes = report_data[0]
 
         with zipfile.ZipFile(io.BytesIO(report_bytes), "r") as xlsx_zip:
-            sheet_files = [name for name in xlsx_zip.namelist() if name.startswith("xl/worksheets/sheet")]
+            sheet_files = [
+                name
+                for name in xlsx_zip.namelist()
+                if name.startswith("xl/worksheets/sheet")
+            ]
 
         # Ensure the correct number of sheets exists
         self.assertEqual(len(bom_records), len(sheet_files))

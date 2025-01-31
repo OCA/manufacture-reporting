@@ -1,6 +1,7 @@
+from datetime import datetime
+
 from odoo import models
 from odoo.tools.translate import _
-from datetime import datetime
 
 class FlattenedBomXlsx(models.AbstractModel):
     _name = "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"
@@ -19,7 +20,7 @@ class FlattenedBomXlsx(models.AbstractModel):
             value = int(hex_color[i : i + 2], 16) / 255.0
             linear_rgb.append(
                 value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4
-                )
+            )
         luminance = (
             0.2126 * linear_rgb[0] + 0.7152 * linear_rgb[1] + 0.0722 * linear_rgb[2]
         )

@@ -5,6 +5,7 @@ import zipfile
 
 from odoo.tests.common import TransactionCase
 
+
 class TestFlattenedBom(TransactionCase):
     @classmethod
     def setUpClass(cls):
@@ -155,10 +156,7 @@ class TestFlattenedBom(TransactionCase):
             "#101010": "#FFFFFF",  # Dark gray -> White text
         }
 
-        # Instantiate the model class
         model_instance = self.env["report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"]
-
-        # Run tests
         for bg_color, expected_text_color in test_cases.items():
             with self.subTest(bg_color=bg_color):
                 result = model_instance.get_text_color(bg_color)

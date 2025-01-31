@@ -10,7 +10,8 @@ class FlattenedBomXlsx(models.AbstractModel):
     _description = "Flattened BOM XLSX"
 
     def get_text_color(self, hex_color):
-        """Determine if text should be black or white based on background color luminance.
+        """Determine if text should be black or white
+        based on background color luminance.
         See https://www.w3.org/TR/WCAG21/#dfn-relative-luminance"""
         hex_color = hex_color.lstrip("#")
         if len(hex_color) != 6:

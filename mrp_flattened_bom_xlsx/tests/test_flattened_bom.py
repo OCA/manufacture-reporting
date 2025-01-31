@@ -139,7 +139,7 @@ class TestFlattenedBom(TransactionCase):
         self.assertEqual(len(bom_records), len(sheet_files))
 
     def test_get_text_color(self):
-        """Test that text color is correctly determined based on background luminance."""
+        """Test text color determined based on background luminance."""
 
         # {background_color: expected_text_color}
         test_cases = {

@@ -116,7 +116,6 @@ class TestFlattenedBom(TransactionCase):
         # Component 3 = 5*3 = 15 units -> 15/12 dozens
         self.assertAlmostEqual(flat_tot.get(self.component_3), 15 / 12)
 
-
     def test_03_multiple_export(self):
         """Test XLSX report generation with separate sheets for each BoM selected"""
         report = self.report_obj
@@ -137,7 +136,6 @@ class TestFlattenedBom(TransactionCase):
 
         # Ensure the correct number of sheets exists
         self.assertEqual(len(bom_records), len(sheet_files))
-
 
     def test_get_text_color(self):
         """Test that text color is correctly determined based on background luminance."""

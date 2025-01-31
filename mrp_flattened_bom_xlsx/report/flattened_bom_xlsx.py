@@ -16,7 +16,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
         linear_rgb = []
         for i in range(0, 6, 2):
-            value = int(hex_color[i:i+2], 16) / 255.0
+            value = int(hex_color[i : i + 2], 16) / 255.0
             linear_rgb.append(
                 value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4
                 )
@@ -58,11 +58,11 @@ class FlattenedBomXlsx(models.AbstractModel):
                     "bold": True,
                     "bg_color": bg_color,
                     "font_color": text_color,
-                    "bottom": 1
+                    "bottom": 1,
                 }
             )
 
-            sheet_name = bom.code or _("BOM")
+            sheet_name = f"{bom.id}/{bom.code}"[:31]
             sheet = workbook.add_worksheet(sheet_name[:31])
             sheet.set_landscape()
             sheet.fit_to_pages(1, 0)
@@ -72,7 +72,7 @@ class FlattenedBomXlsx(models.AbstractModel):
             sheet.set_column(3, 4, 10)
 
             # Company Info
-            company_name =  (
+            company_name = (
                 bom.company_id.partner_id.contact_address_inline
                 or bom.company_id.name
                 or ""

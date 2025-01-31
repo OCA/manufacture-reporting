@@ -3,6 +3,7 @@ from datetime import datetime
 from odoo import models
 from odoo.tools.translate import _
 
+
 class FlattenedBomXlsx(models.AbstractModel):
     _name = "report.mrp_flattened_bom_xlsx.flattened_bom_xlsx"
     _inherit = "report.report_xlsx.abstract"

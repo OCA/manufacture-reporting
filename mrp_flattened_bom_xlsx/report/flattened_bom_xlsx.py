@@ -9,17 +9,20 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def get_text_color(self, hex_color):
         """Determine if text should be black or white based on background color luminance.
-        See https://www.w3.org/TR/WCAG21/#dfn-relative-luminance """
+        See https://www.w3.org/TR/WCAG21/#dfn-relative-luminance"""
         hex_color = hex_color.lstrip("#")
         if len(hex_color) != 6:
             return "#000000"
 
-        # Convert hex to linear RGB
         linear_rgb = []
         for i in range(0, 6, 2):
             value = int(hex_color[i:i+2], 16) / 255.0
-            linear_rgb.append(value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4)
-        luminance = 0.2126 * linear_rgb[0] + 0.7152 * linear_rgb[1] + 0.0722 * linear_rgb[2]
+            linear_rgb.append(
+                value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4
+                )
+        luminance = (
+            0.2126 * linear_rgb[0] + 0.7152 * linear_rgb[1] + 0.0722 * linear_rgb[2]
+        )
         return "#FFFFFF" if luminance < 0.179 else "#000000"
 
     def print_flattened_bom_lines(self, bom, requirements, sheet, row):
@@ -51,11 +54,16 @@ class FlattenedBomXlsx(models.AbstractModel):
             text_color = self.get_text_color(bg_color)
 
             title_style = workbook.add_format(
-                {"bold": True, "bg_color": bg_color, "font_color": text_color, "bottom": 1}
+                {
+                    "bold": True,
+                    "bg_color": bg_color,
+                    "font_color": text_color,
+                    "bottom": 1
+                }
             )
 
             sheet_name = bom.code or _("BOM")
-            sheet = workbook.add_worksheet(sheet_name[:31])  # Limit to Excel's max 31 chars
+            sheet = workbook.add_worksheet(sheet_name[:31])
             sheet.set_landscape()
             sheet.fit_to_pages(1, 0)
             sheet.set_zoom(100)
@@ -64,7 +72,11 @@ class FlattenedBomXlsx(models.AbstractModel):
             sheet.set_column(3, 4, 10)
 
             # Company Info
-            company_name =  bom.company_id.partner_id.contact_address_inline or bom.company_id.name or ""
+            company_name =  (
+                bom.company_id.partner_id.contact_address_inline
+                or bom.company_id.name
+                or ""
+            )
             header_text = f"© {company_name}"
 
             sheet.write(0, 0, header_text)

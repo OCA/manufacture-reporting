@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2025 Camptocamp SA (https://www.camptocamp.com).
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <template
+        id="report_mrp_production_components"
+        inherit_id="mrp.report_mrp_production_components"
+    >
+        <!-- Display the column only if there are products tracked with lot/SN -->
+        <xpath expr="//table/thead" position="before">
+            <t
+                t-set="has_lot"
+                t-value="o.state in ('progress', 'to_close','done') and any(product.tracking in ('lot', 'serial') for product in o.move_raw_ids.product_id)"
+            />
+        </xpath>
+        <xpath expr="//table/thead/tr/th[1]" position="after">
+            <th t-if="has_lot" name="lot">Lot / SN</th>
+        </xpath>
+        <!--
+            For products tracked by lot, we also display an 'Lot missing' column if needed
+            and split the displayed quantities.
+
+            For products tracked by SN we simply print the serial numbers
+        -->
+        <xpath expr="//table/tbody/tr/td[1]" position="after">
+            <t t-set="quantity_by_lot" t-value="raw_line._get_quantity_by_lot()" />
+            <td t-if="has_lot" name="lot">
+                <t t-if="raw_line.product_id.tracking in ('lot', 'serial')">
+                    <t
+                        t-foreach="raw_line.move_line_ids.lot_id.sorted('name')"
+                        t-as="lot"
+                    >
+                        <div t-if="lot" t-field="lot.name" />
+                    </t>
+                    <t t-if="raw_line.product_id.tracking == 'lot'">
+                        <div t-if="False in quantity_by_lot">
+                            <span class="fst-italic"><t>Lot missing</t></span>
+                        </div>
+                    </t>
+                </t>
+            </td>
+        </xpath>
+        <!-- Split the quantity_done by lot -->
+        <xpath
+            expr="//table/tbody/tr/td//span[@t-field='raw_line.quantity_done']/parent::div"
+            position="attributes"
+        >
+            <attribute
+                name="t-if"
+                t-translation="off"
+            >raw_line.product_id.tracking != 'lot'</attribute>
+        </xpath>
+        <xpath
+            expr="//table/tbody/tr/td//span[@t-field='raw_line.quantity_done']/parent::div"
+            position="after"
+        >
+            <div t-if="raw_line.product_id.tracking == 'lot'">
+                <t t-foreach="raw_line.move_line_ids.lot_id.sorted('name')" t-as="lot">
+                    <div
+                        t-if="lot"
+                        t-esc="quantity_by_lot.get(lot, 0)"
+                        t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                    />
+                </t>
+                <div
+                    t-if="False in quantity_by_lot"
+                    t-esc="quantity_by_lot[False]"
+                    t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                />
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

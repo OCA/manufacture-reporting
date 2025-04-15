@@ -97,16 +97,10 @@ class MrpBomMatrixReport(models.Model):
         tools.drop_view_if_exists(self._cr, self._table)
         # pylint: disable=E8103
         self._cr.execute(
-            """CREATE or REPLACE VIEW {} as (
-            {}
-            {}
-            {}
-            {}
-            )""".format(
-                self._table,
-                self._select(),
-                self._from(),
-                self._where(),
-                self._group_by(),
-            )
+            f"""CREATE or REPLACE VIEW {self._table} as (
+            {self._select()}
+            {self._from()}
+            {self._where()}
+            {self._group_by()}
+            )"""
         )

@@ -1,5 +1,5 @@
-The Matrix Bill of Materials is a report that shows connections between all
-parents and all components.
+The Matrix Bill of Materials is a report that shows connections between
+all parents and all components.
 
 This report helps to identify the products that are used in lots of
 assemblies or finished products.

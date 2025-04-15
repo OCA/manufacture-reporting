@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,14 +40,8 @@ msgid "ID"
 msgstr ""
 
 #. module: mrp_bom_matrix_report
-#: model:ir.model.fields,field_description:mrp_bom_matrix_report.field_mrp_bom_matrix_report____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: mrp_bom_matrix_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report__form_view
 #: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_pivot
-#: model_terms:ir.ui.view,arch_db:mrp_bom_matrix_report.mrp_bom_matrix_report_tree_view
 msgid "MRP BOM Matrix Report"
 msgstr ""
 

@@ -1,7 +1,7 @@
 # Copyright 2017-20 ForgeFlow S.L. (https://www.forgeflow.com)
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
-from odoo import fields, models, tools
+from odoo import api, fields, models
 
 
 class MrpBomMatrixReport(models.Model):
@@ -23,6 +23,7 @@ class MrpBomMatrixReport(models.Model):
     )
     count_parent_usage = fields.Integer(string="# Uses in Parent", readonly=True)
 
+    @api.model
     def _select(self):
         select_str = """
             SELECT min(l.id) as id, l.product_id as component_id,
@@ -35,6 +36,7 @@ class MrpBomMatrixReport(models.Model):
         """
         return select_str
 
+    @api.model
     def _from(self):
         # In this part we search recursively for the top parent product for
         # all the BOMs where the component is used.
@@ -81,6 +83,7 @@ class MrpBomMatrixReport(models.Model):
         """
         return from_str
 
+    @api.model
     def _group_by(self):
         group_by_str = """
             GROUP BY l.product_id,
@@ -89,18 +92,11 @@ class MrpBomMatrixReport(models.Model):
         """
         return group_by_str
 
+    @api.model
     def _where(self):
         where_str = """"""
         return where_str
 
-    def init(self):
-        tools.drop_view_if_exists(self._cr, self._table)
-        # pylint: disable=E8103
-        self._cr.execute(
-            f"""CREATE or REPLACE VIEW {self._table} as (
-            {self._select()}
-            {self._from()}
-            {self._where()}
-            {self._group_by()}
-            )"""
-        )
+    @property
+    def _table_query(self):
+        return f"""{self._select()}{self._from()} {self._where()}{self._group_by()}"""

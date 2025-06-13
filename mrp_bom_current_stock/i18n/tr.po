@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-06-13 17:26+0000\n"
+"Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
 "Language-Team: none\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
@@ -20,6 +22,10 @@ msgid ""
 "- All Levels: Allows you to evaluate what is the total potential amount that could\n"
 "                    be manufactured if all the existing material in the specified locations were used."
 msgstr ""
+"- Tüm Seviyeler: Belirtilen lokasyonlardaki mevcut tüm malzemeler "
+"kullanıldığında\n"
+"                     üretilebilecek toplam potansiyel miktarın ne olduğunu "
+"değerlendirmenizi sağlar."
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
@@ -28,11 +34,16 @@ msgid ""
 "                    that only the selected product in particular should be manufactured. In other\n"
 "                    words, it emulates a manufacturing order."
 msgstr ""
+"- Tek Seviye: Sadece belirli bir ürünün üretilmesi durumunda potansiyel "
+"miktarın\n"
+"                     ne olduğunu değerlendirmenize olanak tanır. Başka bir "
+"deyişle,\n"
+"                     bir üretim emrini taklit eder."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock__explosion_type__all
 msgid "All Levels"
-msgstr ""
+msgstr "Bütün Seviyeler"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
@@ -42,132 +53,138 @@ msgid ""
 "                    correctly computed since it is not taken into account that if it is being used by\n"
 "                    a BoM, it cannot be used by another."
 msgstr ""
+"Son olarak, bir bileşenin farklı BoM'larda tekrarlanması durumunda,\n"
+"                    bir BoM tarafından kullanılıyorsa başka bir BoM "
+"tarafından kullanılamayacağı\n"
+"                     dikkate alınmadığından, potansiyel niceliğinin doğru "
+"hesaplanamamış olma\n"
+"                    ihtimalinin bulunduğunu belirtmek gerekir."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__availability
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__availability
 msgid "Availability"
-msgstr ""
+msgstr "Kullanılabilirlik"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock__availability__available
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock_line__availability__available
 msgid "Available"
-msgstr ""
+msgstr "Uygun"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "BOM Current Stock Report"
-msgstr ""
+msgstr "Ürün Reçetesi Güncel Stok Raporu"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_id
 msgid "BoM"
-msgstr ""
+msgstr "BoM"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.act_window,name:mrp_bom_current_stock.mrp_bom_current_stock_action
 #: model:ir.ui.menu,name:mrp_bom_current_stock.mrp_bom_current_stock_menu
 msgid "BoM Current Stock Explosion"
-msgstr ""
+msgstr "Ürün Reçetesi Güncel Stok Patlatma"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_level
 msgid "BoM Level"
-msgstr ""
+msgstr "Ürün Reçetesi Seviyesi"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "BoM Reference"
-msgstr ""
+msgstr "Ürün Reçetesi Referansı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_type
 msgid "BoM Type"
-msgstr ""
+msgstr "Ürün Reçetesi Türü"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__bom_line_id
 msgid "BoM line"
-msgstr ""
+msgstr "Ürün Reçetesi Satırı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_pdf
 msgid "BoM: Current Stock Report PDF"
-msgstr ""
+msgstr "Ürün Reçetesi: Güncel Stock Raporu PDF"
 
 #. module: mrp_bom_current_stock
 #: model:ir.actions.report,name:mrp_bom_current_stock.action_report_bom_current_stock_xlsx
 msgid "BoM: Current Stock Report XLSX"
-msgstr ""
+msgstr "Ürün Reçetesi: Güncel Stock Raporu XLSX"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__create_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Oluşturan"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__create_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Oluşturuldu"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__desired_qty
 msgid "Desired Quantity"
-msgstr ""
+msgstr "İstenilen Miktar"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__display_name
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__display_name
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Görünüm Adı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__exclude_location_ids
 msgid "Exclude locations"
-msgstr ""
+msgstr "Konumları hariç tut"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Explode"
-msgstr ""
+msgstr "Patlatıldı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__explosion_type
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__explosion_type
 msgid "Explosion Type"
-msgstr ""
+msgstr "Patlama Türü"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Explosion result"
-msgstr ""
+msgstr "Patlama Sonucu"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Export XLSX"
-msgstr ""
+msgstr "Dışa Aktarım XLSX"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Go Back"
-msgstr ""
+msgstr "Geri Git"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__id
@@ -179,93 +196,93 @@ msgstr ""
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "It is necessary to differentiate between the two types of explosion."
-msgstr ""
+msgstr "İki tür patlamayı birbirinden ayırmak gerekir."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock____last_update
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line____last_update
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Son Değişiklik"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__write_uid
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Son Güncelleyen"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__write_date
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Son Güncelleme"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Level"
-msgstr ""
+msgstr "Seviye"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__line_ids
 msgid "Line"
-msgstr ""
+msgstr "Satır"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Location"
-msgstr ""
+msgstr "Konum"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 msgid "Location:"
-msgstr ""
+msgstr "Konum:"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_report_mrp_bom_current_stock_report_mrpbom_current_stock_xlsx
 msgid "MRP BOM Current Stock XLSX Report"
-msgstr ""
+msgstr "MRP Bom Güncel Stok XLSX Raporu"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock
 msgid "MRP Bom Route Current Stock"
-msgstr ""
+msgstr "Kök MRP Bom Güncel Stok"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model,name:mrp_bom_current_stock.model_mrp_bom_current_stock_line
 msgid "MRP Bom Route Current Stock Line"
-msgstr ""
+msgstr "Kök MRP Bom Güncel Stok Satırı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock__availability__not_available
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock_line__availability__not_available
 msgid "Not Available"
-msgstr ""
+msgstr "Mevcut Değil"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields.selection,name:mrp_bom_current_stock.selection__mrp_bom_current_stock__explosion_type__one
 msgid "One Level"
-msgstr ""
+msgstr "Bir Seviye"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__parent_bom_id
 msgid "Parent BoM"
-msgstr ""
+msgstr "Üst BoM"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Parent BoM Ref"
-msgstr ""
+msgstr "Üst BoM Referansı"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Parent Product Ref"
-msgstr ""
+msgstr "Üst Ürün Referansı"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
@@ -273,13 +290,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Potential Qty"
-msgstr ""
+msgstr "Potansiyel Miktar"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__potential_qty_rounded
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__potential_qty
 msgid "Potential Quantity"
-msgstr ""
+msgstr "Potansiyel Miktar"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__potential_qty_rounded
@@ -288,56 +305,58 @@ msgid ""
 "Potential quantity that could be manufactured given all current on-hand "
 "stock at the specified locations."
 msgstr ""
+"Belirtilen lokasyonlardaki mevcut tüm stoklar göz önüne alındığında "
+"üretilebilecek potansiyel miktar."
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Print PDF"
-msgstr ""
+msgstr "PDF Yazdır"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 msgid "Product"
-msgstr ""
+msgstr "Ürün"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_qty
 msgid "Product Quantity"
-msgstr ""
+msgstr "Ürün Miktarı"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "Product Reference"
-msgstr ""
+msgstr "Ürün Referansı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_tmpl_id
 msgid "Product Template"
-msgstr ""
+msgstr "Ürün Şablonu"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_uom_id
 msgid "Product Unit of Measure"
-msgstr ""
+msgstr "Ürün Ölçü Birimi"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__product_id
 msgid "Product Variant"
-msgstr ""
+msgstr "Ürün Varyantı"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Qty Available (Location)"
-msgstr ""
+msgstr "Kullanılabilir Miktar (Konum)"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__qty_available_in_source_loc
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__qty_available_in_source_loc
 msgid "Qty Available in Source"
-msgstr ""
+msgstr "Kaynakta Kullanılabilir Miktar"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
@@ -345,33 +364,33 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.report_mrpbom_current_stock_pdf
 #, python-format
 msgid "Quantity"
-msgstr ""
+msgstr "Miktar"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__exclude_location_ids
 msgid "Select only the parent location you want to exclude."
-msgstr ""
+msgstr "Yalnızca hariç tutmak istediğiniz üst konumu seçin."
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form
 msgid "Select product and location to explode"
-msgstr ""
+msgstr "Patlatmak için ürün ve konum seçin"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "Set the source location for every component."
-msgstr ""
+msgstr "Her bileşen için kaynak konumunu ayarlayın."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__location_id
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__location_id
 msgid "Source location"
-msgstr ""
+msgstr "Kaynak Konumu"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__bom_id
 msgid "Starting Bill of Materials"
-msgstr ""
+msgstr "Ürün Reçetesi Başlangıcı"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock_line__availability
@@ -379,6 +398,8 @@ msgid ""
 "The field shows the availability that you have taking into account the "
 "available quantity that could end up being manufactured."
 msgstr ""
+"Alan, üretilebilecek mevcut miktarı hesaba katarak sahip olduğunuz "
+"kullanılabilirliği gösterir."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__availability
@@ -386,11 +407,13 @@ msgid ""
 "The field shows the availability that you have taking into account the "
 "potential quantity that could end up being manufactured."
 msgstr ""
+"Alan, üretilebilecek potansiyel miktarı hesaba katarak sahip olduğunuz "
+"kullanılabilirliği gösterir."
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Ölçü Birimi"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,help:mrp_bom_current_stock.field_mrp_bom_current_stock__product_uom_id
@@ -398,20 +421,20 @@ msgstr ""
 msgid ""
 "Unit of Measure (Unit of Measure) is the unit of measurement for the "
 "inventory control"
-msgstr ""
+msgstr "Ölçü Birimi (Ölçü Birimi), envanter kontrolü için ölçü birimidir"
 
 #. module: mrp_bom_current_stock
 #: code:addons/mrp_bom_current_stock/reports/report_mrpcurrentstock_xlsx.py:0
 #, python-format
 msgid "UoM"
-msgstr ""
+msgstr "Ölçü Birimi"
 
 #. module: mrp_bom_current_stock
 #: model:ir.model.fields,field_description:mrp_bom_current_stock.field_mrp_bom_current_stock_line__wizard_id
 msgid "Wizard"
-msgstr ""
+msgstr "Sihirbaz"
 
 #. module: mrp_bom_current_stock
 #: model_terms:ir.ui.view,arch_db:mrp_bom_current_stock.mrp_bom_current_stock_view_form2
 msgid "or"
-msgstr ""
+msgstr "veya"

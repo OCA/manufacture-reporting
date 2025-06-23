@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2025 Camptocamp SA (https://www.camptocamp.com).
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <template
+        id="report_mrp_production_components"
+        inherit_id="mrp.report_mrp_production_components"
+        priority="5"
+    >
+        <!-- Display the column only if there are reserved quantities -->
+        <xpath expr="//table/thead" position="before">
+            <t
+                t-set="has_reserved_quantities"
+                t-value="o.state in ('confirmed', 'progress') and any(move_line.reserved_uom_qty for move_line in o.move_raw_ids.move_line_ids)"
+            />
+        </xpath>
+        <xpath expr="//table/thead/tr/th[2]" position="after">
+            <th
+                t-if="has_reserved_quantities"
+                t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}"
+                name="reserved"
+            >Reserved</th>
+        </xpath>
+        <xpath expr="//table/tbody/tr/td[2]" position="after">
+            <td
+                t-if="has_reserved_quantities"
+                t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}"
+                name="reserved"
+            >
+                <div>
+                    <span t-field="raw_line.reserved_availability" />
+                </div>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

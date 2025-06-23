@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo-addon-mrp_flattened_bom_xlsx_direct_materials_cost>=16.0dev,<16.1dev',
         'odoo-addon-mrp_flattened_bom_xlsx_labour_cost>=16.0dev,<16.1dev',
         'odoo-addon-mrp_flattened_bom_xlsx_subcontracting_cost>=16.0dev,<16.1dev',
+        'odoo-addon-mrp_order_report_lot>=16.0dev,<16.1dev',
         'odoo-addon-mrp_order_report_lot_barcode>=16.0dev,<16.1dev',
     ],
     classifiers=[

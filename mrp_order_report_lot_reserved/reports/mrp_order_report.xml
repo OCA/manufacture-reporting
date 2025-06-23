@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2025 Camptocamp SA (https://www.camptocamp.com).
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <!--
+        NOTE: This view depends on both `mrp_order_report_lot` and
+        `mrp_order_report_reserved` views.
+
+        We use a higher priority to represent this, because inherits only allow
+        to inherit from a single view.
+    -->
+    <template
+        id="report_mrp_production_components"
+        inherit_id="mrp.report_mrp_production_components"
+        priority="20"
+    >
+        <!-- Display the Lots column also for reserved quantities -->
+        <t t-set="has_lot" position="after">
+            <t
+                t-set="has_lot"
+                t-value="has_lot or (o.state == 'confirmed' and any(product.tracking in ('lot', 'serial') for product in o.move_raw_ids.product_id))"
+            />
+        </t>
+        <!-- Display the "Lot missing" group also if the reserved qty has no lot -->
+        <xpath
+            expr="//table/tbody/tr/td[@name='lot']//div[@t-if='False in quantity_by_lot']"
+            position="attributes"
+        >
+            <attribute
+                name="t-if"
+                separator=" or "
+                add="False in raw_line._get_quantity_reserved_by_lot()"
+            />
+        </xpath>
+        <!-- Split the reserved quantities by lot -->
+        <xpath
+            expr="//table/tbody/tr/td//span[@t-field='raw_line.reserved_availability']/parent::div"
+            position="attributes"
+        >
+            <attribute
+                name="t-if"
+                t-translation="off"
+            >raw_line.product_id.tracking != 'lot'</attribute>
+        </xpath>
+        <xpath
+            expr="//table/tbody/tr/td//span[@t-field='raw_line.reserved_availability']/parent::div"
+            position="after"
+        >
+            <div t-if="raw_line.product_id.tracking == 'lot'">
+                <t
+                    t-set="reserved_by_lot"
+                    t-value="raw_line._get_quantity_reserved_by_lot()"
+                />
+                <t t-foreach="raw_line.move_line_ids.lot_id.sorted('name')" t-as="lot">
+                    <div
+                        t-if="lot"
+                        t-esc="reserved_by_lot.get(lot, 0)"
+                        t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                    />
+                </t>
+                <div
+                    t-if="False in reserved_by_lot"
+                    t-esc="reserved_by_lot[False]"
+                    t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                />
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

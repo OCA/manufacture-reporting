@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [mrp_flattened_bom_xlsx_subcontracting_cost](mrp_flattened_bom_xlsx_subcontracting_cost/) | 16.0.1.0.0 |  | Export Flattened BOM to Excel with subcontracting cost
 [mrp_order_report_lot](mrp_order_report_lot/) | 16.0.1.0.0 | <a href='https://github.com/ivantodorovich'><img src='https://github.com/ivantodorovich.png' width='32' height='32' style='border-radius:50%;' alt='ivantodorovich'/></a> | Display Component's Lot on the Production Order Report
 [mrp_order_report_lot_barcode](mrp_order_report_lot_barcode/) | 16.0.1.0.0 |  | Lot Barcode on the Production Order
+[mrp_order_report_reserved](mrp_order_report_reserved/) | 16.0.1.0.0 | <a href='https://github.com/ivantodorovich'><img src='https://github.com/ivantodorovich.png' width='32' height='32' style='border-radius:50%;' alt='ivantodorovich'/></a> | Display Component's Reserved Quantity on the Production Order Report
 
 [//]: # (end addons)
 

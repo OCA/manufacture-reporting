@@ -142,11 +142,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
                 self._context.get("package_id"),
                 self._context.get("from_date"),
                 self._context.get("to_date"),
-            )[
-                record.product_id.id
-            ][
-                "qty_available"
-            ]
+            )[record.product_id.id]["qty_available"]
             res = record.product_id.product_tmpl_id.uom_id._compute_quantity(
                 product_available, record.product_uom_id
             )

@@ -7,7 +7,7 @@ import odoo.tests.common as common
 class TestMRPBomCurrentStock(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestMRPBomCurrentStock, cls).setUpClass()
+        super().setUpClass()
 
         cls.product_obj = cls.env["product.product"]
         cls.bom_obj = cls.env["mrp.bom"]

@@ -6,12 +6,12 @@
     "name": "MRP BoM Current Stock",
     "summary": "Add a report that explodes the bill of materials and show the "
     "stock available in the source location.",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Manufacture",
     "website": "https://github.com/OCA/manufacture-reporting",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["mrp_bom_location", "report_xlsx"],
+    "depends": ["mrp", "report_xlsx"],
     "data": [
         "security/ir.model.access.csv",
         "reports/report_mrpcurrentstock.xml",

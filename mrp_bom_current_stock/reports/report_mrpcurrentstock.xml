@@ -87,7 +87,7 @@
         >mrp_bom_current_stock.report_mrpbom_current_stock_pdf</field>
         <field name="binding_type">report</field>
     </record>
-     <record id="action_report_bom_current_stock_xlsx" model="ir.actions.report">
+    <record id="action_report_bom_current_stock_xlsx" model="ir.actions.report">
         <field name="name">BoM: Current Stock Report XLSX</field>
         <field name="model">mrp.bom.current.stock</field>
         <field name="report_type">xlsx</field>

@@ -63,17 +63,17 @@
                 </group>
                 <footer>
                     <button
-                        name="%(mrp_bom_current_stock.action_report_bom_current_stock_pdf)d"
-                        type="action"
-                        string="Print PDF"
-                        class="oe_highlight"
-                    />
+                    name="%(mrp_bom_current_stock.action_report_bom_current_stock_pdf)d"
+                    type="action"
+                    string="Print PDF"
+                    class="oe_highlight"
+                />
                     <button
-                        name="%(mrp_bom_current_stock.action_report_bom_current_stock_xlsx)d"
-                        type="action"
-                        string="Export XLSX"
-                        class="oe_highlight"
-                    />
+                    name="%(mrp_bom_current_stock.action_report_bom_current_stock_xlsx)d"
+                    type="action"
+                    string="Export XLSX"
+                    class="oe_highlight"
+                />
                     or
                     <button special="cancel" string="Close" />
                 </footer>

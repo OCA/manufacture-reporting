@@ -43,11 +43,6 @@ class BomRouteCurrentStock(models.TransientModel):
                 self.product_id
             ]
 
-    @api.onchange("bom_id")
-    def _onchange_bom_id(self):
-        if self.bom_id.location_id:
-            self.location_id = self.bom_id.location_id
-
     @api.model
     def _prepare_line(self, bom_line, level, factor):
         return {
@@ -56,9 +51,7 @@ class BomRouteCurrentStock(models.TransientModel):
             "bom_level": level,
             "product_qty": bom_line.product_qty * factor,
             "product_uom_id": bom_line.product_uom_id.id,
-            "location_id": (
-                bom_line.location_id.id if bom_line.location_id else self.location_id.id
-            ),
+            "location_id": self.location_id.id,
             "explosion_id": self.id,
         }
 
@@ -71,18 +64,13 @@ class BomRouteCurrentStock(models.TransientModel):
             for line in bom.bom_line_ids:
                 vals = self._prepare_line(line, level, factor)
                 line_obj.create(vals)
-                location = line.location_id
                 line_boms = line.product_id.bom_ids
-                boms = (
-                    line_boms.filtered(lambda bom: bom.location_id == location)
-                    or line_boms
-                )
-                if boms:
+                if line_boms:
                     line_qty = line.product_uom_id._compute_quantity(
-                        line.product_qty, boms[0].product_uom_id
+                        line.product_qty, line_boms[0].product_uom_id
                     )
-                    new_factor = factor * line_qty / boms[0].product_qty
-                    _create_lines(boms[0], level, new_factor)
+                    new_factor = factor * line_qty / line_boms[0].product_qty
+                    _create_lines(line_boms[0], level, new_factor)
 
         _create_lines(self.bom_id)
         return {

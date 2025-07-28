@@ -25,7 +25,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.product_top = cls.product_obj.create(
             {
                 "name": "FP-01",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_dozen.id,
                 "uom_po_id": cls.uom_dozen.id,
             }
@@ -33,7 +33,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.product_sub_1 = cls.product_obj.create(
             {
                 "name": "IP-01",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_dozen.id,
                 "uom_po_id": cls.uom_dozen.id,
             }
@@ -41,7 +41,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.product_sub_2 = cls.product_obj.create(
             {
                 "name": "IP-02",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_kgm.id,
                 "uom_po_id": cls.uom_kgm.id,
             }
@@ -49,7 +49,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.product_sub_3 = cls.product_obj.create(
             {
                 "name": "IP-03",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_unit.id,
                 "uom_po_id": cls.uom_unit.id,
             }
@@ -58,7 +58,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.component_1 = cls.product_obj.create(
             {
                 "name": "PP-01",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_unit.id,
                 "uom_po_id": cls.uom_unit.id,
             }
@@ -66,7 +66,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.component_2 = cls.product_obj.create(
             {
                 "name": "PP-02",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_unit.id,
                 "uom_po_id": cls.uom_unit.id,
             }
@@ -74,7 +74,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         cls.component_3 = cls.product_obj.create(
             {
                 "name": "PP-03",
-                "type": "product",
+                "is_storable": True,
                 "uom_id": cls.uom_meter.id,
                 "uom_po_id": cls.uom_meter.id,
             }

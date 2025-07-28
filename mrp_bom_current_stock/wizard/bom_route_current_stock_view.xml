@@ -46,7 +46,7 @@
                     <field name="product_id" readonly="1" />
                     <field name="bom_id" readonly="1" />
                     <field name="line_ids" nolabel="1" colspan="2">
-                        <tree create="0" delete="0" editable="1">
+                        <list create="0" delete="0">
                             <field name="bom_level" readonly="1" />
                             <field name="product_id" readonly="1" />
                             <field name="product_qty" readonly="1" />
@@ -58,7 +58,7 @@
                             />
                             <field name="location_id" />
                             <field name="bom_id" readonly="1" />
-                        </tree>
+                        </list>
                     </field>
                 </group>
                 <footer>

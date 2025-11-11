@@ -4,7 +4,6 @@
 import logging
 
 from odoo import models
-from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
@@ -15,14 +14,14 @@ class FlattenedBomXlsx(models.AbstractModel):
     def generate_xlsx_report(self, workbook, data, objects):
         res = super().generate_xlsx_report(workbook, data, objects)
         sheet = workbook.worksheets_objs[0]
-        sheet.name = _("Direct Materials")
+        sheet.name = self.env._("Direct Materials")
 
         sheet.set_column(6, 8, 20)
         title_style = workbook.formats[2]
         sheet_title = [
-            _("Material Unit Cost"),
-            _("Material Cost"),
-            _("Currency"),
+            self.env._("Material Unit Cost"),
+            self.env._("Material Cost"),
+            self.env._("Currency"),
         ]
         sheet.set_row(0, None, None, {"collapsed": 1})
         sheet.write_row(1, 6, sheet_title, title_style)

@@ -5,7 +5,6 @@ import logging
 from collections import OrderedDict
 
 from odoo import models
-from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
@@ -57,20 +56,20 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def _get_labour_title_values(self):
         return [
-            _("Level"),
-            _("Main BOM"),
-            _("Sub BOMs"),
-            _("Internal Reference"),
-            _("Product Name"),
-            _("Operation"),
-            _("Work Center"),
-            _("Quantity"),
-            _("Unit of Measure"),
-            _("Duration (hours)"),
-            _("Cost per hour"),
-            _("Labour Unit Cost"),
-            _("Labour Cost"),
-            _("Currency"),
+            self.env._("Level"),
+            self.env._("Main BOM"),
+            self.env._("Sub BOMs"),
+            self.env._("Internal Reference"),
+            self.env._("Product Name"),
+            self.env._("Operation"),
+            self.env._("Work Center"),
+            self.env._("Quantity"),
+            self.env._("Unit of Measure"),
+            self.env._("Duration (hours)"),
+            self.env._("Cost per hour"),
+            self.env._("Labour Unit Cost"),
+            self.env._("Labour Cost"),
+            self.env._("Currency"),
         ]
 
     def _generate_xlsx_labour_sheet_format(self, sheet):
@@ -83,7 +82,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         res = super().generate_xlsx_report(workbook, data, objects)
-        sheet = workbook.add_worksheet(_("Labour Costs"))
+        sheet = workbook.add_worksheet(self.env._("Labour Costs"))
 
         self._generate_xlsx_labour_sheet_format(sheet)
         title_style = workbook.add_format(

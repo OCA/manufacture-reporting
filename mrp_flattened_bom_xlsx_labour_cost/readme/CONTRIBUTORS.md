@@ -1,1 +1,2 @@
 - Bernat Puig Font \<bernat.puig@forgeflow.com\>
+- Thinh Banh \<thinhbp@trobz.com\>

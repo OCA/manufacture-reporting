@@ -5,7 +5,6 @@ import logging
 from collections import OrderedDict
 
 from odoo import models
-from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
@@ -51,17 +50,17 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def _get_subcontracting_title_values(self):
         return [
-            _("Level"),
-            _("Main BOM"),
-            _("Subcontracted BOM"),
-            _("Internal Reference"),
-            _("Product Name"),
-            _("Partner Name"),
-            _("Quantity"),
-            _("Unit of Measure"),
-            _("Subcontracting Unit Cost"),
-            _("Subcontracting Cost"),
-            _("Currency"),
+            self.env._("Level"),
+            self.env._("Main BOM"),
+            self.env._("Subcontracted BOM"),
+            self.env._("Internal Reference"),
+            self.env._("Product Name"),
+            self.env._("Partner Name"),
+            self.env._("Quantity"),
+            self.env._("Unit of Measure"),
+            self.env._("Subcontracting Unit Cost"),
+            self.env._("Subcontracting Cost"),
+            self.env._("Currency"),
         ]
 
     def _generate_xlsx_subcontracting_sheet_format(self, sheet):
@@ -75,7 +74,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         res = super().generate_xlsx_report(workbook, data, objects)
-        sheet = workbook.add_worksheet(_("Subcontracting Costs"))
+        sheet = workbook.add_worksheet(self.env._("Subcontracting Costs"))
 
         self._generate_xlsx_subcontracting_sheet_format(sheet)
         title_style = workbook.add_format(

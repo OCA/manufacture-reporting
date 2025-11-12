@@ -6,4 +6,4 @@ To use this module, you need to:
 
     *(Could be interesting to modify quantities of these BOMs)*
 
-3.  Go to 'Print / Export Flattened BOM to Excel'.
+3.  Go to 'Print / Export Flattened BOM Structure to Excel'.

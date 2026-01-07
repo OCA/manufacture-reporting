@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [mrp_bom_current_stock](mrp_bom_current_stock/) | 16.0.1.0.0 |  | Add a report that explodes the bill of materials and show the stock available in the source location.
+[mrp_bom_simple_report](mrp_bom_simple_report/) | 16.0.1.0.0 | <a href='https://github.com/quentinDupont'><img src='https://github.com/quentinDupont.png' width='32' height='32' style='border-radius:50%;' alt='quentinDupont'/></a> | Print simple report for your Bill of Materials
 [mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 16.0.1.0.1 |  | Export BoM Structure to Excel .XLSX
 [mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 16.0.1.0.0 |  | Export BOM Structure (Level 1) to Excel .XLSX
 [mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 16.0.1.1.0 |  | Export Flattened BOM to Excel

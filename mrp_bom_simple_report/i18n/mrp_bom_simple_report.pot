@@ -6,11 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 10:50+0000\n"
-"PO-Revision-Date: 2024-11-20 10:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,39 +16,39 @@ msgstr ""
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "<b>Quantity: </b>"
-msgstr "<b>Quantité : </b>"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "<span>Bill of Material</span>"
-msgstr "<span>Fiche Technique</span>"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "Component"
-msgstr "Matière Première"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "Free comment"
-msgstr "Commentaire libre"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "Quantity"
-msgstr "Quantité"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model:ir.actions.report,name:mrp_bom_simple_report.mrp_bom_simple_report_action
 msgid "Simple Bill of Material"
-msgstr "Fiche technique simple"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "UoM"
-msgstr "UdM"
+msgstr ""
 
 #. module: mrp_bom_simple_report
 #: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
 msgid "↳ Intermediate Bill of Material for"
-msgstr "↳ Fiche technique intermédiaire pour"
+msgstr ""

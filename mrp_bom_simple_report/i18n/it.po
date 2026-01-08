@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_bom_simple_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "<b>Quantity: </b>"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "<span>Bill of Material</span>"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "Component"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "Free comment"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "Quantity"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model:ir.actions.report,name:mrp_bom_simple_report.mrp_bom_simple_report_action
+msgid "Simple Bill of Material"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "UoM"
+msgstr ""
+
+#. module: mrp_bom_simple_report
+#: model_terms:ir.ui.view,arch_db:mrp_bom_simple_report.bom_simple_report_xml
+msgid "↳ Intermediate Bill of Material for"
+msgstr ""

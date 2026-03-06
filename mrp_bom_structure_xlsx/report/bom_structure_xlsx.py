@@ -3,8 +3,7 @@
 
 import logging
 
-from odoo import _, models
-from odoo.exceptions import CacheMiss
+from odoo import models
 
 _logger = logging.getLogger(__name__)
 
@@ -29,25 +28,17 @@ class BomStructureXlsx(models.AbstractModel):
         sheet.write(i, 5, ch.product_id.uom_id.name or "")
         sheet.write(i, 6, ch.bom_id.code or "")
         i += 1
-        # self.env.cache.invalidate()
-        try:
-            for child in ch.child_line_ids:
-                i = self.print_bom_children(child, sheet, i, j)
-        except CacheMiss as e:
-            # The Bom has no childs, thus it is the last level.
-            # When a BoM has no childs, chlid_line_ids is None, this creates a
-            # CacheMiss Error. However, this is expected because there really
-            # cannot be child_line_ids.
-            _logger.warning(e)
+        for child in ch.child_line_ids:
+            i = self.print_bom_children(child, sheet, i, j)
 
         j -= 1
         return i
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 11.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
         )
-        sheet = workbook.add_worksheet(_("BOM Structure"))
+        sheet = workbook.add_worksheet(self.env._("BOM Structure"))
         sheet.set_landscape()
         sheet.fit_to_pages(1, 0)
         sheet.set_zoom(80)
@@ -60,13 +51,13 @@ class BomStructureXlsx(models.AbstractModel):
             {"bold": True, "bg_color": "#FFFFCC", "bottom": 1}
         )
         sheet_title = [
-            _("BOM Name"),
-            _("Level"),
-            _("Product Reference"),
-            _("Product Name"),
-            _("Quantity"),
-            _("Unit of Measure"),
-            _("Reference"),
+            self.env._("BOM Name"),
+            self.env._("Level"),
+            self.env._("Product Reference"),
+            self.env._("Product Name"),
+            self.env._("Quantity"),
+            self.env._("Unit of Measure"),
+            self.env._("Reference"),
         ]
         sheet.set_row(0, None, None, {"collapsed": 1})
         sheet.write_row(1, 0, sheet_title, title_style)

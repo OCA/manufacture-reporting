@@ -11,38 +11,23 @@ class MrpBom(models.Model):
     _inherit = "mrp.bom"
 
     def _get_flattened_totals(self, factor=1, totals=None):
-        """Calculate the **unitary** product requirements of flattened BOM.
-        *Unit* means that the requirements are computed for one unit of the
-        default UoM of the product.
-        :returns: dict: keys are components and values are aggregated quantity
-        in the product default UoM.
-        """
+        """Calculate the unitary product requirements of flattened BOM."""
         self.ensure_one()
         if totals is None:
             totals = {}
+        if not self.product_qty:
+            return totals
         factor /= self.product_uom_id._compute_quantity(
             self.product_qty, self.product_tmpl_id.uom_id, round=False
         )
+        boms = self.env["mrp.bom"]._bom_find(self.bom_line_ids.product_id)
         for line in self.bom_line_ids:
-            sub_bom = self.env["mrp.bom"]._bom_find(line.product_id)[line.product_id]
+            qty = factor * line.product_uom_id._compute_quantity(
+                line.product_qty, line.product_id.uom_id, round=False
+            )
+            sub_bom = boms.get(line.product_id)
             if sub_bom:
-                new_factor = factor * line.product_uom_id._compute_quantity(
-                    line.product_qty, line.product_id.uom_id, round=False
-                )
-                sub_bom._get_flattened_totals(new_factor, totals)
+                sub_bom._get_flattened_totals(qty, totals)
             else:
-                if totals.get(line.product_id):
-                    totals[line.product_id] += (
-                        factor
-                        * line.product_uom_id._compute_quantity(
-                            line.product_qty, line.product_id.uom_id, round=False
-                        )
-                    )
-                else:
-                    totals[line.product_id] = (
-                        factor
-                        * line.product_uom_id._compute_quantity(
-                            line.product_qty, line.product_id.uom_id, round=False
-                        )
-                    )
+                totals[line.product_id] = totals.get(line.product_id, 0.0) + qty
         return totals

@@ -30,7 +30,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 11.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
         )
         sheet = workbook.add_worksheet(self.env._("Flattened BOM"))
         sheet.set_landscape()

@@ -27,7 +27,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "FP-01",
                 "is_storable": True,
                 "uom_id": cls.uom_dozen.id,
-                "uom_po_id": cls.uom_dozen.id,
             }
         )
         cls.product_sub_1 = cls.product_obj.create(
@@ -35,7 +34,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "IP-01",
                 "is_storable": True,
                 "uom_id": cls.uom_dozen.id,
-                "uom_po_id": cls.uom_dozen.id,
             }
         )
         cls.product_sub_2 = cls.product_obj.create(
@@ -43,7 +41,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "IP-02",
                 "is_storable": True,
                 "uom_id": cls.uom_kgm.id,
-                "uom_po_id": cls.uom_kgm.id,
             }
         )
         cls.product_sub_3 = cls.product_obj.create(
@@ -51,7 +48,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "IP-03",
                 "is_storable": True,
                 "uom_id": cls.uom_unit.id,
-                "uom_po_id": cls.uom_unit.id,
             }
         )
 
@@ -60,7 +56,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "PP-01",
                 "is_storable": True,
                 "uom_id": cls.uom_unit.id,
-                "uom_po_id": cls.uom_unit.id,
             }
         )
         cls.component_2 = cls.product_obj.create(
@@ -68,7 +63,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "PP-02",
                 "is_storable": True,
                 "uom_id": cls.uom_unit.id,
-                "uom_po_id": cls.uom_unit.id,
             }
         )
         cls.component_3 = cls.product_obj.create(
@@ -76,7 +70,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "name": "PP-03",
                 "is_storable": True,
                 "uom_id": cls.uom_meter.id,
-                "uom_po_id": cls.uom_meter.id,
             }
         )
 
@@ -161,15 +154,6 @@ class TestMRPBomCurrentStock(common.TransactionCase):
             }
         )
 
-    def _product_change_qty(self, product, new_qty):
-        values = {
-            "product_id": product.id,
-            "new_quantity": new_qty,
-            "product_tmpl_id": product.product_tmpl_id.id,
-        }
-        wizard = self.env["stock.change.product.qty"].create(values)
-        wizard.change_product_qty()
-
     def test_wizard(self):
         self.wizard = self.env["mrp.bom.current.stock"].create(
             {
@@ -184,7 +168,11 @@ class TestMRPBomCurrentStock(common.TransactionCase):
         self.assertEqual(self.wizard.location_id, self.stock_loc)
         for i, line in enumerate(lines):
             self.assertEqual(line.product_qty, sol[i])
-            self._product_change_qty(line.product_id, line.product_qty)
+            self.env["stock.quant"]._update_available_quantity(
+                line.product_id,
+                self.stock_loc,
+                line.product_qty,
+            )
         lines._compute_qty_available_in_source_loc()
         for line in lines:
             available = line.product_id.product_tmpl_id.uom_id._compute_quantity(

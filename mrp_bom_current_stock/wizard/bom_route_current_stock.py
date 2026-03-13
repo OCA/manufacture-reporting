@@ -15,7 +15,7 @@ class BomRouteCurrentStock(models.TransientModel):
     product_id = fields.Many2one(
         comodel_name="product.product",
         string="Product Variant",
-        domain="[('type', 'in', ['product', 'consu'])]",
+        domain="[('type', '=', 'consu')]",
         required=True,
     )
     product_tmpl_id = fields.Many2one(
@@ -119,17 +119,17 @@ class BomRouteCurrentStockLine(models.TransientModel):
         readonly=True,
     )
 
-    @api.onchange("location_id")
+    @api.depends("location_id", "product_id", "product_uom_id")
     def _compute_qty_available_in_source_loc(self):
         for record in self:
             product_available = record.product_id.with_context(
                 location=record.location_id.id
             )._compute_quantities_dict(
-                self._context.get("lot_id"),
-                self._context.get("owner_id"),
-                self._context.get("package_id"),
-                self._context.get("from_date"),
-                self._context.get("to_date"),
+                self.env.context.get("lot_id"),
+                self.env.context.get("owner_id"),
+                self.env.context.get("package_id"),
+                self.env.context.get("from_date"),
+                self.env.context.get("to_date"),
             )[record.product_id.id]["qty_available"]
             res = record.product_id.product_tmpl_id.uom_id._compute_quantity(
                 product_available, record.product_uom_id

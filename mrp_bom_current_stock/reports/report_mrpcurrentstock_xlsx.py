@@ -4,7 +4,6 @@
 import logging
 
 from odoo import models
-from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 
@@ -31,9 +30,9 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 11.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
         )
-        sheet = workbook.add_worksheet(_("BOM Current Stock Report"))
+        sheet = workbook.add_worksheet(self.env._("BOM Current Stock Report"))
         sheet.set_landscape()
         sheet.fit_to_pages(1, 0)
         sheet.set_zoom(80)
@@ -49,15 +48,15 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
             {"bold": True, "bg_color": "#FFFFCC", "bottom": 1}
         )
         sheet_title = [
-            _("Level"),
-            _("BoM Reference"),
-            _("Product Reference"),
-            _("Quantity"),
-            _("Qty Available (Location)"),
-            _("UoM"),
-            _("Location"),
-            _("Parent BoM Ref"),
-            _("Parent Product Ref"),
+            self.env._("Level"),
+            self.env._("BoM Reference"),
+            self.env._("Product Reference"),
+            self.env._("Quantity"),
+            self.env._("Qty Available (Location)"),
+            self.env._("UoM"),
+            self.env._("Location"),
+            self.env._("Parent BoM Ref"),
+            self.env._("Parent Product Ref"),
         ]
         sheet.set_row(0, None, None, {"collapsed": 1})
         sheet.write_row(1, 0, sheet_title, title_style)

@@ -1,0 +1,1 @@
+odoo-addon-mrp_bom_structure_xlsx @ git+https://github.com/OCA/manufacture-reporting@refs/pull/151/head#subdirectory=mrp_bom_structure_xlsx

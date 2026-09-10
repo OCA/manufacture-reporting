@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [mrp_bom_current_stock](mrp_bom_current_stock/) | 18.0.1.0.0 |  | Add a report that explodes the bill of materials and show the stock available in the source location.
 [mrp_bom_matrix_report](mrp_bom_matrix_report/) | 18.0.1.0.0 |  | MRP BOM Matrix Report
 [mrp_bom_structure_xlsx](mrp_bom_structure_xlsx/) | 18.0.1.0.0 |  | Export BoM Structure to Excel .XLSX
+[mrp_bom_structure_xlsx_level_1](mrp_bom_structure_xlsx_level_1/) | 18.0.1.0.0 |  | Export BOM Structure (Level 1) to Excel .XLSX
 [mrp_flattened_bom_xlsx](mrp_flattened_bom_xlsx/) | 18.0.1.0.0 |  | Export Flattened BOM to Excel
 
 [//]: # (end addons)

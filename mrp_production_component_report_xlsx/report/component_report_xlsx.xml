@@ -1,0 +1,9 @@
+<odoo>
+    <record id="component_report_xlsx" model="ir.actions.report">
+        <field name="name">Component Report (XLSX)</field>
+        <field name="model">mrp.production</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production" />
+        <field name="report_name">mrp_comp_xlsx.component_report</field>
+        <field name="report_type">xlsx</field>
+    </record>
+</odoo>

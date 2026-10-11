@@ -1,0 +1,1 @@
+This module addresses the challenge of efficiently aggregating components from multiple manufacturing orders in Odoo. Standard Odoo lacks a direct method to consolidate component lists, making it difficult to assess total material needs, identify common components, or generate summarized kitting lists, often leading to manual and error-prone processes.

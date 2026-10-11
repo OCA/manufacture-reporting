@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_flattened_bom_xlsx_direct_materials_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Currency"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#: model:ir.model.fields,field_description:mrp_flattened_bom_xlsx_direct_materials_cost.field_mrp_bom__direct_materials_cost
+msgid "Direct Material Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Direct Materials"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_report_mrp_flattened_bom_xlsx_flattened_bom_xlsx
+msgid "Flattened BOM XLSX"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Material Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#. odoo-python
+#: code:addons/mrp_flattened_bom_xlsx_direct_materials_cost/report/flattened_bom_xlsx.py:0
+#, python-format
+msgid "Material Unit Cost"
+msgstr ""
+
+#. module: mrp_flattened_bom_xlsx_direct_materials_cost
+#: model:ir.model,name:mrp_flattened_bom_xlsx_direct_materials_cost.model_product_product
+msgid "Product Variant"
+msgstr ""

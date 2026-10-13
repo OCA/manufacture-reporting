@@ -32,6 +32,11 @@ class BomRouteCurrentStock(models.TransientModel):
     location_id = fields.Many2one(
         comodel_name="stock.location", string="Starting location"
     )
+    include_reserved_qty = fields.Boolean(
+        string="Include reserved quantity",
+        help="If selected, reserved quantity is taken in account",
+        default=True,
+    )
     line_ids = fields.One2many(
         comodel_name="mrp.bom.current.stock.line", inverse_name="explosion_id"
     )
@@ -130,6 +135,7 @@ class BomRouteCurrentStockLine(models.TransientModel):
         related="bom_line.bom_id",
         readonly=True,
     )
+    include_reserved_qty = fields.Boolean(related="explosion_id.include_reserved_qty")
 
     @api.onchange("location_id")
     def _compute_qty_available_in_source_loc(self):
@@ -146,6 +152,8 @@ class BomRouteCurrentStockLine(models.TransientModel):
                 record.product_id.id
             ][
                 "qty_available"
+                if record.explosion_id.include_reserved_qty
+                else "free_qty"
             ]
             res = record.product_id.product_tmpl_id.uom_id._compute_quantity(
                 product_available, record.product_uom_id

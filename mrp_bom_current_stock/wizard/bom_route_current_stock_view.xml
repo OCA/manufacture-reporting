@@ -20,6 +20,11 @@
                            ('product_id','=',False), ('type', '=', 'normal')]"
                     />
                     <field name="location_id" />
+                    <field
+                        name="include_reserved_qty"
+                        widget="boolean_toggle"
+                        string="Incl. Reserved Qty"
+                    />
                 </group>
                 <footer>
                     <button
@@ -43,6 +48,12 @@
                     <br />
                     <field name="product_id" readonly="1" />
                     <field name="bom_id" readonly="1" />
+                    <field
+                        name="include_reserved_qty"
+                        string="Incl. Reserved Qty"
+                        readonly="1"
+                    />
+
                     <field name="line_ids" nolabel="1" colspan="2">
                         <tree create="0" delete="0" editable="1">
                             <field name="bom_level" readonly="1" />

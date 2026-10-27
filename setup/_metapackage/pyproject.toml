@@ -1,8 +1,9 @@
 [project]
 name = "odoo-addons-oca-manufacture-reporting"
-version = "19.0.20261019.0"
+version = "19.0.20261027.0"
 dependencies = [
     "odoo-addon-mrp_bom_current_stock==19.0.*",
+    "odoo-addon-mrp_bom_matrix_report==19.0.*",
     "odoo-addon-mrp_bom_structure_xlsx==19.0.*",
     "odoo-addon-mrp_bom_structure_xlsx_level_1==19.0.*",
     "odoo-addon-mrp_flattened_bom_xlsx==19.0.*",

@@ -3,11 +3,11 @@
 
 {
     "name": "MRP BOM Matrix Report",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "license": "LGPL-3",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/manufacture-reporting",
     "category": "Manufacturing",
     "depends": ["mrp"],
-    "data": ["security/ir.model.access.csv", "reports/mrp_bom_matrix_report_views.xml"],
+    "data": ["security/ir.access.csv", "reports/mrp_bom_matrix_report_views.xml"],
 }

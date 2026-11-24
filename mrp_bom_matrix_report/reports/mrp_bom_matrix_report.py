@@ -2,6 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models
+from odoo.tools import SQL
 
 
 class MrpBomMatrixReport(models.Model):
@@ -98,5 +99,11 @@ class MrpBomMatrixReport(models.Model):
         return where_str
 
     @property
-    def _table_query(self):
-        return f"""{self._select()}{self._from()} {self._where()}{self._group_by()}"""
+    def _table_sql(self):
+        return SQL(
+            "(%s %s %s %s)",
+            SQL(self._select()),
+            SQL(self._from()),
+            SQL(self._where()),
+            SQL(self._group_by()),
+        )

@@ -19,8 +19,7 @@ class BomStructureXlsxL1(models.AbstractModel):
         sheet.write(
             i,
             4,
-            ch.product_uom_id._compute_quantity(ch.product_qty, ch.product_id.uom_id)
-            or "",
+            ch.uom_id._compute_quantity(ch.product_qty, ch.product_id.uom_id) or "",
         )
         sheet.write(i, 5, ch.product_id.uom_id.name or "")
         sheet.write(i, 6, ch.bom_id.code or "")

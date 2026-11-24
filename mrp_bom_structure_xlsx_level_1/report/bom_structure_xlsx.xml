@@ -11,8 +11,5 @@
             name="report_name"
         >mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1</field>
         <field name="report_type">xlsx</field>
-        <field
-            name="report_file"
-        >mrp_bom_structure_xlsx_l1.bom_structure_xlsx_l1</field>
     </record>
 </odoo>

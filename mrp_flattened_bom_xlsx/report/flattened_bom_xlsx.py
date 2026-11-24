@@ -16,7 +16,7 @@ class FlattenedBomXlsx(models.AbstractModel):
         sheet.write(i, 1, bom.code or "")
         sheet.write(i, 2, bom.display_name or "")
         sheet.write(i, 3, bom.product_qty)
-        sheet.write(i, 4, bom.product_uom_id.name or "")
+        sheet.write(i, 4, bom.uom_id.name or "")
         sheet.write(i, 5, bom.code or "")
         i += 1
         for product, total_qty in requirements.items():
@@ -30,7 +30,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 20.0"}
         )
         sheet = workbook.add_worksheet(self.env._("Flattened BOM"))
         sheet.set_landscape()
@@ -58,7 +58,7 @@ class FlattenedBomXlsx(models.AbstractModel):
 
         for o in objects:
             # We need to calculate the totals for the BoM qty and UoM:
-            starting_factor = o.product_uom_id._compute_quantity(
+            starting_factor = o.uom_id._compute_quantity(
                 o.product_qty, o.product_tmpl_id.uom_id, round=False
             )
             totals = o._get_flattened_totals(factor=starting_factor)

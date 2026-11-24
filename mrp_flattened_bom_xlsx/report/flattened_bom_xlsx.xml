@@ -9,7 +9,6 @@
         <field name="type">ir.actions.report</field>
         <field name="report_name">mrp_flattened_bom_xlsx.flattened_bom_xlsx</field>
         <field name="report_type">xlsx</field>
-        <field name="report_file">mrp_bom_structure</field>
         <field name="attachment_use">False</field>
     </record>
 </odoo>

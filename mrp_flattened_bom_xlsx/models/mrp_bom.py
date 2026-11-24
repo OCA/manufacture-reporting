@@ -17,12 +17,12 @@ class MrpBom(models.Model):
             totals = {}
         if not self.product_qty:
             return totals
-        factor /= self.product_uom_id._compute_quantity(
+        factor /= self.uom_id._compute_quantity(
             self.product_qty, self.product_tmpl_id.uom_id, round=False
         )
         boms = self.env["mrp.bom"]._bom_find(self.bom_line_ids.product_id)
         for line in self.bom_line_ids:
-            qty = factor * line.product_uom_id._compute_quantity(
+            qty = factor * line.uom_id._compute_quantity(
                 line.product_qty, line.product_id.uom_id, round=False
             )
             sub_bom = boms.get(line.product_id)

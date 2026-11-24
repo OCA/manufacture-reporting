@@ -1,6 +1,7 @@
 # Copyright 2018 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
+
 from odoo.tests.common import TransactionCase
 
 
@@ -103,8 +104,8 @@ class TestFlattenedBom(TransactionCase):
 
     def test_02_different_uom(self):
         """Test totals computation with a multi level BoM and different UoM."""
-        self.bom_top.product_uom_id = self.uom_dozen
-        self.line_sub_2_1.product_uom_id = self.uom_dozen
+        self.bom_top.uom_id = self.uom_dozen
+        self.line_sub_2_1.uom_id = self.uom_dozen
         flat_tot = self.bom_top._get_flattened_totals()
         self.assertEqual(len(flat_tot), 3)
         # Component 1 = 2*2 + 5*3*12 = 184 units -> 184/12 dozens

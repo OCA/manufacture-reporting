@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="mrp_bom_matrix_report__form_view" model="ir.ui.view">
         <field name="name">mrp.bom.matrix.report.form</field>
@@ -59,8 +59,8 @@
         <field name="view_id" ref="mrp_bom_matrix_report_tree_view" />
     </record>
     <menuitem
-        action="action_mrp_bom_matrix_report"
         id="menu_mrp_bom_matrix_report"
+        action="action_mrp_bom_matrix_report"
         name="BOM Matrix"
         parent="mrp.menu_mrp_reporting"
     />

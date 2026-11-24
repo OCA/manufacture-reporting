@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mrp_bom_current_stock,access_mrp_bom_current_stock,model_mrp_bom_current_stock,base.group_user,1,1,1,0
-access_mrp_bom_current_stock_line,access_mrp_bom_current_stock_line,model_mrp_bom_current_stock_line,base.group_user,1,1,1,0

@@ -26,9 +26,7 @@ class BomRouteCurrentStock(models.TransientModel):
     product_qty = fields.Float(
         related="bom_id.product_qty", digits="Product Unit of Measure"
     )
-    product_uom_id = fields.Many2one(
-        comodel_name="uom.uom", related="bom_id.product_uom_id"
-    )
+    product_uom_id = fields.Many2one(comodel_name="uom.uom", related="bom_id.uom_id")
     location_id = fields.Many2one(
         comodel_name="stock.location", string="Starting location"
     )
@@ -50,7 +48,7 @@ class BomRouteCurrentStock(models.TransientModel):
             "bom_line": bom_line.id,
             "bom_level": level,
             "product_qty": bom_line.product_qty * factor,
-            "product_uom_id": bom_line.product_uom_id.id,
+            "product_uom_id": bom_line.uom_id.id,
             "location_id": self.location_id.id,
             "explosion_id": self.id,
         }
@@ -66,8 +64,8 @@ class BomRouteCurrentStock(models.TransientModel):
                 line_obj.create(vals)
                 line_boms = line.product_id.bom_ids
                 if line_boms:
-                    line_qty = line.product_uom_id._compute_quantity(
-                        line.product_qty, line_boms[0].product_uom_id
+                    line_qty = line.uom_id._compute_quantity(
+                        line.product_qty, line_boms[0].uom_id
                     )
                     new_factor = factor * line_qty / line_boms[0].product_qty
                     _create_lines(line_boms[0], level, new_factor)

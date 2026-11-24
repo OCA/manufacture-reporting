@@ -30,7 +30,7 @@ class ReportMrpBomCurrentStockXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 20.0"}
         )
         sheet = workbook.add_worksheet(self.env._("BOM Current Stock Report"))
         sheet.set_landscape()

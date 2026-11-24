@@ -78,7 +78,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
             {
                 "product_tmpl_id": cls.product_top.product_tmpl_id.id,
                 "product_qty": 1.0,
-                "product_uom_id": cls.uom_unit.id,
+                "uom_id": cls.uom_unit.id,
             }
         )
         cls.line_top_1 = cls.bom_line_obj.create(
@@ -86,7 +86,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.product_sub_1.id,
                 "bom_id": cls.bom_top.id,
                 "product_qty": 1.0,
-                "product_uom_id": cls.uom_dozen.id,
+                "uom_id": cls.uom_dozen.id,
             }
         )
         cls.line_top_2 = cls.bom_line_obj.create(
@@ -94,7 +94,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.product_sub_2.id,
                 "bom_id": cls.bom_top.id,
                 "product_qty": 200.0,
-                "product_uom_id": cls.uom_gm.id,
+                "uom_id": cls.uom_gm.id,
             }
         )
         cls.line_top_3 = cls.bom_line_obj.create(
@@ -102,7 +102,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.product_sub_3.id,
                 "bom_id": cls.bom_top.id,
                 "product_qty": 1.0,
-                "product_uom_id": cls.uom_dozen.id,
+                "uom_id": cls.uom_dozen.id,
             }
         )
 
@@ -110,7 +110,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
             {
                 "product_tmpl_id": cls.product_sub_1.product_tmpl_id.id,
                 "product_qty": 12.0,
-                "product_uom_id": cls.uom_unit.id,
+                "uom_id": cls.uom_unit.id,
             }
         )
         cls.line_sub_1_1 = cls.bom_line_obj.create(
@@ -118,7 +118,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.component_1.id,
                 "bom_id": cls.bom_sub_1.id,
                 "product_qty": 1.0,
-                "product_uom_id": cls.uom_dozen.id,
+                "uom_id": cls.uom_dozen.id,
             }
         )
 
@@ -126,7 +126,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
             {
                 "product_tmpl_id": cls.product_sub_2.product_tmpl_id.id,
                 "product_qty": 20.0,
-                "product_uom_id": cls.uom_kgm.id,
+                "uom_id": cls.uom_kgm.id,
             }
         )
         cls.line_sub_2_1 = cls.bom_line_obj.create(
@@ -134,7 +134,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.component_2.id,
                 "bom_id": cls.bom_sub_2.id,
                 "product_qty": 1.0,
-                "product_uom_id": cls.uom_unit.id,
+                "uom_id": cls.uom_unit.id,
             }
         )
 
@@ -142,7 +142,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
             {
                 "product_tmpl_id": cls.product_sub_3.product_tmpl_id.id,
                 "product_qty": 10.0,
-                "product_uom_id": cls.uom_unit.id,
+                "uom_id": cls.uom_unit.id,
             }
         )
         cls.line_sub_3_1 = cls.bom_line_obj.create(
@@ -150,7 +150,7 @@ class TestMRPBomCurrentStock(common.TransactionCase):
                 "product_id": cls.component_3.id,
                 "bom_id": cls.bom_sub_3.id,
                 "product_qty": 2.0,
-                "product_uom_id": cls.uom_meter.id,
+                "uom_id": cls.uom_meter.id,
             }
         )
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_mrpbom_current_stock_pdf">
         <t t-call="web.html_container">
@@ -54,14 +54,14 @@
                                     <td>
                                         <span
                                             style="color: white;"
-                                            t-esc="'... '*(l.bom_level)"
+                                            t-out="'... '*(l.bom_level)"
                                         />
-                                        <span t-esc="l.product_id.display_name" />
+                                        <span t-out="l.product_id.display_name" />
                                     </td>
                                     <td>
-                                        <span t-esc="l.product_qty" />
+                                        <span t-out="l.product_qty" />
                                         <span
-                                            t-esc="l.product_uom_id.name"
+                                            t-out="l.product_uom_id.name"
                                             groups="uom.group_uom"
                                         />
                                     </td>
@@ -71,7 +71,7 @@
                                     <td>
                                         <span t-field="l.qty_available_in_source_loc" />
                                         <span
-                                            t-esc="l.product_uom_id.name"
+                                            t-out="l.product_uom_id.name"
                                             groups="uom.group_uom"
                                         />
                                     </td>

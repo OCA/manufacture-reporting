@@ -22,8 +22,7 @@ class BomStructureXlsx(models.AbstractModel):
         sheet.write(
             i,
             4,
-            ch.product_uom_id._compute_quantity(ch.product_qty, ch.product_id.uom_id)
-            or "",
+            ch.uom_id._compute_quantity(ch.product_qty, ch.product_id.uom_id) or "",
         )
         sheet.write(i, 5, ch.product_id.uom_id.name or "")
         sheet.write(i, 6, ch.bom_id.code or "")
@@ -36,7 +35,7 @@ class BomStructureXlsx(models.AbstractModel):
 
     def generate_xlsx_report(self, workbook, data, objects):
         workbook.set_properties(
-            {"comments": "Created with Python and XlsxWriter from Odoo 19.0"}
+            {"comments": "Created with Python and XlsxWriter from Odoo 20.0"}
         )
         sheet = workbook.add_worksheet(self.env._("BOM Structure"))
         sheet.set_landscape()
@@ -69,7 +68,7 @@ class BomStructureXlsx(models.AbstractModel):
             sheet.write(i, 2, o.product_id.default_code or "", bold)
             sheet.write(i, 3, o.product_id.name or "", bold)
             sheet.write(i, 4, o.product_qty, bold)
-            sheet.write(i, 5, o.product_uom_id.name or "", bold)
+            sheet.write(i, 5, o.uom_id.name or "", bold)
             sheet.write(i, 6, o.code or "", bold)
             i += 1
             j = 0

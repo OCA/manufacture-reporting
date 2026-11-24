@@ -6,6 +6,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestMrpBomStructureXlsxBase(BaseCommon):
+    _test_user_groups = ("mrp.group_mrp_manager",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

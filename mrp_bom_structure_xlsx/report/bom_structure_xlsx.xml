@@ -9,6 +9,5 @@
         <field name="type">ir.actions.report</field>
         <field name="report_name">mrp_bom_structure_xlsx.bom_structure_xlsx</field>
         <field name="report_type">xlsx</field>
-        <field name="report_file">mrp_bom</field>
     </record>
 </odoo>
